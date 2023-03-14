@@ -1,25 +1,17 @@
 *** Settings ***
 Library     SeleniumLibrary
-
-
-
-*** Variables ***
-${url}    https://webshop.mobiletestautomation.nl/
-${browser}    chrome
-
-
-
-*** Keywords ***
-LaunceBrowser
-    Open Browser   ${url}      ${browser}
-    Maximize Browser Window
-
-
+Resource    Keywords/loginKeywords.robot
+Resource    Variables/loginVariable.robot
 
 
 *** Test Cases ***
 PositiefLoginTest
-    LaunceBrowser   
+    Navigate to HomePage 
+    Log in
+    Exit Browser
+   
+      
+    
 
 
 
