@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230314 13:55:03.453" rpa="false" schemaversion="3">
+<suite id="s1" name="Deneme" source="C:\development\Robot-Framework\deneme.robot">
+<test id="s1-t1" name="Testcase Log In" line="25">
+<kw name="Log In">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${SiteUrl}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230314 13:55:03.636" level="INFO">Opening browser 'Chrome' to base url 'https://webshop.mobiletestautomation.nl/'.</msg>
+<status status="PASS" starttime="20230314 13:55:03.635" endtime="20230314 13:55:05.604"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>class=user-info</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230314 13:55:05.604" level="INFO">Clicking element 'class=user-info'.</msg>
+<status status="PASS" starttime="20230314 13:55:05.604" endtime="20230314 13:55:06.352"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230314 13:55:08.354" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230314 13:55:06.352" endtime="20230314 13:55:08.354"/>
+</kw>
+<status status="PASS" starttime="20230314 13:55:03.633" endtime="20230314 13:55:08.354"/>
+</kw>
+<status status="PASS" starttime="20230314 13:55:03.632" endtime="20230314 13:55:08.354"/>
+</test>
+<status status="PASS" starttime="20230314 13:55:03.454" endtime="20230314 13:55:08.355"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Deneme">Deneme</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
