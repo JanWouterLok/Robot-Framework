@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.0 on win32)" generated="20230314 11:44:33.215" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot-Framework" source="C:\Users\MuratOzben\Documents\Robot-Framework\Robot-Framework">
+<suite id="s1-s1" name="Tests" source="C:\Users\MuratOzben\Documents\Robot-Framework\Robot-Framework\Tests">
+<suite id="s1-s1-s1" name="LoginTest" source="C:\Users\MuratOzben\Documents\Robot-Framework\Robot-Framework\Tests\LoginTest.robot">
+<test id="s1-s1-s1-t1" name="PositiefLoginTest" line="21">
+<kw name="LaunceBrowser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230314 11:44:33.406" level="INFO">Opening browser 'chrome' to base url 'https://demowebshop.tricentis.com/'.</msg>
+<status status="PASS" starttime="20230314 11:44:33.406" endtime="20230314 11:44:35.096"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230314 11:44:35.097" endtime="20230314 11:44:35.219"/>
+</kw>
+<status status="PASS" starttime="20230314 11:44:33.405" endtime="20230314 11:44:35.219"/>
+</kw>
+<status status="PASS" starttime="20230314 11:44:33.404" endtime="20230314 11:44:35.220"/>
+</test>
+<status status="PASS" starttime="20230314 11:44:33.247" endtime="20230314 11:44:35.222"/>
+</suite>
+<status status="PASS" starttime="20230314 11:44:33.243" endtime="20230314 11:44:35.225"/>
+</suite>
+<status status="PASS" starttime="20230314 11:44:33.219" endtime="20230314 11:44:35.228"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot-Framework">Robot-Framework</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tests">Robot-Framework.Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="LoginTest">Robot-Framework.Tests.LoginTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

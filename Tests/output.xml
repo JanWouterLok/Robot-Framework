@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.0 on win32)" generated="20230314 11:32:23.834" rpa="false" schemaversion="3">
+<suite id="s1" name="LoginTest" source="C:\Users\MuratOzben\Documents\Robot-Framework\Robot-Framework\Tests\LoginTest.robot">
+<test id="s1-t1" name="PositiefLoginTest" line="21">
+<kw name="LaunceBrowser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230314 11:32:23.968" level="INFO">Opening browser 'chrome' to base url 'https://webshop.mobiletestautomation.nl/'.</msg>
+<status status="PASS" starttime="20230314 11:32:23.968" endtime="20230314 11:32:25.829"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230314 11:32:25.829" endtime="20230314 11:32:25.947"/>
+</kw>
+<status status="PASS" starttime="20230314 11:32:23.968" endtime="20230314 11:32:25.948"/>
+</kw>
+<status status="PASS" starttime="20230314 11:32:23.967" endtime="20230314 11:32:25.949"/>
+</test>
+<status status="PASS" starttime="20230314 11:32:23.835" endtime="20230314 11:32:25.952"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="LoginTest">LoginTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
