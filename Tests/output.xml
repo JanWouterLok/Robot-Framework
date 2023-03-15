@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230315 10:13:34.764" rpa="false" schemaversion="3">
+<suite id="s1" name="LoginTest" source="C:\Robot-Framework\Tests\LoginTest.robot">
+<test id="s1-t1" name="PositiefLoginTest" line="8">
+<kw name="Navigate to HomePage" library="loginKeywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230315 10:13:34.877" level="INFO">Opening browser 'chrome' to base url 'https://webshop.mobiletestautomation.nl/'.</msg>
+<status status="PASS" starttime="20230315 10:13:34.876" endtime="20230315 10:13:36.489"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230315 10:13:36.489" endtime="20230315 10:13:36.619"/>
+</kw>
+<status status="PASS" starttime="20230315 10:13:34.875" endtime="20230315 10:13:36.619"/>
+</kw>
+<kw name="Log in" library="loginKeywords">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath=//*[@id="_desktop_user_info"]/div/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230315 10:13:36.619" level="INFO">Clicking link 'xpath=//*[@id="_desktop_user_info"]/div/a'.</msg>
+<status status="PASS" starttime="20230315 10:13:36.619" endtime="20230315 10:13:36.896"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230315 10:13:36.897" level="INFO">Typing text 'dantester@jourrapide.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20230315 10:13:36.897" endtime="20230315 10:13:36.977"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${Password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230315 10:13:36.977" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg timestamp="20230315 10:13:37.002" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230315 10:13:37.035" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230315 10:13:36.977" endtime="20230315 10:13:37.035"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=submit-login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230315 10:13:37.036" level="INFO">Clicking button 'id=submit-login'.</msg>
+<status status="PASS" starttime="20230315 10:13:37.036" endtime="20230315 10:13:37.742"/>
+</kw>
+<status status="PASS" starttime="20230315 10:13:36.619" endtime="20230315 10:13:37.742"/>
+</kw>
+<kw name="Exit Browser" library="loginKeywords">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230315 10:13:37.743" endtime="20230315 10:13:39.846"/>
+</kw>
+<status status="PASS" starttime="20230315 10:13:37.743" endtime="20230315 10:13:39.846"/>
+</kw>
+<status status="PASS" starttime="20230315 10:13:34.875" endtime="20230315 10:13:39.846"/>
+</test>
+<status status="PASS" starttime="20230315 10:13:34.764" endtime="20230315 10:13:39.846"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="LoginTest">LoginTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
