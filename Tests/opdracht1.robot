@@ -5,7 +5,7 @@ Resource    C:/Robot-Framework/Resources/Variables/loginVariable.robot
 
 
 *** Test Cases ***
-PositiefLoginTest
+Login op webshop en bevestig dat gebruiker ingelogd is
     Navigate to HomePage 
     Log in
     Page Should Contain  Sign out
