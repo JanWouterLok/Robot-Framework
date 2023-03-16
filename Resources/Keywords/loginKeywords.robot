@@ -24,7 +24,7 @@ Maak een nieuw account aan en bevestig dat gebruiker ingelogd is
     Click Element  css=input[name=id_gender][value='1']
     Input Text  css=input[name=firstname]  Aparte
     Input Text  css=input[name=lastname]  Vogel
-    ${randomEmail} =  Generate Random String  12  [LETTERS][NUMBERS]
+    ${randomEmail} =  Generate Random String  8-12  [LETTERS][NUMBERS]
     Input Text  css=input[class=form-control][name=email]  ${randomEmail}@birdmail.com
     Input Text  css=input[name=password]  gehiem
     Input Text  css=input[name=birthday]  02/23/1975
