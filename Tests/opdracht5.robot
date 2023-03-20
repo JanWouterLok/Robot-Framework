@@ -13,4 +13,5 @@ Zoek product op en bevestig dat product in resultaat zit
     Page Should Contain Image  css:img[src='https://webshop.mobiletestautomation.nl/15-home_default/mountain-fox-vector-graphics.jpg']
     Page Should Contain Image  css:img[src='https://webshop.mobiletestautomation.nl/18-home_default/mountain-fox-notebook.jpg']
     Page Should Not Contain Image  css:img[src='https://webshop.mobiletestautomation.nl/25-home_default/orange.jpg']
-    Sleep  5s
+    Log out
+    Exit Browser
