@@ -1,11 +1,12 @@
 *** Settings ***
 Library     SeleniumLibrary
-Resource    C:/Robot-Framework/Resources/Keywords/loginKeywords.robot
-Resource    C:/Robot-Framework/Resources/Variables/loginVariable.robot
+Resource    ../Resources/Keywords/loginKeywords.robot
+Resource    ../Resources/Variables/loginVariable.robot
+Test Setup  Navigate to HomePage
+Test Teardown  Exit Browser
 
 *** Test Cases ***
 Zoek product op en bevestig dat product in resultaat zit
-    Navigate to HomePage
     Log in
     Input Text  css:input[name=s]  fox
     Press Keys  css:input[name=s]  RETURN
@@ -14,4 +15,3 @@ Zoek product op en bevestig dat product in resultaat zit
     Page Should Contain Image  css:img[src='https://webshop.mobiletestautomation.nl/18-home_default/mountain-fox-notebook.jpg']
     Page Should Not Contain Image  css:img[src='https://webshop.mobiletestautomation.nl/25-home_default/orange.jpg']
     Log out
-    Exit Browser

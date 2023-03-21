@@ -1,171 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230320 15:36:07.339" rpa="false" schemaversion="3">
-<suite id="s1" name="Opdracht5Metlijst" source="C:\Robot-Framework\Tests\opdracht5metlijst.robot">
-<test id="s1-t1" name="Zoek product op en bevestig dat product in resultaat zit" line="7">
-<kw name="Navigate to HomePage" library="loginKeywords">
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230321 13:25:09.310" rpa="false" schemaversion="3">
+<suite id="s1" name="Opdracht5" source="C:\Robot-Framework\Tests\opdracht5.robot">
+<test id="s1-t1" name="Zoek product op en bevestig dat product in resultaat zit" line="9">
+<kw name="Navigate to HomePage" library="loginKeywords" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230320 15:36:07.469" level="INFO">Opening browser 'chrome' to base url 'https://webshop.mobiletestautomation.nl/'.</msg>
-<status status="PASS" starttime="20230320 15:36:07.468" endtime="20230320 15:36:09.373"/>
+<msg timestamp="20230321 13:25:09.427" level="INFO">Opening browser 'chrome' to base url 'https://webshop.mobiletestautomation.nl/'.</msg>
+<status status="PASS" starttime="20230321 13:25:09.426" endtime="20230321 13:25:11.205"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230320 15:36:09.373" endtime="20230320 15:36:09.493"/>
+<status status="PASS" starttime="20230321 13:25:11.205" endtime="20230321 13:25:11.336"/>
 </kw>
-<status status="PASS" starttime="20230320 15:36:07.468" endtime="20230320 15:36:09.493"/>
+<status status="PASS" starttime="20230321 13:25:09.426" endtime="20230321 13:25:11.336"/>
 </kw>
 <kw name="Log in" library="loginKeywords">
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>css:a[title='Log in to your customer account']</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20230320 15:36:09.496" level="INFO">Clicking link 'css:a[title='Log in to your customer account']'.</msg>
-<status status="PASS" starttime="20230320 15:36:09.495" endtime="20230320 15:36:09.881"/>
+<msg timestamp="20230321 13:25:11.336" level="INFO">Clicking link 'css:a[title='Log in to your customer account']'.</msg>
+<status status="PASS" starttime="20230321 13:25:11.336" endtime="20230321 13:25:11.538"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name=email</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230320 15:36:09.881" level="INFO">Typing text 'dantester@jourrapide.com' into text field 'name=email'.</msg>
-<status status="PASS" starttime="20230320 15:36:09.881" endtime="20230320 15:36:09.967"/>
+<msg timestamp="20230321 13:25:11.539" level="INFO">Typing text 'dantester@jourrapide.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20230321 13:25:11.539" endtime="20230321 13:25:11.623"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>name=password</arg>
 <arg>${Password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20230320 15:36:09.968" level="INFO">Typing password into text field 'name=password'.</msg>
-<msg timestamp="20230320 15:36:09.997" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20230320 15:36:10.029" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20230320 15:36:09.967" endtime="20230320 15:36:10.029"/>
+<msg timestamp="20230321 13:25:11.623" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg timestamp="20230321 13:25:11.654" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230321 13:25:11.685" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230321 13:25:11.623" endtime="20230321 13:25:11.685"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id:submit-login</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230320 15:36:10.029" level="INFO">Clicking button 'id:submit-login'.</msg>
-<status status="PASS" starttime="20230320 15:36:10.029" endtime="20230320 15:36:11.143"/>
+<msg timestamp="20230321 13:25:11.685" level="INFO">Clicking button 'id:submit-login'.</msg>
+<status status="PASS" starttime="20230321 13:25:11.685" endtime="20230321 13:25:12.232"/>
 </kw>
-<status status="PASS" starttime="20230320 15:36:09.494" endtime="20230320 15:36:11.144"/>
+<status status="PASS" starttime="20230321 13:25:11.336" endtime="20230321 13:25:12.232"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>css:input[name=s]</arg>
 <arg>fox</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230320 15:36:11.144" level="INFO">Typing text 'fox' into text field 'css:input[name=s]'.</msg>
-<status status="PASS" starttime="20230320 15:36:11.144" endtime="20230320 15:36:11.209"/>
+<msg timestamp="20230321 13:25:12.233" level="INFO">Typing text 'fox' into text field 'css:input[name=s]'.</msg>
+<status status="PASS" starttime="20230321 13:25:12.233" endtime="20230321 13:25:12.295"/>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>css:input[name=s]</arg>
 <arg>RETURN</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20230320 15:36:11.210" level="INFO">Sending key(s) ('RETURN',) to css:input[name=s] element.</msg>
-<msg timestamp="20230320 15:36:11.499" level="INFO">Pressing special key RETURN to element.</msg>
-<msg timestamp="20230320 15:36:11.499" level="INFO">Releasing special key RETURN.</msg>
-<status status="PASS" starttime="20230320 15:36:11.210" endtime="20230320 15:36:12.244"/>
+<msg timestamp="20230321 13:25:12.296" level="INFO">Sending key(s) ('RETURN',) to css:input[name=s] element.</msg>
+<msg timestamp="20230321 13:25:12.593" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20230321 13:25:12.593" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20230321 13:25:12.295" endtime="20230321 13:25:13.039"/>
 </kw>
-<kw name="Get WebElements" library="SeleniumLibrary">
-<var>@{productNames}</var>
-<arg>css:.product-title</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<msg timestamp="20230320 15:36:12.254" level="INFO">@{productNames} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="aaaba496a0193dd1f25d4014f556d37e", element="3d5d2efd-0a56-416c-b864-204a50035502")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
-<status status="PASS" starttime="20230320 15:36:12.245" endtime="20230320 15:36:12.254"/>
+<kw name="Page Should Contain Image" library="SeleniumLibrary">
+<arg>css:img[src='https://webshop.mobiletestautomation.nl/9-home_default/mountain-fox-cushion.jpg']</arg>
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20230321 13:25:13.053" level="INFO">Current page contains image 'css:img[src='https://webshop.mobiletestautomation.nl/9-home_default/mountain-fox-cushion.jpg']'.</msg>
+<status status="PASS" starttime="20230321 13:25:13.039" endtime="20230321 13:25:13.053"/>
 </kw>
-<for flavor="IN">
-<var>${element}</var>
-<value>@{productNames}</value>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="aaaba496a0193dd1f25d4014f556d37e", element="3d5d2efd-0a56-416c-b864-204a50035502")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20230320 15:36:12.267" level="INFO">${text} = Mountain Fox Cushion</msg>
-<status status="PASS" starttime="20230320 15:36:12.254" endtime="20230320 15:36:12.267"/>
+<kw name="Page Should Contain Image" library="SeleniumLibrary">
+<arg>css:img[src='https://webshop.mobiletestautomation.nl/15-home_default/mountain-fox-vector-graphics.jpg']</arg>
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20230321 13:25:13.065" level="INFO">Current page contains image 'css:img[src='https://webshop.mobiletestautomation.nl/15-home_default/mountain-fox-vector-graphics.jpg']'.</msg>
+<status status="PASS" starttime="20230321 13:25:13.053" endtime="20230321 13:25:13.065"/>
 </kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>${element}</arg>
-<arg>Fox</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20230320 15:36:12.273" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="aaaba496a0193dd1f25d4014f556d37e", element="3d5d2efd-0a56-416c-b864-204a50035502")&gt;' contains text 'Fox'.</msg>
-<status status="PASS" starttime="20230320 15:36:12.267" endtime="20230320 15:36:12.273"/>
+<kw name="Page Should Contain Image" library="SeleniumLibrary">
+<arg>css:img[src='https://webshop.mobiletestautomation.nl/18-home_default/mountain-fox-notebook.jpg']</arg>
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20230321 13:25:13.077" level="INFO">Current page contains image 'css:img[src='https://webshop.mobiletestautomation.nl/18-home_default/mountain-fox-notebook.jpg']'.</msg>
+<status status="PASS" starttime="20230321 13:25:13.065" endtime="20230321 13:25:13.077"/>
 </kw>
-<status status="PASS" starttime="20230320 15:36:12.254" endtime="20230320 15:36:12.273"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="aaaba496a0193dd1f25d4014f556d37e", element="7e971ef6-e3f6-4e2d-8e6f-260bbe1a406c")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20230320 15:36:12.284" level="INFO">${text} = Mountain Fox - Vector Graphics</msg>
-<status status="PASS" starttime="20230320 15:36:12.273" endtime="20230320 15:36:12.284"/>
-</kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>${element}</arg>
-<arg>Fox</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20230320 15:36:12.290" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="aaaba496a0193dd1f25d4014f556d37e", element="7e971ef6-e3f6-4e2d-8e6f-260bbe1a406c")&gt;' contains text 'Fox'.</msg>
-<status status="PASS" starttime="20230320 15:36:12.284" endtime="20230320 15:36:12.290"/>
-</kw>
-<status status="PASS" starttime="20230320 15:36:12.273" endtime="20230320 15:36:12.290"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="aaaba496a0193dd1f25d4014f556d37e", element="fcdced1a-b01f-41c4-a262-a849b7bba07f")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20230320 15:36:12.299" level="INFO">${text} = Mountain Fox Notebook</msg>
-<status status="PASS" starttime="20230320 15:36:12.291" endtime="20230320 15:36:12.299"/>
-</kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>${element}</arg>
-<arg>Fox</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20230320 15:36:12.304" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="aaaba496a0193dd1f25d4014f556d37e", element="fcdced1a-b01f-41c4-a262-a849b7bba07f")&gt;' contains text 'Fox'.</msg>
-<status status="PASS" starttime="20230320 15:36:12.299" endtime="20230320 15:36:12.304"/>
-</kw>
-<status status="PASS" starttime="20230320 15:36:12.290" endtime="20230320 15:36:12.304"/>
-</iter>
-<iter>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="aaaba496a0193dd1f25d4014f556d37e", element="c8581239-1cac-444d-82cd-34dd40690707")&gt;</var>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20230320 15:36:12.313" level="INFO">${text} = Orange</msg>
-<status status="PASS" starttime="20230320 15:36:12.305" endtime="20230320 15:36:12.314"/>
-</kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>${element}</arg>
-<arg>Fox</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20230320 15:36:12.474" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-92.png"&gt;&lt;img src="selenium-screenshot-92.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20230320 15:36:12.474" level="FAIL">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="aaaba496a0193dd1f25d4014f556d37e", element="c8581239-1cac-444d-82cd-34dd40690707")&gt;' should have contained text 'Fox' but its text was 'Orange'.</msg>
-<status status="FAIL" starttime="20230320 15:36:12.314" endtime="20230320 15:36:12.474"/>
-</kw>
-<status status="FAIL" starttime="20230320 15:36:12.305" endtime="20230320 15:36:12.474"/>
-</iter>
-<status status="FAIL" starttime="20230320 15:36:12.254" endtime="20230320 15:36:12.474"/>
-</for>
-<kw name="Log out" library="loginKeywords">
-<status status="NOT RUN" starttime="20230320 15:36:12.474" endtime="20230320 15:36:12.474"/>
-</kw>
-<kw name="Exit Browser" library="loginKeywords">
-<status status="NOT RUN" starttime="20230320 15:36:12.474" endtime="20230320 15:36:12.474"/>
-</kw>
-<status status="FAIL" starttime="20230320 15:36:07.464" endtime="20230320 15:36:12.474">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="aaaba496a0193dd1f25d4014f556d37e", element="c8581239-1cac-444d-82cd-34dd40690707")&gt;' should have contained text 'Fox' but its text was 'Orange'.</status>
+<status status="PASS" starttime="20230321 13:25:09.415" endtime="20230321 13:25:13.077"/>
 </test>
-<status status="FAIL" starttime="20230320 15:36:07.354" endtime="20230320 15:36:12.477"/>
+<status status="PASS" starttime="20230321 13:25:09.310" endtime="20230321 13:25:13.079"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Opdracht5Metlijst">Opdracht5Metlijst</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Opdracht5">Opdracht5</stat>
 </suite>
 </statistics>
 <errors>
