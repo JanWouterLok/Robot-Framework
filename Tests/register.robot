@@ -1,20 +1,17 @@
 *** Settings ***
 Library     SeleniumLibrary
+Library     String
 Resource    ../Resources/Keywords/homePageKeywords.robot
-Resource    ../Resources/Keywords/loginKeywords.robot
-Resource    ../Resources/Variables/loginVariable.robot
+Resource    ../Resources/Keywords/registerKeywords.robot
 Resource    ../Resources/Variables/homePageVariable.robot
 Resource    ../Resources/Variables/registerVariable.robot
 Test Setup  Navigate to HomePage
 Test Teardown   Exit Browser
 
-
 *** Test Cases ***
-PositiefLoginTest
-    Navigate to HomePage 
-    Log in
-    Exit Browser
+Maak een nieuw account aan en bevestig dat gebruiker ingelogd is
+    Maak een nieuw account aan en bevestig dat gebruiker ingelogd is
+    Log out
 
-Login to webshop and confirm user is logged in
-    Log in
-    Bevestig dat gebruiker ingelogd is
+New account
+    Create account
