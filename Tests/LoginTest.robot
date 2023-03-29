@@ -13,8 +13,8 @@ Test Teardown   Exit Browser
 PositiefLoginTest
     Navigate to HomePage 
     Log in
-    Exit Browser
+    Log out
 
-Login to webshop and confirm user is logged in
-    Log in
-    Bevestig dat gebruiker ingelogd is
+Log in and confirm that user is signed in
+    Log in and confirm that user is signed in
+    Log out

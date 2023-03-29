@@ -4,6 +4,10 @@ Navigate to HomePage
     Open Browser   ${url}      ${browser}
     Maximize Browser Window
 
+Navigate to HomePage and show all products page 1
+    Navigate to HomePage
+    Go to All products page 1
+
 Exit Browser
     Close Browser
     

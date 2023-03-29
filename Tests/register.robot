@@ -9,8 +9,8 @@ Test Setup  Navigate to HomePage
 Test Teardown   Exit Browser
 
 *** Test Cases ***
-Maak een nieuw account aan en bevestig dat gebruiker ingelogd is
-    Maak een nieuw account aan en bevestig dat gebruiker ingelogd is
+Create new account and verify that user is signed in
+    Create new account and verify that user is signed in
     Log out
 
 New account

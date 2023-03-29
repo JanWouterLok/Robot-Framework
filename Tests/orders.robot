@@ -4,24 +4,22 @@ Library     String
 Resource    ../Resources/Keywords/homePageKeywords.robot
 Resource    ../Resources/Keywords/registerKeywords.robot
 Resource    ../Resources/Keywords/ordersKeywords.robot
+Resource    ../Resources/Keywords/loginKeywords.robot
 Resource    ../Resources/Variables/homePageVariable.robot
 Test Setup  Navigate to HomePage
 Test Teardown   Exit Browser
 
 *** Test Cases ***
+
 New order
     Search product
     Add product in cart
 
-Order plaatsen en versturen naar je eigen adres
-    Maak een nieuw account aan en bevestig dat gebruiker ingelogd is
-    Click Element  css:img[src='https://webshop.mobiletestautomation.nl/8-home_default/mug-today-is-a-good-day.jpg']
-    Product toevoegen aan winkelwagen en afrekenen
-    Bestellen
-    Adresgegevens invullen
-    Adresgegevens bevestigen
-    Order plaatsen en bevestiging dat order echt geplaatst is
+Order something and send to your own address
+    Create new account and verify that user is signed in
+    Order something and send to your own address
     Log out
 
-PLace an order with multiple products
-    Plaats 5 producten in de winkelwagen
+Add 5 products to the shopping cart
+    Navigate to HomePage and show all products page 1
+    Add 5 products to the shopping cart
