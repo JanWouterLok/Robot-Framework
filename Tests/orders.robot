@@ -5,6 +5,7 @@ Resource    ../Resources/Keywords/homePageKeywords.robot
 Resource    ../Resources/Keywords/registerKeywords.robot
 Resource    ../Resources/Keywords/ordersKeywords.robot
 Resource    ../Resources/Keywords/loginKeywords.robot
+Resource    ../Resources/Variables/loginVariable.robot
 Resource    ../Resources/Variables/homePageVariable.robot
 Test Setup  Navigate to HomePage
 Test Teardown   Exit Browser
@@ -23,3 +24,8 @@ Order something and send to your own address
 Add 5 products to the shopping cart
     Navigate to HomePage and show all products page 1
     Add 5 products to the shopping cart
+
+Search product and confirm that right products are shown
+    Log in
+    Search product and confirm that right products are shown
+    Log out

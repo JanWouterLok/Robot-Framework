@@ -1,41 +1,832 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230329 17:10:00.134" rpa="false" schemaversion="3">
-<suite id="s1" name="homePage" source="C:\Robot-Framework\Tests\homePage.robot">
-<test id="s1-t1" name="Search test" line="10">
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230330 11:46:33.853" rpa="false" schemaversion="3">
+<suite id="s1" name="Orders" source="C:\Robot-Framework\Tests\orders.robot">
+<test id="s1-t1" name="New order" line="15">
 <kw name="Navigate to HomePage" library="homePageKeywords" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230329 17:10:00.254" level="FAIL">Variable '${url}' not found.</msg>
-<status status="FAIL" starttime="20230329 17:10:00.253" endtime="20230329 17:10:00.254"/>
+<msg timestamp="20230330 11:46:33.986" level="INFO">Opening browser 'chrome' to base url 'https://webshop.mobiletestautomation.nl/'.</msg>
+<status status="PASS" starttime="20230330 11:46:33.986" endtime="20230330 11:46:35.904"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="NOT RUN" starttime="20230329 17:10:00.254" endtime="20230329 17:10:00.254"/>
+<status status="PASS" starttime="20230330 11:46:35.904" endtime="20230330 11:46:36.026"/>
 </kw>
-<status status="FAIL" starttime="20230329 17:10:00.253" endtime="20230329 17:10:00.254"/>
+<status status="PASS" starttime="20230330 11:46:33.986" endtime="20230330 11:46:36.026"/>
+</kw>
+<kw name="Search product" library="homePageKeywords">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>class=ui-autocomplete-input</arg>
+<arg>shirt</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230330 11:46:36.026" level="INFO">Typing text 'shirt' into text field 'class=ui-autocomplete-input'.</msg>
+<status status="PASS" starttime="20230330 11:46:36.026" endtime="20230330 11:46:36.105"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>class=ui-autocomplete-input</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230330 11:46:36.107" level="INFO">Sending key(s) ('RETURN',) to class=ui-autocomplete-input element.</msg>
+<msg timestamp="20230330 11:46:36.400" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20230330 11:46:36.400" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20230330 11:46:36.105" endtime="20230330 11:46:37.041"/>
+</kw>
+<status status="PASS" starttime="20230330 11:46:36.026" endtime="20230330 11:46:37.041"/>
+</kw>
+<kw name="Add product in cart" library="ordersKeywords">
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230330 11:46:40.042" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230330 11:46:37.041" endtime="20230330 11:46:40.042"/>
+</kw>
+<status status="PASS" starttime="20230330 11:46:37.041" endtime="20230330 11:46:40.042"/>
 </kw>
 <kw name="Exit Browser" library="homePageKeywords" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230329 17:10:00.254" endtime="20230329 17:10:00.254"/>
+<status status="PASS" starttime="20230330 11:46:40.042" endtime="20230330 11:46:42.183"/>
 </kw>
-<status status="PASS" starttime="20230329 17:10:00.254" endtime="20230329 17:10:00.254"/>
+<status status="PASS" starttime="20230330 11:46:40.042" endtime="20230330 11:46:42.183"/>
 </kw>
-<status status="FAIL" starttime="20230329 17:10:00.253" endtime="20230329 17:10:00.255">Setup failed:
-Variable '${url}' not found.</status>
+<status status="PASS" starttime="20230330 11:46:33.983" endtime="20230330 11:46:42.183"/>
 </test>
-<status status="FAIL" starttime="20230329 17:10:00.134" endtime="20230329 17:10:00.256"/>
+<test id="s1-t2" name="Order something and send to your own address" line="19">
+<kw name="Navigate to HomePage" library="homePageKeywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230330 11:46:42.190" level="INFO">Opening browser 'chrome' to base url 'https://webshop.mobiletestautomation.nl/'.</msg>
+<status status="PASS" starttime="20230330 11:46:42.188" endtime="20230330 11:46:43.968"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230330 11:46:43.968" endtime="20230330 11:46:44.086"/>
+</kw>
+<status status="PASS" starttime="20230330 11:46:42.188" endtime="20230330 11:46:44.086"/>
+</kw>
+<kw name="Create new account and verify that user is signed in" library="registerKeywords">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>css:a[title='Log in to your customer account']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230330 11:46:44.086" level="INFO">Clicking link 'css:a[title='Log in to your customer account']'.</msg>
+<status status="PASS" starttime="20230330 11:46:44.086" endtime="20230330 11:46:44.475"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>css:a[data-link-action=display-register-form]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230330 11:46:44.476" level="INFO">Clicking link 'css:a[data-link-action=display-register-form]'.</msg>
+<status status="PASS" starttime="20230330 11:46:44.475" endtime="20230330 11:46:44.776"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:input[name=id_gender][value='1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230330 11:46:44.776" level="INFO">Clicking element 'css:input[name=id_gender][value='1']'.</msg>
+<status status="PASS" starttime="20230330 11:46:44.776" endtime="20230330 11:46:44.819"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=firstname]</arg>
+<arg>Strange</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230330 11:46:44.819" level="INFO">Typing text 'Strange' into text field 'css:input[name=firstname]'.</msg>
+<status status="PASS" starttime="20230330 11:46:44.819" endtime="20230330 11:46:44.873"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=lastname]</arg>
+<arg>Bird</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230330 11:46:44.873" level="INFO">Typing text 'Bird' into text field 'css:input[name=lastname]'.</msg>
+<status status="PASS" starttime="20230330 11:46:44.873" endtime="20230330 11:46:44.930"/>
+</kw>
+<kw name="Generate Random String" library="String">
+<var>${randomEmail}</var>
+<arg>8-12</arg>
+<arg>[LETTERS][NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20230330 11:46:44.930" level="INFO">${randomEmail} = 6VvHPCjDUoj</msg>
+<status status="PASS" starttime="20230330 11:46:44.930" endtime="20230330 11:46:44.930"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[class=form-control][name=email]</arg>
+<arg>${randomEmail}@birdmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230330 11:46:44.931" level="INFO">Typing text '6VvHPCjDUoj@birdmail.com' into text field 'css:input[class=form-control][name=email]'.</msg>
+<status status="PASS" starttime="20230330 11:46:44.931" endtime="20230330 11:46:44.993"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=password]</arg>
+<arg>gehiem</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230330 11:46:44.993" level="INFO">Typing text 'gehiem' into text field 'css:input[name=password]'.</msg>
+<status status="PASS" starttime="20230330 11:46:44.993" endtime="20230330 11:46:45.050"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=birthday]</arg>
+<arg>02/23/1975</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230330 11:46:45.051" level="INFO">Typing text '02/23/1975' into text field 'css:input[name=birthday]'.</msg>
+<status status="PASS" starttime="20230330 11:46:45.050" endtime="20230330 11:46:45.109"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:button[data-link-action=save-customer][type=submit]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230330 11:46:45.111" level="INFO">Clicking button 'css:button[data-link-action=save-customer][type=submit]'.</msg>
+<status status="PASS" starttime="20230330 11:46:45.111" endtime="20230330 11:46:46.481"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>class=account</arg>
+<arg>Strange Bird</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230330 11:46:46.481" endtime="20230330 11:46:46.510"/>
+</kw>
+<status status="PASS" starttime="20230330 11:46:44.086" endtime="20230330 11:46:46.511"/>
+</kw>
+<kw name="Order something and send to your own address" library="ordersKeywords">
+<kw name="Select Mug Today Is A Good Day" library="ordersKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:img[src='https://webshop.mobiletestautomation.nl/8-home_default/mug-today-is-a-good-day.jpg']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230330 11:46:46.511" endtime="20230330 11:46:46.533"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:img[src='https://webshop.mobiletestautomation.nl/8-home_default/mug-today-is-a-good-day.jpg']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230330 11:46:46.533" level="INFO">Clicking element 'css:img[src='https://webshop.mobiletestautomation.nl/8-home_default/mug-today-is-a-good-day.jpg']'.</msg>
+<status status="PASS" starttime="20230330 11:46:46.533" endtime="20230330 11:46:46.908"/>
+</kw>
+<status status="PASS" starttime="20230330 11:46:46.511" endtime="20230330 11:46:46.908"/>
+</kw>
+<kw name="Add product to shopping cart and pay everything" library="ordersKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:button[data-button-action=add-to-cart]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230330 11:46:46.909" level="INFO">Clicking button 'css:button[data-button-action=add-to-cart]'.</msg>
+<status status="PASS" starttime="20230330 11:46:46.909" endtime="20230330 11:46:46.959"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:div[class=cart-content-btn] a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230330 11:46:46.959" endtime="20230330 11:46:47.609"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:div[class=cart-content-btn] a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230330 11:46:47.609" level="INFO">Clicking element 'css:div[class=cart-content-btn] a'.</msg>
+<status status="PASS" starttime="20230330 11:46:47.609" endtime="20230330 11:46:47.932"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>css:div[class=cart-content-btn] a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20230330 11:46:47.932" endtime="20230330 11:46:47.939"/>
+</kw>
+<status status="PASS" starttime="20230330 11:46:46.909" endtime="20230330 11:46:47.939"/>
+</kw>
+<kw name="Click proceed to checkout button" library="ordersKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:a[href='https://webshop.mobiletestautomation.nl/order']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230330 11:46:47.940" level="INFO">Clicking element 'css:a[href='https://webshop.mobiletestautomation.nl/order']'.</msg>
+<status status="PASS" starttime="20230330 11:46:47.939" endtime="20230330 11:46:48.276"/>
+</kw>
+<status status="PASS" starttime="20230330 11:46:47.939" endtime="20230330 11:46:48.277"/>
+</kw>
+<kw name="Fill address and confirm" library="ordersKeywords">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=address1]</arg>
+<arg>Straat</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230330 11:46:48.277" level="INFO">Typing text 'Straat' into text field 'css:input[name=address1]'.</msg>
+<status status="PASS" starttime="20230330 11:46:48.277" endtime="20230330 11:46:48.344"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=address2]</arg>
+<arg>21</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230330 11:46:48.344" level="INFO">Typing text '21' into text field 'css:input[name=address2]'.</msg>
+<status status="PASS" starttime="20230330 11:46:48.344" endtime="20230330 11:46:48.397"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=postcode]</arg>
+<arg>1111 AA</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230330 11:46:48.397" level="INFO">Typing text '1111 AA' into text field 'css:input[name=postcode]'.</msg>
+<status status="PASS" starttime="20230330 11:46:48.397" endtime="20230330 11:46:48.465"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=city]</arg>
+<arg>Steenwijk</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230330 11:46:48.465" level="INFO">Typing text 'Steenwijk' into text field 'css:input[name=city]'.</msg>
+<status status="PASS" starttime="20230330 11:46:48.465" endtime="20230330 11:46:48.524"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:button[name=confirm-addresses]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230330 11:46:48.524" level="INFO">Clicking button 'css:button[name=confirm-addresses]'.</msg>
+<status status="PASS" starttime="20230330 11:46:48.524" endtime="20230330 11:46:49.286"/>
+</kw>
+<status status="PASS" starttime="20230330 11:46:48.277" endtime="20230330 11:46:49.286"/>
+</kw>
+<kw name="Place order and confirm" library="ordersKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:button[name=confirmDeliveryOption]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230330 11:46:49.286" level="INFO">Clicking button 'css:button[name=confirmDeliveryOption]'.</msg>
+<status status="PASS" starttime="20230330 11:46:49.286" endtime="20230330 11:46:49.996"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:input[id=payment-option-2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230330 11:46:49.997" level="INFO">Clicking element 'css:input[id=payment-option-2]'.</msg>
+<status status="PASS" starttime="20230330 11:46:49.996" endtime="20230330 11:46:50.037"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:input[id='conditions_to_approve[terms-and-conditions]']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230330 11:46:50.037" level="INFO">Clicking element 'css:input[id='conditions_to_approve[terms-and-conditions]']'.</msg>
+<status status="PASS" starttime="20230330 11:46:50.037" endtime="20230330 11:46:50.070"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Place order</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230330 11:46:50.070" level="INFO">Clicking button 'Place order'.</msg>
+<status status="PASS" starttime="20230330 11:46:50.070" endtime="20230330 11:46:51.522"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>css:h3[class='h1 card-title']</arg>
+<arg>YOUR ORDER IS CONFIRMED</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230330 11:46:51.549" level="INFO">Element 'css:h3[class='h1 card-title']' contains text 'YOUR ORDER IS CONFIRMED'.</msg>
+<status status="PASS" starttime="20230330 11:46:51.522" endtime="20230330 11:46:51.550"/>
+</kw>
+<status status="PASS" starttime="20230330 11:46:49.286" endtime="20230330 11:46:51.550"/>
+</kw>
+<status status="PASS" starttime="20230330 11:46:46.511" endtime="20230330 11:46:51.550"/>
+</kw>
+<kw name="Log out" library="homePageKeywords">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>css:a[class='logout hidden-sm-down']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230330 11:46:51.551" level="INFO">Clicking link 'css:a[class='logout hidden-sm-down']'.</msg>
+<status status="PASS" starttime="20230330 11:46:51.551" endtime="20230330 11:46:52.149"/>
+</kw>
+<status status="PASS" starttime="20230330 11:46:51.551" endtime="20230330 11:46:52.149"/>
+</kw>
+<kw name="Exit Browser" library="homePageKeywords" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230330 11:46:52.150" endtime="20230330 11:46:54.254"/>
+</kw>
+<status status="PASS" starttime="20230330 11:46:52.150" endtime="20230330 11:46:54.254"/>
+</kw>
+<status status="PASS" starttime="20230330 11:46:42.183" endtime="20230330 11:46:54.254"/>
+</test>
+<test id="s1-t3" name="Add 5 products to the shopping cart" line="24">
+<kw name="Navigate to HomePage" library="homePageKeywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230330 11:46:54.261" level="INFO">Opening browser 'chrome' to base url 'https://webshop.mobiletestautomation.nl/'.</msg>
+<status status="PASS" starttime="20230330 11:46:54.261" endtime="20230330 11:46:55.990"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230330 11:46:55.990" endtime="20230330 11:46:56.113"/>
+</kw>
+<status status="PASS" starttime="20230330 11:46:54.261" endtime="20230330 11:46:56.113"/>
+</kw>
+<kw name="Navigate to HomePage and show all products page 1" library="homePageKeywords">
+<kw name="Navigate to HomePage" library="homePageKeywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230330 11:46:56.113" level="INFO">Opening browser 'chrome' to base url 'https://webshop.mobiletestautomation.nl/'.</msg>
+<status status="PASS" starttime="20230330 11:46:56.113" endtime="20230330 11:46:58.177"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230330 11:46:58.177" endtime="20230330 11:46:58.301"/>
+</kw>
+<status status="PASS" starttime="20230330 11:46:56.113" endtime="20230330 11:46:58.301"/>
+</kw>
+<kw name="Go to All products page 1" library="ordersKeywords">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>css:a[href='https://webshop.mobiletestautomation.nl/2-home']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230330 11:46:58.301" level="INFO">Clicking link 'css:a[href='https://webshop.mobiletestautomation.nl/2-home']'.</msg>
+<status status="PASS" starttime="20230330 11:46:58.301" endtime="20230330 11:46:59.083"/>
+</kw>
+<status status="PASS" starttime="20230330 11:46:58.301" endtime="20230330 11:46:59.083"/>
+</kw>
+<status status="PASS" starttime="20230330 11:46:56.113" endtime="20230330 11:46:59.083"/>
+</kw>
+<kw name="Add 5 products to the shopping cart" library="ordersKeywords">
+<kw name="Select Mug The Adventure Begins" library="ordersKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:img[src='https://webshop.mobiletestautomation.nl/7-home_default/mug-the-adventure-begins.jpg']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230330 11:46:59.084" endtime="20230330 11:46:59.104"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:img[src='https://webshop.mobiletestautomation.nl/7-home_default/mug-the-adventure-begins.jpg']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230330 11:46:59.104" level="INFO">Clicking element 'css:img[src='https://webshop.mobiletestautomation.nl/7-home_default/mug-the-adventure-begins.jpg']'.</msg>
+<status status="PASS" starttime="20230330 11:46:59.104" endtime="20230330 11:46:59.459"/>
+</kw>
+<status status="PASS" starttime="20230330 11:46:59.084" endtime="20230330 11:46:59.459"/>
+</kw>
+<kw name="Add product to shopping cart" library="ordersKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:button[data-button-action=add-to-cart]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230330 11:46:59.461" level="INFO">Clicking button 'css:button[data-button-action=add-to-cart]'.</msg>
+<status status="PASS" starttime="20230330 11:46:59.460" endtime="20230330 11:46:59.516"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:div[class=cart-content-btn] button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230330 11:46:59.516" endtime="20230330 11:47:00.570"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:div[class=cart-content-btn] button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:00.570" level="INFO">Clicking button 'css:div[class=cart-content-btn] button'.</msg>
+<status status="PASS" starttime="20230330 11:47:00.570" endtime="20230330 11:47:00.610"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>css:div[class=cart-content-btn] button</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20230330 11:47:00.610" endtime="20230330 11:47:00.837"/>
+</kw>
+<status status="PASS" starttime="20230330 11:46:59.460" endtime="20230330 11:47:00.837"/>
+</kw>
+<kw name="Go to All products page 2 via Breadcrumblist" library="ordersKeywords">
+<kw name="Navigate to homepage via BreadcrumbList" library="ordersKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:ol[itemtype='http://schema.org/BreadcrumbList'] span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:00.837" level="INFO">Clicking element 'css:ol[itemtype='http://schema.org/BreadcrumbList'] span'.</msg>
+<status status="PASS" starttime="20230330 11:47:00.837" endtime="20230330 11:47:01.807"/>
+</kw>
+<status status="PASS" starttime="20230330 11:47:00.837" endtime="20230330 11:47:01.807"/>
+</kw>
+<kw name="Go to All products page 1" library="ordersKeywords">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>css:a[href='https://webshop.mobiletestautomation.nl/2-home']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:01.808" level="INFO">Clicking link 'css:a[href='https://webshop.mobiletestautomation.nl/2-home']'.</msg>
+<status status="PASS" starttime="20230330 11:47:01.807" endtime="20230330 11:47:02.359"/>
+</kw>
+<status status="PASS" starttime="20230330 11:47:01.807" endtime="20230330 11:47:02.360"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>css:a[rel=nofollow][href='https://webshop.mobiletestautomation.nl/2-home?page=2']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:02.360" level="INFO">Clicking link 'css:a[rel=nofollow][href='https://webshop.mobiletestautomation.nl/2-home?page=2']'.</msg>
+<status status="PASS" starttime="20230330 11:47:02.360" endtime="20230330 11:47:02.407"/>
+</kw>
+<status status="PASS" starttime="20230330 11:47:00.837" endtime="20230330 11:47:02.407"/>
+</kw>
+<kw name="Select Hummingbird - Vector Graphics" library="ordersKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:img[src='https://webshop.mobiletestautomation.nl/17-home_default/hummingbird-vector-graphics.jpg']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230330 11:47:02.407" endtime="20230330 11:47:02.839"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:img[src='https://webshop.mobiletestautomation.nl/17-home_default/hummingbird-vector-graphics.jpg']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:02.839" level="INFO">Clicking element 'css:img[src='https://webshop.mobiletestautomation.nl/17-home_default/hummingbird-vector-graphics.jpg']'.</msg>
+<status status="PASS" starttime="20230330 11:47:02.839" endtime="20230330 11:47:03.168"/>
+</kw>
+<status status="PASS" starttime="20230330 11:47:02.407" endtime="20230330 11:47:03.168"/>
+</kw>
+<kw name="Add product to shopping cart" library="ordersKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:button[data-button-action=add-to-cart]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:03.169" level="INFO">Clicking button 'css:button[data-button-action=add-to-cart]'.</msg>
+<status status="PASS" starttime="20230330 11:47:03.168" endtime="20230330 11:47:03.213"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:div[class=cart-content-btn] button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230330 11:47:03.213" endtime="20230330 11:47:03.853"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:div[class=cart-content-btn] button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:03.853" level="INFO">Clicking button 'css:div[class=cart-content-btn] button'.</msg>
+<status status="PASS" starttime="20230330 11:47:03.853" endtime="20230330 11:47:03.894"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>css:div[class=cart-content-btn] button</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20230330 11:47:03.894" endtime="20230330 11:47:04.119"/>
+</kw>
+<status status="PASS" starttime="20230330 11:47:03.168" endtime="20230330 11:47:04.119"/>
+</kw>
+<kw name="Go to All products page 1 via Breadcrumblist" library="ordersKeywords">
+<kw name="Navigate to homepage via BreadcrumbList" library="ordersKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:ol[itemtype='http://schema.org/BreadcrumbList'] span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:04.119" level="INFO">Clicking element 'css:ol[itemtype='http://schema.org/BreadcrumbList'] span'.</msg>
+<status status="PASS" starttime="20230330 11:47:04.119" endtime="20230330 11:47:04.641"/>
+</kw>
+<status status="PASS" starttime="20230330 11:47:04.119" endtime="20230330 11:47:04.642"/>
+</kw>
+<kw name="Go to All products page 1" library="ordersKeywords">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>css:a[href='https://webshop.mobiletestautomation.nl/2-home']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:04.643" level="INFO">Clicking link 'css:a[href='https://webshop.mobiletestautomation.nl/2-home']'.</msg>
+<status status="PASS" starttime="20230330 11:47:04.642" endtime="20230330 11:47:05.020"/>
+</kw>
+<status status="PASS" starttime="20230330 11:47:04.642" endtime="20230330 11:47:05.020"/>
+</kw>
+<status status="PASS" starttime="20230330 11:47:04.119" endtime="20230330 11:47:05.020"/>
+</kw>
+<kw name="Select Brown Bear Cushion" library="ordersKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:img[src='https://webshop.mobiletestautomation.nl/11-home_default/brown-bear-cushion.jpg']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230330 11:47:05.021" endtime="20230330 11:47:05.041"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:img[src='https://webshop.mobiletestautomation.nl/11-home_default/brown-bear-cushion.jpg']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:05.041" level="INFO">Clicking element 'css:img[src='https://webshop.mobiletestautomation.nl/11-home_default/brown-bear-cushion.jpg']'.</msg>
+<status status="PASS" starttime="20230330 11:47:05.041" endtime="20230330 11:47:05.406"/>
+</kw>
+<status status="PASS" starttime="20230330 11:47:05.020" endtime="20230330 11:47:05.406"/>
+</kw>
+<kw name="Add product to shopping cart" library="ordersKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:button[data-button-action=add-to-cart]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:05.407" level="INFO">Clicking button 'css:button[data-button-action=add-to-cart]'.</msg>
+<status status="PASS" starttime="20230330 11:47:05.406" endtime="20230330 11:47:05.455"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:div[class=cart-content-btn] button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230330 11:47:05.455" endtime="20230330 11:47:06.549"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:div[class=cart-content-btn] button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:06.549" level="INFO">Clicking button 'css:div[class=cart-content-btn] button'.</msg>
+<status status="PASS" starttime="20230330 11:47:06.549" endtime="20230330 11:47:06.592"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>css:div[class=cart-content-btn] button</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20230330 11:47:06.592" endtime="20230330 11:47:06.816"/>
+</kw>
+<status status="PASS" starttime="20230330 11:47:05.406" endtime="20230330 11:47:06.816"/>
+</kw>
+<kw name="Go to All products page 2 via Breadcrumblist" library="ordersKeywords">
+<kw name="Navigate to homepage via BreadcrumbList" library="ordersKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:ol[itemtype='http://schema.org/BreadcrumbList'] span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:06.816" level="INFO">Clicking element 'css:ol[itemtype='http://schema.org/BreadcrumbList'] span'.</msg>
+<status status="PASS" starttime="20230330 11:47:06.816" endtime="20230330 11:47:07.696"/>
+</kw>
+<status status="PASS" starttime="20230330 11:47:06.816" endtime="20230330 11:47:07.696"/>
+</kw>
+<kw name="Go to All products page 1" library="ordersKeywords">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>css:a[href='https://webshop.mobiletestautomation.nl/2-home']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:07.697" level="INFO">Clicking link 'css:a[href='https://webshop.mobiletestautomation.nl/2-home']'.</msg>
+<status status="PASS" starttime="20230330 11:47:07.697" endtime="20230330 11:47:08.305"/>
+</kw>
+<status status="PASS" starttime="20230330 11:47:07.697" endtime="20230330 11:47:08.305"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>css:a[rel=nofollow][href='https://webshop.mobiletestautomation.nl/2-home?page=2']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:08.306" level="INFO">Clicking link 'css:a[rel=nofollow][href='https://webshop.mobiletestautomation.nl/2-home?page=2']'.</msg>
+<status status="PASS" starttime="20230330 11:47:08.305" endtime="20230330 11:47:08.352"/>
+</kw>
+<status status="PASS" starttime="20230330 11:47:06.816" endtime="20230330 11:47:08.353"/>
+</kw>
+<kw name="Select Mountain Fox Notebook" library="ordersKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:img[src='https://webshop.mobiletestautomation.nl/18-home_default/mountain-fox-notebook.jpg']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230330 11:47:08.353" endtime="20230330 11:47:08.779"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:img[src='https://webshop.mobiletestautomation.nl/18-home_default/mountain-fox-notebook.jpg']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:08.779" level="INFO">Clicking element 'css:img[src='https://webshop.mobiletestautomation.nl/18-home_default/mountain-fox-notebook.jpg']'.</msg>
+<status status="PASS" starttime="20230330 11:47:08.779" endtime="20230330 11:47:09.014"/>
+</kw>
+<status status="PASS" starttime="20230330 11:47:08.353" endtime="20230330 11:47:09.014"/>
+</kw>
+<kw name="Add product to shopping cart" library="ordersKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:button[data-button-action=add-to-cart]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:09.014" level="INFO">Clicking button 'css:button[data-button-action=add-to-cart]'.</msg>
+<status status="PASS" starttime="20230330 11:47:09.014" endtime="20230330 11:47:09.065"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:div[class=cart-content-btn] button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230330 11:47:09.065" endtime="20230330 11:47:09.702"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:div[class=cart-content-btn] button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:09.702" level="INFO">Clicking button 'css:div[class=cart-content-btn] button'.</msg>
+<status status="PASS" starttime="20230330 11:47:09.702" endtime="20230330 11:47:09.738"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>css:div[class=cart-content-btn] button</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20230330 11:47:09.739" endtime="20230330 11:47:09.963"/>
+</kw>
+<status status="PASS" starttime="20230330 11:47:09.014" endtime="20230330 11:47:09.963"/>
+</kw>
+<kw name="Go to All products page 1 via Breadcrumblist" library="ordersKeywords">
+<kw name="Navigate to homepage via BreadcrumbList" library="ordersKeywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:ol[itemtype='http://schema.org/BreadcrumbList'] span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:09.963" level="INFO">Clicking element 'css:ol[itemtype='http://schema.org/BreadcrumbList'] span'.</msg>
+<status status="PASS" starttime="20230330 11:47:09.963" endtime="20230330 11:47:10.697"/>
+</kw>
+<status status="PASS" starttime="20230330 11:47:09.963" endtime="20230330 11:47:10.697"/>
+</kw>
+<kw name="Go to All products page 1" library="ordersKeywords">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>css:a[href='https://webshop.mobiletestautomation.nl/2-home']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:10.699" level="INFO">Clicking link 'css:a[href='https://webshop.mobiletestautomation.nl/2-home']'.</msg>
+<status status="PASS" starttime="20230330 11:47:10.698" endtime="20230330 11:47:11.297"/>
+</kw>
+<status status="PASS" starttime="20230330 11:47:10.697" endtime="20230330 11:47:11.297"/>
+</kw>
+<status status="PASS" starttime="20230330 11:47:09.963" endtime="20230330 11:47:11.297"/>
+</kw>
+<kw name="Select Today Is A Good Day Framed Poster" library="ordersKeywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:img[src='https://webshop.mobiletestautomation.nl/5-home_default/today-is-a-good-day-framed-poster.jpg']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230330 11:47:11.297" endtime="20230330 11:47:11.323"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:img[src='https://webshop.mobiletestautomation.nl/5-home_default/today-is-a-good-day-framed-poster.jpg']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:11.324" level="INFO">Clicking element 'css:img[src='https://webshop.mobiletestautomation.nl/5-home_default/today-is-a-good-day-framed-poster.jpg']'.</msg>
+<status status="PASS" starttime="20230330 11:47:11.324" endtime="20230330 11:47:11.779"/>
+</kw>
+<status status="PASS" starttime="20230330 11:47:11.297" endtime="20230330 11:47:11.779"/>
+</kw>
+<kw name="Add product to shopping cart and pay everything" library="ordersKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:button[data-button-action=add-to-cart]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:11.780" level="INFO">Clicking button 'css:button[data-button-action=add-to-cart]'.</msg>
+<status status="PASS" starttime="20230330 11:47:11.779" endtime="20230330 11:47:11.819"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:div[class=cart-content-btn] a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230330 11:47:11.819" endtime="20230330 11:47:12.916"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:div[class=cart-content-btn] a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:12.916" level="INFO">Clicking element 'css:div[class=cart-content-btn] a'.</msg>
+<status status="PASS" starttime="20230330 11:47:12.916" endtime="20230330 11:47:13.426"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>css:div[class=cart-content-btn] a</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20230330 11:47:13.426" endtime="20230330 11:47:13.435"/>
+</kw>
+<status status="PASS" starttime="20230330 11:47:11.779" endtime="20230330 11:47:13.435"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>css:span[class=cart-products-count]</arg>
+<arg>(5)</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230330 11:47:13.436" level="INFO">Verifying element 'css:span[class=cart-products-count]' contains exact text '(5)'.</msg>
+<status status="PASS" starttime="20230330 11:47:13.435" endtime="20230330 11:47:13.453"/>
+</kw>
+<status status="PASS" starttime="20230330 11:46:59.084" endtime="20230330 11:47:13.453"/>
+</kw>
+<kw name="Exit Browser" library="homePageKeywords" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230330 11:47:13.454" endtime="20230330 11:47:15.537"/>
+</kw>
+<status status="PASS" starttime="20230330 11:47:13.454" endtime="20230330 11:47:15.537"/>
+</kw>
+<status status="PASS" starttime="20230330 11:46:54.254" endtime="20230330 11:47:15.537"/>
+</test>
+<test id="s1-t4" name="Search product and confirm that right products are shown" line="28">
+<kw name="Navigate to HomePage" library="homePageKeywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230330 11:47:15.545" level="INFO">Opening browser 'chrome' to base url 'https://webshop.mobiletestautomation.nl/'.</msg>
+<status status="PASS" starttime="20230330 11:47:15.544" endtime="20230330 11:47:17.249"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230330 11:47:17.249" endtime="20230330 11:47:17.368"/>
+</kw>
+<status status="PASS" starttime="20230330 11:47:15.544" endtime="20230330 11:47:17.368"/>
+</kw>
+<kw name="Log in" library="loginKeywords">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>css:a[title='Log in to your customer account']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:17.368" level="INFO">Clicking link 'css:a[title='Log in to your customer account']'.</msg>
+<status status="PASS" starttime="20230330 11:47:17.368" endtime="20230330 11:47:17.740"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:17.741" level="INFO">Typing text 'dantester@jourrapide.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20230330 11:47:17.740" endtime="20230330 11:47:17.813"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${Password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:17.813" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg timestamp="20230330 11:47:17.841" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230330 11:47:17.871" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230330 11:47:17.813" endtime="20230330 11:47:17.871"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:submit-login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:17.871" level="INFO">Clicking button 'id:submit-login'.</msg>
+<status status="PASS" starttime="20230330 11:47:17.871" endtime="20230330 11:47:18.815"/>
+</kw>
+<status status="PASS" starttime="20230330 11:47:17.368" endtime="20230330 11:47:18.815"/>
+</kw>
+<kw name="Search product and confirm that right products are shown" library="ordersKeywords">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=s]</arg>
+<arg>fox</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:18.816" level="INFO">Typing text 'fox' into text field 'css:input[name=s]'.</msg>
+<status status="PASS" starttime="20230330 11:47:18.815" endtime="20230330 11:47:18.874"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>css:input[name=s]</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230330 11:47:18.874" level="INFO">Sending key(s) ('RETURN',) to css:input[name=s] element.</msg>
+<msg timestamp="20230330 11:47:19.163" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20230330 11:47:19.163" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20230330 11:47:18.874" endtime="20230330 11:47:19.502"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>@{productNames}</var>
+<arg>css:.product-title</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20230330 11:47:19.518" level="INFO">@{productNames} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="7dcc072edbd17f62ceaeca5ddfbbf15b", element="6193bb23-2aa8-4e5b-a74f-ce6358652266")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement (ses...</msg>
+<status status="PASS" starttime="20230330 11:47:19.502" endtime="20230330 11:47:19.518"/>
+</kw>
+<for flavor="IN">
+<var>${element}</var>
+<value>@{productNames}</value>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="7dcc072edbd17f62ceaeca5ddfbbf15b", element="6193bb23-2aa8-4e5b-a74f-ce6358652266")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:19.530" level="INFO">${text} = Mountain Fox Cushion</msg>
+<status status="PASS" starttime="20230330 11:47:19.518" endtime="20230330 11:47:19.530"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230330 11:47:19.531" endtime="20230330 11:47:19.531"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>Fox</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230330 11:47:19.539" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="7dcc072edbd17f62ceaeca5ddfbbf15b", element="6193bb23-2aa8-4e5b-a74f-ce6358652266")&gt;' contains text 'Fox'.</msg>
+<status status="PASS" starttime="20230330 11:47:19.531" endtime="20230330 11:47:19.539"/>
+</kw>
+<status status="PASS" starttime="20230330 11:47:19.518" endtime="20230330 11:47:19.539"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="7dcc072edbd17f62ceaeca5ddfbbf15b", element="18956f6e-617c-4e30-b5fd-dd8e69a77f7a")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:19.550" level="INFO">${text} = Mountain Fox - Vector Graphics</msg>
+<status status="PASS" starttime="20230330 11:47:19.539" endtime="20230330 11:47:19.550"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230330 11:47:19.550" endtime="20230330 11:47:19.550"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>Fox</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230330 11:47:19.558" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="7dcc072edbd17f62ceaeca5ddfbbf15b", element="18956f6e-617c-4e30-b5fd-dd8e69a77f7a")&gt;' contains text 'Fox'.</msg>
+<status status="PASS" starttime="20230330 11:47:19.550" endtime="20230330 11:47:19.558"/>
+</kw>
+<status status="PASS" starttime="20230330 11:47:19.539" endtime="20230330 11:47:19.558"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="7dcc072edbd17f62ceaeca5ddfbbf15b", element="4da64a27-8d47-4fb8-949c-de18aa6733c4")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:19.568" level="INFO">${text} = Mountain Fox Notebook</msg>
+<status status="PASS" starttime="20230330 11:47:19.558" endtime="20230330 11:47:19.568"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230330 11:47:19.568" endtime="20230330 11:47:19.569"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>Fox</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230330 11:47:19.575" level="INFO">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="7dcc072edbd17f62ceaeca5ddfbbf15b", element="4da64a27-8d47-4fb8-949c-de18aa6733c4")&gt;' contains text 'Fox'.</msg>
+<status status="PASS" starttime="20230330 11:47:19.569" endtime="20230330 11:47:19.576"/>
+</kw>
+<status status="PASS" starttime="20230330 11:47:19.558" endtime="20230330 11:47:19.576"/>
+</iter>
+<iter>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="7dcc072edbd17f62ceaeca5ddfbbf15b", element="ed080427-6701-4b0c-9750-182880f28ae3")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230330 11:47:19.585" level="INFO">${text} = Orange</msg>
+<status status="PASS" starttime="20230330 11:47:19.576" endtime="20230330 11:47:19.585"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230330 11:47:19.585" endtime="20230330 11:47:19.586"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>Fox</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230330 11:47:19.767" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230330 11:47:19.767" level="FAIL">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="7dcc072edbd17f62ceaeca5ddfbbf15b", element="ed080427-6701-4b0c-9750-182880f28ae3")&gt;' should have contained text 'Fox' but its text was 'Orange'.</msg>
+<status status="FAIL" starttime="20230330 11:47:19.586" endtime="20230330 11:47:19.768"/>
+</kw>
+<status status="FAIL" starttime="20230330 11:47:19.576" endtime="20230330 11:47:19.768"/>
+</iter>
+<status status="FAIL" starttime="20230330 11:47:19.518" endtime="20230330 11:47:19.768"/>
+</for>
+<status status="FAIL" starttime="20230330 11:47:18.815" endtime="20230330 11:47:19.768"/>
+</kw>
+<kw name="Log out" library="homePageKeywords">
+<status status="NOT RUN" starttime="20230330 11:47:19.769" endtime="20230330 11:47:19.769"/>
+</kw>
+<kw name="Exit Browser" library="homePageKeywords" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230330 11:47:19.770" endtime="20230330 11:47:21.868"/>
+</kw>
+<status status="PASS" starttime="20230330 11:47:19.770" endtime="20230330 11:47:21.868"/>
+</kw>
+<status status="FAIL" starttime="20230330 11:47:15.537" endtime="20230330 11:47:21.869">Element '&lt;selenium.webdriver.remote.webelement.WebElement (session="7dcc072edbd17f62ceaeca5ddfbbf15b", element="ed080427-6701-4b0c-9750-182880f28ae3")&gt;' should have contained text 'Fox' but its text was 'Orange'.</status>
+</test>
+<status status="FAIL" starttime="20230330 11:46:33.854" endtime="20230330 11:47:21.870"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="homePage">homePage</stat>
+<stat pass="3" fail="1" skip="0" id="s1" name="Orders">Orders</stat>
 </suite>
 </statistics>
 <errors>

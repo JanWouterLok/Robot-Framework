@@ -92,3 +92,13 @@ Order something and send to your own address
     Click proceed to checkout button
     Fill address and confirm 
     Place order and confirm
+
+Search product and confirm that right products are shown
+    Input Text  css:input[name=s]  fox
+    Press Keys  css:input[name=s]  RETURN
+    @{productNames} =  Get WebElements  css:.product-title
+    FOR  ${element}  IN  @{productNames}
+    ${text}=  Get Text  ${element}  #This line is not necessary but shows the whole description in the log
+    Log To Console  ${text}
+    Element Should Contain  ${element}  Fox
+    END
