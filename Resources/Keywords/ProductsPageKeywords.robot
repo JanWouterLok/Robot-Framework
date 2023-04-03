@@ -85,7 +85,9 @@ Add Valori Mobile App
     Art Element Click
     Execute Javascript      window.scrollTo(0,1500)
     Click Element           xpath=//*[@id="js-product-list"]/div[1]/div[8]/article/div/a/img
-    Add to Element to Cart
+    Element Should Be Disabled        xpath=//button[@class='btn btn-primary add-to-cart']
+    sleep         2
+    
 
 
 #cart a eklenmiyor
@@ -93,13 +95,17 @@ Add an Orange to Cart
     Navigate to WebShop Page
     Fruit Element Click
     Click Element         xpath=//*[@id="js-product-list"]/div[1]/div[1]/article/div/a
-    Add to Element to Cart
+    Element Should Be Disabled        xpath=//button[@class='btn btn-primary add-to-cart']
+    sleep         2
+    
 
 #cart a eklenmiyor
 Add a Banana to Cart
     Navigate to WebShop Page
     Fruit Element Click
     Click Element         xpath=//*[@id="js-product-list"]/div[1]/div[2]/article/div/a/img
+    Element Should Be Disabled        xpath=//button[@class='btn btn-primary add-to-cart'] 
+    sleep         2
     
 
 
@@ -122,6 +128,11 @@ Verify de Order
     ${"confirmed_txt"}    Set Variable    xpath=//*[@id="content-hook_order_confirmation"]/div/div/div/h3
     Log To Console        ${"confirmed_txt"} 
     Element Should Contain      ${"confirmed_txt"}      YOUR ORDER IS CONFIRMED
+     
+    #sub total validation
+    ${sub_Total}=   Get Text    xpath=//table/tbody/tr[1]/td[2]
+    Log To Console         ${sub_Total}  
+    Should Be Equal        ${sub_Total}    €98.89
 
 
 Search a product 
@@ -140,7 +151,6 @@ Verify searchProduct
     END
 
     Element Text Should Be    xpath=//*[@class='col-md-6 hidden-sm-down total-products']    There are 6 products.
-    Element Should Be Contain  
-
+    
 
 

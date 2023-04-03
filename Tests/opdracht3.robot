@@ -1,10 +1,12 @@
 *** Settings ***
 Library           SeleniumLibrary
-Resource          ../Resources/Keywords/LoginKeywords.robot
-Resource          ../Resources/Variables/LoginVariables.robot
-Resource          ../Resources/Variables/RegisterVariables.robot
-Resource          ../Resources/Keywords/ProductsKeywords.robot
-Resource          ../Resources/Keywords/RegisterKeywords.robot
+Resource          ../Resources/Keywords/LoginPageKeywords.robot
+Resource          ../Resources/Variables/LoginPageVariables.robot
+Resource          ../Resources/Variables/RegisterPageVariables.robot
+Resource          ../Resources/Keywords/ProductsPageKeywords.robot
+Resource          ../Resources/Keywords/RegisterPageKeywords.robot
+Resource          ../Resources/Keywords/HomePageKeywords.robot
+Resource          ../Resources/Keywords/HomePageVariables.robot
 Library           String
 Test Setup        Navigate to HomePage
 Test Teardown     Exit Browser
@@ -13,10 +15,10 @@ Test Teardown     Exit Browser
 
 
 
+
 *** Test Cases ***
-Voeg 5 producten toe
+Create a new account and a new address, then adds 5 items to the cart and confirms it.
     Navigate to HomePage
-    #Log in                ${Username}          ${Password}
     Open a new account
     sleep                 3
     Adres Addition
@@ -34,10 +36,9 @@ Voeg 5 producten toe
     #Verify de Order
 
 
-Voeg producten op de cart toe
+Current User Adds and validates products to the Cart
     Navigate to HomePage
-    Open a new account
-    Adres Addition
+    Log in                ${Username}          ${Password}
     Navigate to WebShop Page
     Add a Mug the Adventure Begins
     Add a Hummingbird Printed T-Shirt
@@ -49,6 +50,15 @@ Voeg producten op de cart toe
     Exit Browser
 
 
-Product kan niet toevoegen
+Verify that some products should not be added to the cart
     Log in       ${Username}          ${Password}
+    Add an Orange to Cart
     Add a Banana to Cart
+    Add Valori Mobile App
+    
+
+# AdresAdditionTest
+#     Navigate to HomePage
+#     Log in                doejohn@test.nl            Test1234!
+#     Adres Addition
+    

@@ -1,6 +1,10 @@
 *** Settings ***
-Library   SeleniumLibrary
+Library      SeleniumLibrary
 Library      String
+Resource    ../Resources/Keywords/HomePageVariables.robot
+Resource    ../Resources/Keywords/LoginPageVariables.robot
+Resource    ../Resources/Keywords/RegisterPageVariables.robot
+
 
 *** Variables ***
 ${firstname}         John  
@@ -25,9 +29,9 @@ Open a new account
 
 
 
-# Verify new Account
-#     ${user} =    Get Text       xpath=//*[@class='account']
-#     Log To Console              ${user}
-#     Element Text Should Be      xpath=//*[@class='account']      John Doe
-#     Element Should Be Visible   xpath=//*[@id="_desktop_user_info"]/div/a[1]
+Verify new Account
+    ${user} =    Get Text       xpath=//*[@class='account']
+    Log To Console              ${user}
+    Element Text Should Be      xpath=//*[@class='account']      John Doe
+    Element Should Be Visible   xpath=//*[@id="_desktop_user_info"]/div/a[1]
 

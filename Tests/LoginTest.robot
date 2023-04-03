@@ -1,7 +1,8 @@
 *** Settings ***
 Library     SeleniumLibrary
-Resource    ../Resources/Keywords/LoginKeywords.robot
-Resource    ../Resources/Variables/LoginVariables.robot
+Resource    ../Resources/Keywords/LoginPageKeywords.robot
+Resource    ../Resources/Variables/LoginPageVariables.robot
+Resource    ../Resources/Keywords/HomePageKeywords.robot
 
 
 *** Test Cases ***

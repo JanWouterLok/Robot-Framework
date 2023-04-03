@@ -15,6 +15,6 @@ Test Teardown     Exit Browser
 
 
 *** Test Cases ***
-Zoek product op en Bevestig dat product zicthbaar is
+Search a product and Confirm that product is visible
     Search a product  
     Verify searchProduct

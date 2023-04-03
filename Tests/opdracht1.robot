@@ -1,14 +1,16 @@
 *** Settings ***
 Library           SeleniumLibrary
-Resource          ../Resources/Keywords/LoginKeywords.robot
-Resource          ../Resources/Variables/LoginVariable.robot
+Resource          ../Resources/Keywords/LoginPageKeywords.robot
+Resource          ../Resources/Variables/LoginPageVariable.robot
+Resource          ../Resources/Variables/HomePageVariables.robot
+Resource          ../Resources/Keywords/HomePageKeywords.robot
 Test Setup        Navigate to HomePage
 #Test Teardown     Exit Browser
 
 
 *** Test Cases ***
 PositiefLoginTest 
-    Log in                     ${Username}             ${Password}
+    Log in                     
     Verify Login 
     
 
@@ -25,3 +27,8 @@ NegatiefLoginTest2
 NegatiefLoginTest3
     Log in                     ${onjuisteUserName}    ${onjuistePassword} 
     Verify Login is failed 
+
+
+Verify unable to login with wrong email
+    Log in                     ${'WrongUsername}    ${onjuistePassword}
+    alert should be present    Gebruik een '@' in het e-mailadres. In ${'WrongUsername} ontbreekt een '@'.

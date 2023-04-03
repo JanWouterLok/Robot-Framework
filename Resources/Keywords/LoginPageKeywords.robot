@@ -1,6 +1,8 @@
 *** Settings ***
 Library      SeleniumLibrary
 Library      String
+Resource     ../Variables/LoginPageVariables.robot
+Resource     ../Variables/HomePageVariables.robot
 
 
 
@@ -11,6 +13,13 @@ Log in
     Input Text         name=email                 ${username} 
     Input Text         name=password              ${Password}
     Click Button       id=submit-login
+
+
+Enter username
+    Input Text         name=email                 ${username} 
+
+Enter password
+    Input Text         name=password              ${Password}
 
 Navigate Log in
     Click Link         xpath=//*[@id="_desktop_user_info"]/div/a
