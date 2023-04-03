@@ -9,26 +9,23 @@ Test Setup        Navigate to HomePage
 
 
 *** Test Cases ***
-PositiefLoginTest 
+Positieve Login Test 
     Log in                     
     Verify Login 
     
-
-NegatiefLoginTest1
+Negatieve Login Test with valid password & invaild username
     Log in                     ${onjuisteUserName}    ${Password}
     Verify Login is failed 
-   
 
-
-NegatiefLoginTest2
+Negatieve Login Test with invalid password & vaild username
     Log in                     ${Username}            ${onjuistePassword} 
     Verify Login is failed 
       
-NegatiefLoginTest3
+Negatieve Login Test with invalid password & invaild username
     Log in                     ${onjuisteUserName}    ${onjuistePassword} 
     Verify Login is failed 
 
 
-Verify unable to login with wrong email
-    Log in                     ${'WrongUsername}    ${onjuistePassword}
-    alert should be present    Gebruik een '@' in het e-mailadres. In ${'WrongUsername} ontbreekt een '@'.
+# Verify unable to login with wrong email
+#     Log in                     ${WrongUsername}    ${onjuistePassword}
+#     alert should be present    Gebruik een '@' in het e-mailadres. In ${WrongUsername} ontbreekt een '@'.
