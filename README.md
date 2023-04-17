@@ -73,11 +73,3 @@ pip install --pre --upgrade robotframework-ride==2.0b1  
 
 
 
-
-
-
-pip install -U wxPython
-
-pip install --pre --upgrade robotframework-ride==2.0b1 
-
-
