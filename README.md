@@ -40,29 +40,30 @@ C:\Projects
 
 ## Optional
 
-Install git
+### Install git
 https://github.com/git-guides/install-git
 
 Download and install
 
 
-Install robotframework-requests library
+### Install robotframework-requests library
 ```
 pip install robotframework-requests
 ```
 
 ## Editor
-Install VS Code
+
+### Install VS Code
 https://code.visualstudio.com/download 
 
 Download and install
 
-Install PyCharm (Optional)
+### Install PyCharm (Optional)
 https://www.jetbrains.com/pycharm/download/#section=windows
 
 Download and install
 
-Install RIDE (Optional)
+### Install RIDE (Optional)
 Run the following command
 ```
 pip install -U wxPython
