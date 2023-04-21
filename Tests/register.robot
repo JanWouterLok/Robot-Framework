@@ -5,13 +5,13 @@ Resource    ../Resources/Keywords/homePageKeywords.robot
 Resource    ../Resources/Keywords/registerKeywords.robot
 Resource    ../Resources/Variables/homePageVariable.robot
 Resource    ../Resources/Variables/registerVariable.robot
+Resource    ../Resources/Locators/homePageLocators.robot
+Resource    ../Resources/Locators/registerLocators.robot
 Test Setup  Navigate to HomePage
 Test Teardown   Exit Browser
 
 *** Test Cases ***
-Maak een nieuw account aan en bevestig dat gebruiker ingelogd is
-    Maak een nieuw account aan en bevestig dat gebruiker ingelogd is
+Create an new account
+    Create an new account and confirm that user is logged in
     Log out
 
-New account
-    Create account
