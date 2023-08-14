@@ -1,9 +1,4 @@
 *** Settings ***
-Resource            ../resources/po/LandingPage.resource
-Resource            ../resources/po/SignInPage.resource
-Resource            ../resources/po/AccountPage.resource
-Resource            ../resources/po/TopNav.resource
-Resource            ../resources/po/FooterNav.resource
 Resource            ../Resources/PO/AccountPage.resource
 Resource            ../Resources/PO/FooterNav.resource
 Resource            ../Resources/PO/LandingPage.resource

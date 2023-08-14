@@ -1,8 +1,8 @@
 *** Settings ***
 Library             SeleniumLibrary
 
-Resource            /Resources/Locators/TestCasesVariables.resource
-Resource            /Resources/Locators/SignInPageVariables.resource
+Resource            /Resources/Variables/TestCasesVariables.resource
+Resource            /Resources/Locators/SignInPageLocators.resource
 
 *** Keywords ***
 
