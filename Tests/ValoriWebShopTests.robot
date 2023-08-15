@@ -4,7 +4,7 @@ Library         OperatingSystem
 Library         Dialogs
 Resource        ../Resources/ValoriWebShop.resource
 Resource        ../Resources/Common.resource
-Resource        ../Resougit rces/Variables/TestCasesVariables.resource
+Resource        ../Resources/Variables/TestCasesVariables.resource
 Test Setup      Start web test
 Test Teardown   End web test
 
@@ -29,6 +29,9 @@ Should be able to sign in webshop
 #       3. Enter a valid password
 #       4. Click on login button
 #       5. Verify that the user is logged in
+
+        ValoriWebShop.Go to Valori Webshop landing page
+        ValoriWebShop.Sign in to Valori Webshop
 
 Should not be able to login with invalid username and valid password
     [Documentation]     Enter an invalid username&password and try to sign in

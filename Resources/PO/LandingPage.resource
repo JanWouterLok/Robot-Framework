@@ -1,7 +1,7 @@
 *** Settings ***
 Library             SeleniumLibrary
-Resource            /Resources/Variables/LandingPageVariables.resource
-Resource            /Resources/Variables/TestCasesVariables.resource
+Resource            C:/ValoriRobotFrameWorkProject/Robot-Framework/Resources/Locators/LandingPageLocators.resource
+Resource            C:/ValoriRobotFrameWorkProject/Robot-Framework/Resources/Variables/TestCasesVariables.resource
 
 *** Variables ***
 

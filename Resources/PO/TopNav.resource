@@ -1,10 +1,10 @@
 *** Settings ***
 Library             SeleniumLibrary
-Resource            /Resources/Locators/TopNavLocators.resource
+Resource            C:/ValoriRobotFrameWorkProject/Robot-Framework/Resources/Locators/TopNavLocators.resource
 
 *** Keywords ***
 
 
 Click Sign In Link
 
-    Click Link      ${TOP_NAV_SIGN_IN_LINK}
+        Click Element      ${TOP_NAV_SIGN_IN_LINK}
