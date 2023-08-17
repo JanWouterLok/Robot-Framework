@@ -7,4 +7,8 @@ Resource            C:/ValoriRobotFrameWorkProject/Robot-Framework/Resources/Loc
 
 Click Sign In Link
 
-        Click Element      ${TOP_NAV_SIGN_IN_LINK}
+        Click Element                       ${TOP_NAV_SIGN_IN_LINK}
+
+Verify user is logged in
+
+        Page Should Contain Element         ${TOP_NAV_LOGGED_IN_USER}

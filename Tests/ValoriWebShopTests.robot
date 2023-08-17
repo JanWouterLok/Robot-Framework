@@ -12,28 +12,23 @@ Test Teardown   End web test
 Should be able to open webshop
     [Documentation]     As a user I want to be able to open the webshop
     [Tags]    TC-001    Smoke   Open Webshop
-    ValoriWebShop.Go to Valori Webshop landing page
+
+        ValoriWebShop.Go to Valori Webshop landing page
 
 Should be able to run tests in different browsers
     [Documentation]     As a user I want to be able to open the webshop and run the tests in different browsers
     [Tags]    TC-002    Smoke   Open Webshop
     ${new_browser} =  Get Selection From User    Choose a browser to run this suite with    chrome      headlesschrome   firefox        headlessfirefox         edge
-    Set Global Variable    ${BROWSER}    ${new_browser}
+        Set Global Variable    ${BROWSER}    ${new_browser}
 
 Should be able to sign in webshop
     [Documentation]     Enter a valid username&password and sign in
     [Tags]    TC_WS_001    Smoke   Sign in Webshop
 
-#       1. Go to the homepage
-#       2. Enter a valid username
-#       3. Enter a valid password
-#       4. Click on login button
-#       5. Verify that the user is logged in
-
         ValoriWebShop.Go to Valori Webshop landing page
         ValoriWebShop.Sign in to Valori Webshop
 
-Should not be able to login with invalid username and valid password
+Should not be able to login with invalid email and valid password
     [Documentation]     Enter an invalid username&password and try to sign in
     [Tags]    TC_WS_002    Functional   Sign in Webshop
 
@@ -41,9 +36,12 @@ Should not be able to login with invalid username and valid password
 #       2. Enter an invalid username
 #       3. Enter a valid password
 #       4. Click on login button
-#       5. Verify that the user is not logged in/verify a message "authentication failed" is displayed
+#       5. Verify that the user is not logged in/verify a message "Gebruik een '@' in het e-mailadres." is displayed
 
-Should not be able to login with valid username and invalid password
+        ValoriWebshop.Go to Valori Webshop landing page
+        ValoriWebshop.Sign in to Valori Webshop with invalid email
+
+Should not be able to login with valid email and invalid password
     [Documentation]     Enter an invalid username&password and try to sign in
     [Tags]    TC_WS_003    Functional   Sign in Webshop
 
@@ -52,6 +50,9 @@ Should not be able to login with valid username and invalid password
 #       3. Enter an invalid password
 #       4. Click on login button
 #        5. Verify that the user is not logged in/verify a message "authentication failed" is displayed
+
+        ValoriWebshop.Go to Valori Webshop landing page
+        ValoriWebshop.Sign in to Valori Webshop with invalid password
 
 Should not be able to login with invalid username and invalid password
     [Documentation]     Enter an invalid username&password and try to sign in
@@ -62,6 +63,9 @@ Should not be able to login with invalid username and invalid password
 #       3. Enter an invalid password
 #       4. Click on login button
 #        5. Verify that the user is not logged in/verify a message "authentication failed" is displayed
+
+        ValoriWebshop.Go to Valori Webshop landing page
+        ValoriWebshop.Sign in to Valori Webshop with invalid email and password
 
 Should be able to create an account and confirm account has been created
     [Documentation]     Confirm that the account has been successfully created by verifying that the confirmation page or message states that the account has been created
@@ -78,6 +82,8 @@ Should be able to create an account and confirm account has been created
 #       9. Enter birthday
 #       10. Click on ""SAVE"" Button
 #       11. Verify that the account has been created
+        ValoriWebShop.Go to Valori Webshop landing page
+        ValoriWebShop.Create an account on Valori Webshop
 
 Should not be able to create an account without using "@" in the email address
     [Documentation]     Enter invalid email address and try to create an account
