@@ -56,13 +56,39 @@ Create a "Mr." account on Valori Webshop
         SignInPage.Click create an account link
         CreateAccountPage.Verify Create Account page loaded
         CreateAccountPage.Click radio button "Mr."
-        GenerateAndUseMockData.Generate and Use "Create Account" Mock Data
+        GenerateAndUseMockData.Generate and Use Valid "Create Account" Mock Data
         CreateAccountPage.Enter date of birth
         CreateAccountPage.Click "Receive offers" checkbox
         CreateAccountPage.Click "Sign up for newsletter" checkbox
         CreateAccountPage.Click "Save" new account button
         TopNav.Click logged in user link
         AccountPage.Verify Account page loaded
+
+Create a "Mrs." account on Valori Webshop with invalid email
+        TopNav.Click sign in link
+        SignInPage.Verify Sign In page loaded
+        SignInPage.Click create an account link
+        CreateAccountPage.Verify Create Account page loaded
+        CreateAccountPage.Click radio button "Mrs."
+        GenerateAndUseMockData.Generate and Use "Create Account" Mock Data with invalid email
+        CreateAccountPage.Enter date of birth
+        CreateAccountPage.Click "Receive offers" checkbox
+        CreateAccountPage.Click "Sign up for newsletter" checkbox
+        CreateAccountPage.Click "Save" new account button
+        CreateAccountPage.Verify invalid email message displayed
+
+Create a "Mr." account on Valori Webshop with invalid password
+        TopNav.Click sign in link
+        SignInPage.Verify Sign In page loaded
+        SignInPage.Click create an account link
+        CreateAccountPage.Verify Create Account page loaded
+        CreateAccountPage.Click radio button "Mr."
+        GenerateAndUseMockData.Generate and Use "Create Account" Mock Data with invalid password
+        CreateAccountPage.Enter date of birth
+        CreateAccountPage.Click "Receive offers" checkbox
+        CreateAccountPage.Click "Sign up for newsletter" checkbox
+        CreateAccountPage.Click "Save" new account button
+        CreateAccountPage.Verify invalid password message displayed
 
 Add 5 products to cart
         LandingPage.Click product "HummingBird Printed T-Shirt"

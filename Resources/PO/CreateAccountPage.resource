@@ -54,3 +54,13 @@ Verify date format is incorrect message
 
         Wait Until Page Contains        ${CREATE_ACCOUNT_PAGE_DATE_FORMAT_INCORRECT_MESSAGE}
         Page Should Contain             ${CREATE_ACCOUNT_PAGE_DATE_FORMAT_INCORRECT_MESSAGE}
+
+Verify invalid email message displayed
+
+        Wait Until Page Contains        ${CREATE_ACCOUNT_PAGE_INVALID_EMAIL_MESSAGE}
+        Page Should Contain             ${CREATE_ACCOUNT_PAGE_INVALID_EMAIL_MESSAGE}
+
+Verify invalid password message displayed
+
+        Wait Until Page Contains        ${CREATE_ACCOUNT_PAGE_INVALID_PASSWORD_MESSAGE}
+        Page Should Contain             ${CREATE_ACCOUNT_PAGE_INVALID_PASSWORD_MESSAGE}

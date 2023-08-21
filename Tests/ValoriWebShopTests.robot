@@ -58,7 +58,7 @@ Should not be able to login with invalid username and invalid password
 #       2. Enter an invalid username
 #       3. Enter an invalid password
 #       4. Click on login button
-#        5. Verify that the user is not logged in/verify a message "authentication failed" is displayed
+#       5. Verify that the user is not logged in/verify a message "authentication failed" is displayed
 
         ValoriWebshop.Go to Valori Webshop landing page
         ValoriWebshop.Sign in to Valori Webshop with invalid email and password
@@ -67,17 +67,6 @@ Should be able to create an account and confirm account has been created
     [Documentation]     Confirm that the account has been successfully created by verifying that the confirmation page or message states that the account has been created
     [Tags]    TC_WS_005    Functional   Create Account
 
-#       1. Go to the homepage
-#       2. Click on Sign In Button
-#       3. Click on "No account?Create one here"
-#       4. Select Social title
-#       5. Enter a firstname
-#       6. Enter a lastname
-#       7. Enter a vaild email
-#       8. Enter a valid password
-#       9. Enter birthday
-#       10. Click on ""SAVE"" Button
-#       11. Verify that the account has been created
         ValoriWebShop.Go to Valori Webshop landing page
         ValoriWebShop.Create a "Mr." account on Valori Webshop
 
@@ -97,6 +86,9 @@ Should not be able to create an account without using "@" in the email address
 #       10. Click on ""SAVE"" Button
 #       11. Verify that the error message ""Gebruik een'@'in het e-mailadress. In {email} ontbreekt een '@'." is displayed
 
+        ValoriWebShop.Go to Valori Webshop landing page
+        ValoriWebShop.Create a "Mrs." account on Valori Webshop with invalid email
+
 Should not be able to create account without when using less than five charactere in password box.
     [Documentation]     Enter invalid password and try to create an account
     [Tags]    TC_WS_007    Functional   Create Account
@@ -112,6 +104,9 @@ Should not be able to create account without when using less than five character
 #       9. Enter birthday
 #       10. Click on ""SAVE"" Button
 #       11. Verify that the error message "Zorg dat de indeling voldoet aan de gevraagde indeling. At least 5 characters long" is displayed
+
+        ValoriWebShop.Go to Valori Webshop landing page
+        ValoriWebShop.Create a "Mr." account on Valori Webshop with invalid password
 
 Should be able to add five items to cart and confirm those items are added to cart
     [Documentation]     Add five items to cart and confirm those items are added to cart
@@ -197,7 +192,6 @@ Should be able to file a complaint and confirm that the complaint is filed
 
 Should be able to use "Forgot password" functionality
 
-
 Should be able to change personal information
 
 Should be able to look at personal addresses
@@ -207,8 +201,6 @@ Should be able to review order history
 Should be able to review credit slips
 
 Should be able to search for product
-
-Should be able to add product to cart
 
 Should be able to checkout product
 
@@ -221,4 +213,6 @@ Should be able to use the Footer Navigation
 Should be able to subscribe to newsletter
 
 Should be able to sign out webshop
+
+Should be able to delete account
 

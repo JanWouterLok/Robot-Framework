@@ -1,1 +1,3 @@
-*** Keywords ***
+*** Variables ***
+${ORDER_DROPDOWN_CONTINUE_SHOPPING_BUTTON} =
+${ORDER_DROPDOWN_CHECKOUT_BUTTON} =
