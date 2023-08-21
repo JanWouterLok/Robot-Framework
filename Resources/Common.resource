@@ -11,6 +11,6 @@ Start web test
     Maximize Browser Window
 
 End web test
-    Sleep                           2s
+    Sleep                           5s
     Close Browser
     Log                             Ending the test case!

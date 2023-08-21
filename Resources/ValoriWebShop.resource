@@ -5,6 +5,12 @@ Resource            ../Resources/PO/LandingPage.resource
 Resource            ../Resources/PO/SignInPage.resource
 Resource            ../Resources/PO/TopNav.resource
 Resource            ../Resources/PO/CreateAccountPage.resource
+Resource            ../Resources/PO/SingleProductPage.resource
+Resource            ../Resources/PO/OrderDropDown.resource
+Resource            ../Resources/PO/CartPage.resource
+Resource            ../Resources/PO/AddressPage.resource
+Resource            ../Resources/Keywords/GenerateAndUseMockData.resource
+
 
 *** Keywords ***
 
@@ -44,21 +50,50 @@ Sign in to Valori Webshop with invalid email and password
         SignInPage.Click sign in
         SignInPage.Verify wrong email message displayed
 
-Create an "Mr" account on Valori Webshop
+Create a "Mr." account on Valori Webshop
         TopNav.Click sign in link
         SignInPage.Verify Sign In page loaded
         SignInPage.Click create an account link
         CreateAccountPage.Verify Create Account page loaded
         CreateAccountPage.Click radio button "Mr."
-        CreateAccountPage.Enter first name
-        CreateAccountPage.Enter last name
-        CreateAccountPage.Enter email
-        CreateAccountPage.Enter password
+        GenerateAndUseMockData.Generate and Use "Create Account" Mock Data
         CreateAccountPage.Enter date of birth
         CreateAccountPage.Click "Receive offers" checkbox
         CreateAccountPage.Click "Sign up for newsletter" checkbox
         CreateAccountPage.Click "Save" new account button
-        TopNav.Verify user is logged in
+        TopNav.Click logged in user link
+        AccountPage.Verify Account page loaded
+
+Add 5 products to cart
+        LandingPage.Click product "HummingBird Printed T-Shirt"
+        SingleProductPage.Select "Size M" dropdown
+        SingleProductPage.Click "Add to cart" button
+        OrderDropDown.Click "Continue shopping" button
+        TopNav.Click "Valori" logo
+        LandingPage.Click product "The Adventure Begins Framed Poster"
+        SingleProductPage.Select "Dimensions" "40 x 60cm"
+        SingleProductPage.Click "Add to cart" button
+        OrderDropDown.Click "Continue shopping" button
+        TopNav.Click "Valori" logo
+        LandingPage.Click product "HummingBird Printed Sweater"
+        SingleProductPage.Select "Size L" dropdown
+        SingleProductPage.Click "Add to cart" button
+        OrderDropDown.Click "Continue shopping" button
+        TopNav.Click "Valori" logo
+        LandingPage.Click product "The Best is Yet to Come Framed Poster"
+        SingleProductPage.Select "Dimensions" "60 x 90cm"
+        SingleProductPage.Click "Add to cart" button
+        OrderDropDown.Click "Continue shopping" button
+        TopNav.Click "Valori" logo
+        LandingPage.Click product "The Best is Yet to Come Mug"
+        SingleProductPage.Click "Add to cart" button
+        OrderDropDown.Click "Proceed to checkout" button
+        CartPage.Verify Cart page loaded
+        Cartpage.Verify products in cart
+        CartPage.Click "Proceed to checkout" button
+        AddressPage.Verify Address page loaded
+
+
 
 
 

@@ -12,3 +12,12 @@ Click Sign In Link
 Verify user is logged in
 
         Page Should Contain Element         ${TOP_NAV_LOGGED_IN_USER}
+
+Click Logged in user link
+
+        Click Element                       ${TOP_NAV_LOGGED_IN_USER}
+
+Click "Valori" logo
+
+        Click Element                       ${TOP_NAV_VALORI_LOGO}
+

@@ -7,4 +7,4 @@ ${SIGN_IN_BUTTON} =                         id=submit-login
 ${SIGN_IN_PAGE_INVALID_EMAIL_ERROR} =       Gebruik een '@' in het e-mailadres.
 ${SIGN_IN_PAGE_INVALID_PASSWORD_ERROR} =    Authentication failed.
 ${SIGN_IN_PAGE_AUTHENTICATION_ERROR} =      Authentication failed.
-${SIGN_IN_PAGE_CREATE_ACCOUNT_LINK} =       linkText=No account? Create one here
+${SIGN_IN_PAGE_CREATE_ACCOUNT_LINK} =       css=.no-account > a

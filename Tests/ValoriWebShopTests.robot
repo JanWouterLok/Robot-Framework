@@ -2,6 +2,7 @@
 
 Library         OperatingSystem
 Library         Dialogs
+Library         String
 Resource        ../Resources/ValoriWebShop.resource
 Resource        ../Resources/Common.resource
 Resource        ../Resources/Variables/TestCasesVariables.resource
@@ -9,6 +10,7 @@ Test Setup      Start web test
 Test Teardown   End web test
 
 *** Test Cases ***
+
 Should be able to open webshop
     [Documentation]     As a user I want to be able to open the webshop
     [Tags]    TC-001    Smoke   Open Webshop
@@ -45,12 +47,6 @@ Should not be able to login with valid email and invalid password
     [Documentation]     Enter an invalid username&password and try to sign in
     [Tags]    TC_WS_003    Functional   Sign in Webshop
 
-#       1. Go to the homepage
-#       2. Enter a valid username
-#       3. Enter an invalid password
-#       4. Click on login button
-#        5. Verify that the user is not logged in/verify a message "authentication failed" is displayed
-
         ValoriWebshop.Go to Valori Webshop landing page
         ValoriWebshop.Sign in to Valori Webshop with invalid password
 
@@ -83,7 +79,7 @@ Should be able to create an account and confirm account has been created
 #       10. Click on ""SAVE"" Button
 #       11. Verify that the account has been created
         ValoriWebShop.Go to Valori Webshop landing page
-        ValoriWebShop.Create an account on Valori Webshop
+        ValoriWebShop.Create a "Mr." account on Valori Webshop
 
 Should not be able to create an account without using "@" in the email address
     [Documentation]     Enter invalid email address and try to create an account
@@ -125,6 +121,11 @@ Should be able to add five items to cart and confirm those items are added to ca
 #       2. login as existing user
 #       3. Add 5 product to cart
 #       4. Verify that 5 items have been added to the cart
+
+        ValoriWebShop.Go to Valori Webshop landing page
+        ValoriWebShop.Sign in to Valori Webshop
+        ValoriWebShop.Add 5 products to cart
+
 
 Should be able to add address to existing user
     [Documentation]     Add address to existing user

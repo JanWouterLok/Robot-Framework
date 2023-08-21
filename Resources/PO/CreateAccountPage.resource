@@ -1,21 +1,22 @@
 *** Settings ***
-Library           SeleniumLibrary
+Library             SeleniumLibrary
 Resource            ../Variables/TestCasesVariables.resource
 Resource            ../Locators/CreateAccountPageLocators.resource
+
 *** Keywords ***
 
 Verify Create Account Page loaded
 
-    Wait Until Page Contains            ${CREATE_ACCOUNT_PAGE_HEADER}
-    Page Should Contain                 ${CREATE_ACCOUNT_PAGE_HEADER}
+        Wait Until Page Contains        ${CREATE_ACCOUNT_PAGE_HEADER}
+        Page Should Contain             ${CREATE_ACCOUNT_PAGE_HEADER}
 
 Click radio button "Mr."
 
-    Click Button                        ${CREATE_ACCOUNT_PAGE_RADIO_BUTTON_MR}
+        Click Element                   ${CREATE_ACCOUNT_PAGE_RADIO_BUTTON_MR}
 
 Click radio button "Mrs."
 
-        Click Button                    ${CREATE_ACCOUNT_PAGE_RADIO_BUTTON_MRS}
+        Click Element                   ${CREATE_ACCOUNT_PAGE_RADIO_BUTTON_MRS}
 
 Enter First Name
 
@@ -30,7 +31,7 @@ Enter Email
         Input Text                      ${CREATE_ACCOUNT_PAGE_EMAIL_BOX}                ${EMAIL_NEW_ACCOUNT}
 
 Enter Password
-
+        [
         Input Text                      ${CREATE_ACCOUNT_PAGE_PASSWORD_BOX}             ${PASSWORD_NEW_ACCOUNT}
 
 Enter Date of Birth
