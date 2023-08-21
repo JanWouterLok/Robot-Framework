@@ -1,6 +1,5 @@
 *** Settings ***
 Library             SeleniumLibrary
-
 Resource            ../Variables/TestCasesVariables.resource
 Resource            ../Locators/SignInPageLocators.resource
 
@@ -23,9 +22,19 @@ Enter invalid email
 
         Input Text      ${SIGN_IN_PAGE_EMAIL_BOX}       ${INVALID_EMAIL}
 
+Capture Page Screenshot after entering invalid email
+         Sleep                                          1s
+         Log To Console                                 ${TIMESTAMP}
+         Capture Page Screenshot                        ${SCREENSHOT_INVALID_EMAIL}
+
 Enter invalid password
 
         Input Text      ${SIGN_IN_PAGE_PASSWORD_BOX}    ${INVALID_PASSWORD}
+
+Capture Page Screenshot after entering invalid email and password
+        Sleep                                           1s
+        Log To Console                                  ${TIMESTAMP}
+        Capture Page Screenshot                         ${SCREENSHOT_INVALID_EMAIL_AND_PASSWORD}
 
 click sign in
 
@@ -33,7 +42,7 @@ click sign in
 
 Verify wrong email message displayed
 
-        Wait Until Element Is Visible       //div[contains(text(), "ontbreekt een '@'")]    timeout=5s
+        Wait Until Element Is Visible                   //div[contains(text(), "ontbreekt een '@'")]    timeout=5s
         Wait Until Page Contains                        ${SIGN_IN_PAGE_INVALID_EMAIL_ERROR}
         Page Should Contain                             ${SIGN_IN_PAGE_INVALID_EMAIL_ERROR}
 

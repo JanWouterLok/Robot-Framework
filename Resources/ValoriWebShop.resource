@@ -6,7 +6,7 @@ Resource            ../Resources/PO/SignInPage.resource
 Resource            ../Resources/PO/TopNav.resource
 Resource            ../Resources/PO/CreateAccountPage.resource
 Resource            ../Resources/PO/SingleProductPage.resource
-Resource            ../Resources/PO/OrderDropDown.resource
+Resource            ../Resources/PO/OrderModal.resource
 Resource            ../Resources/PO/CartPage.resource
 Resource            ../Resources/PO/AddressPage.resource
 Resource            ../Resources/Keywords/GenerateAndUseMockData.resource
@@ -32,7 +32,7 @@ Sign in to Valori Webshop with invalid email
         SignInPage.Enter invalid Email
         SignInPage.Enter password
         SignInPage.Click sign in
-        SignInPage.Verify wrong email message displayed
+        SignInPage.Capture Page Screenshot after entering invalid email
 
 Sign in to Valori Webshop with invalid password
         TopNav.Click sign in link
@@ -48,7 +48,7 @@ Sign in to Valori Webshop with invalid email and password
         SignInPage.Enter invalid Email
         SignInPage.Enter invalid password
         SignInPage.Click sign in
-        SignInPage.Verify wrong email message displayed
+        SignInPage.Capture Page Screenshot after entering invalid email and password
 
 Create a "Mr." account on Valori Webshop
         TopNav.Click sign in link

@@ -1,7 +1,6 @@
 *** Settings ***
 Library         SeleniumLibrary
 Library         String
-Resource        ../PO/CreateAccountPage.resource
 Resource        ../Locators/CreateAccountPageLocators.resource
 
 
@@ -9,7 +8,7 @@ Resource        ../Locators/CreateAccountPageLocators.resource
 
 Generate and Use Valid "Create Account" Mock Data
     [Documentation]     Generate random data for the Create Account page
-    [Tags]              Create Account using random data
+    [Tags]              GUMD-001        Functional          Valid Mock Data
 
 
         ${GENERATED_FIRST_NAME_NEW_ACCOUNT} =               Generate Random String      3               [LETTERS]
@@ -24,7 +23,7 @@ Generate and Use Valid "Create Account" Mock Data
 
 Generate and Use "Create Account" Mock Data with invalid email
     [Documentation]     Generate random data for the Create Account page with invalid email
-    [Tags]              Create Account using random data but with invalid email
+    [Tags]              GUMD-002        Functional         Invalid Mock Email
 
         ${GENERATED_FIRST_NAME_NEW_ACCOUNT} =               Generate Random String      3               [LETTERS]
         ${GENERATED_LAST_NAME_NEW_ACCOUNT} =                Generate Random String      3               [LETTERS]
@@ -38,7 +37,7 @@ Generate and Use "Create Account" Mock Data with invalid email
 
 Generate and Use "Create Account" Mock Data with invalid password
     [Documentation]     Generate random data for the Create Account page with invalid password
-    [Tags]              Create Account using random data but with invalid password
+    [Tags]              GUMD-003        Functional          Invalid Mock Password
 
         ${GENERATED_FIRST_NAME_NEW_ACCOUNT} =               Generate Random String      3               [LETTERS]
         ${GENERATED_LAST_NAME_NEW_ACCOUNT} =                Generate Random String      3               [LETTERS]

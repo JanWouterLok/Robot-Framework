@@ -2,7 +2,7 @@
 Library           SeleniumLibrary
 Library             SeleniumLibrary
 Resource            ../Variables/TestCasesVariables.resource
-Resource            ../Locators/OrderDropDownLocators.resource
+Resource            ../Locators/OrderModalLocators.resource
 *** Keywords ***
 
 Click "Continue shopping" button
