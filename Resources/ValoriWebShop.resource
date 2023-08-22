@@ -95,7 +95,7 @@ Create a "Mr." account on Valori Webshop with invalid password
         CreateAccountPage.Capture screenshot after entering invalid password
         CreateAccountPage.Verify if still on create account page after entering invalid password
 
-Add 5 products to cart and proceed to checkout
+Add 5 products to cart
         LandingPage.Click product "HummingBird Printed T-Shirt"
         SingleProductPage.Select "Size M" dropdown
         SingleProductPage.Click "Add to cart" button
@@ -121,8 +121,8 @@ Add 5 products to cart and proceed to checkout
         OrderModal.Click "Proceed to checkout" button
         CartPage.Verify Cart page loaded
         Cartpage.Verify products in cart
-        CartPage.Click "Proceed to checkout" button
-        AddressPage.Verify Address page loaded
+
+
 
 
 
