@@ -33,6 +33,7 @@ Sign in to Valori Webshop with invalid email
         SignInPage.Enter password
         SignInPage.Click sign in
         SignInPage.Capture Page Screenshot after entering invalid email
+        SignInPage.Verify if still on sign in page after entering invalid email and/or password
 
 Sign in to Valori Webshop with invalid password
         TopNav.Click sign in link
@@ -41,14 +42,16 @@ Sign in to Valori Webshop with invalid password
         SignInPage.Enter invalid password
         SignInPage.Click sign in
         SignInPage.Verify authentication failed message displayed
+        SignInPage.Verify if still on sign in page after entering invalid email and/or password
 
 Sign in to Valori Webshop with invalid email and password
         TopNav.Click sign in link
         SignInPage.Verify Sign In page loaded
-        SignInPage.Enter invalid Email
+        SignInPage.Enter unknown Email
         SignInPage.Enter invalid password
         SignInPage.Click sign in
-        SignInPage.Capture Page Screenshot after entering invalid email and password
+        SignInPage.Verify authentication failed message displayed
+        SignInPage.Verify if still on sign in page after entering invalid email and/or password
 
 Create a "Mr." account on Valori Webshop
         TopNav.Click sign in link
@@ -75,7 +78,8 @@ Create a "Mrs." account on Valori Webshop with invalid email
         CreateAccountPage.Click "Receive offers" checkbox
         CreateAccountPage.Click "Sign up for newsletter" checkbox
         CreateAccountPage.Click "Save" new account button
-        CreateAccountPage.Verify invalid email message displayed
+        CreateAccountPage.Capture screenshot after entering invalid email
+        CreateAccountPage.Verify if still on create account page after entering invalid email
 
 Create a "Mr." account on Valori Webshop with invalid password
         TopNav.Click sign in link
@@ -88,32 +92,33 @@ Create a "Mr." account on Valori Webshop with invalid password
         CreateAccountPage.Click "Receive offers" checkbox
         CreateAccountPage.Click "Sign up for newsletter" checkbox
         CreateAccountPage.Click "Save" new account button
-        CreateAccountPage.Verify invalid password message displayed
+        CreateAccountPage.Capture screenshot after entering invalid password
+        CreateAccountPage.Verify if still on create account page after entering invalid password
 
-Add 5 products to cart
+Add 5 products to cart and proceed to checkout
         LandingPage.Click product "HummingBird Printed T-Shirt"
         SingleProductPage.Select "Size M" dropdown
         SingleProductPage.Click "Add to cart" button
-        OrderDropDown.Click "Continue shopping" button
+        OrderModal.Click "Continue shopping" button
         TopNav.Click "Valori" logo
         LandingPage.Click product "The Adventure Begins Framed Poster"
         SingleProductPage.Select "Dimensions" "40 x 60cm"
         SingleProductPage.Click "Add to cart" button
-        OrderDropDown.Click "Continue shopping" button
+        OrderModal.Click "Continue shopping" button
         TopNav.Click "Valori" logo
         LandingPage.Click product "HummingBird Printed Sweater"
         SingleProductPage.Select "Size L" dropdown
         SingleProductPage.Click "Add to cart" button
-        OrderDropDown.Click "Continue shopping" button
+        OrderModal.Click "Continue shopping" button
         TopNav.Click "Valori" logo
         LandingPage.Click product "The Best is Yet to Come Framed Poster"
         SingleProductPage.Select "Dimensions" "60 x 90cm"
         SingleProductPage.Click "Add to cart" button
-        OrderDropDown.Click "Continue shopping" button
+        OrderModal.Click "Continue shopping" button
         TopNav.Click "Valori" logo
         LandingPage.Click product "The Best is Yet to Come Mug"
         SingleProductPage.Click "Add to cart" button
-        OrderDropDown.Click "Proceed to checkout" button
+        OrderModal.Click "Proceed to checkout" button
         CartPage.Verify Cart page loaded
         Cartpage.Verify products in cart
         CartPage.Click "Proceed to checkout" button

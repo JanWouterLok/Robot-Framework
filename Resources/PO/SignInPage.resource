@@ -22,10 +22,13 @@ Enter invalid email
 
         Input Text      ${SIGN_IN_PAGE_EMAIL_BOX}       ${INVALID_EMAIL}
 
+Enter unknown email
+
+        Input Text      ${SIGN_IN_PAGE_EMAIL_BOX}       ${INVALID_UNKNOWN_EMAIL}
+
 Capture Page Screenshot after entering invalid email
          Sleep                                          1s
-         Log To Console                                 ${TIMESTAMP}
-         Capture Page Screenshot                        ${SCREENSHOT_INVALID_EMAIL}
+         Capture Page Screenshot                        ${SCREENSHOT_INVALID_EMAIL_SIGN_IN}
 
 Enter invalid password
 
@@ -33,8 +36,7 @@ Enter invalid password
 
 Capture Page Screenshot after entering invalid email and password
         Sleep                                           1s
-        Log To Console                                  ${TIMESTAMP}
-        Capture Page Screenshot                         ${SCREENSHOT_INVALID_EMAIL_AND_PASSWORD}
+        Capture Page Screenshot                         ${SCREENSHOT_INVALID_EMAIL_AND_PASSWORD_SIGN_IN}
 
 click sign in
 
@@ -55,6 +57,11 @@ Verify authentication failed message displayed
 
         Wait Until Page Contains                        ${SIGN_IN_PAGE_AUTHENTICATION_ERROR}
         Page Should Contain                             ${SIGN_IN_PAGE_AUTHENTICATION_ERROR}
+
+Verify if still on sign in page after entering invalid email and/or password
+
+        Wait Until Page Contains Element                ${SIGN_IN_PAGE_HEADER}
+        Page Should Contain Element                     ${SIGN_IN_PAGE_HEADER}
 
 Click create an account link
 

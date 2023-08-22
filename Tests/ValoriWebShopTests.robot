@@ -34,11 +34,6 @@ Should not be able to login with invalid email and valid password
     [Documentation]     Enter an invalid username&password and try to sign in
     [Tags]    TC_WS_002    Functional   Sign in Webshop
 
-#       1. Go to the homepage
-#       2. Enter an invalid username
-#       3. Enter a valid password
-#       4. Click on login button
-#       5. Verify that the user is not logged in/verify a message "Gebruik een '@' in het e-mailadres." is displayed
 
         ValoriWebshop.Go to Valori Webshop landing page
         ValoriWebshop.Sign in to Valori Webshop with invalid email
@@ -54,11 +49,6 @@ Should not be able to login with invalid username and invalid password
     [Documentation]     Enter an invalid username&password and try to sign in
     [Tags]    TC_WS_004    Functional   Sign in Webshop
 
-#       1. Go to the homepage
-#       2. Enter an invalid username
-#       3. Enter an invalid password
-#       4. Click on login button
-#       5. Verify that the user is not logged in/verify a message "authentication failed" is displayed
 
         ValoriWebshop.Go to Valori Webshop landing page
         ValoriWebshop.Sign in to Valori Webshop with invalid email and password

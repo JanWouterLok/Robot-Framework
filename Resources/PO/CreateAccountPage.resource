@@ -50,10 +50,28 @@ Click "Save" new account button
 
         Click Button                    ${CREATE_ACCOUNT_PAGE_SAVE_BUTTON}
 
+Capture screenshot after entering invalid email
+        Sleep                           1s
+        Capture Page Screenshot         ${SCREENSHOT_INVALID_EMAIL_CREATE_ACCOUNT}
+
+Capture screenshot after entering invalid password
+        Sleep                           1s
+        Capture Page Screenshot         ${SCREENSHOT_INVALID_PASSWORD_CREATE_ACCOUNT}
+
 Verify date format is incorrect message
 
         Wait Until Page Contains        ${CREATE_ACCOUNT_PAGE_DATE_FORMAT_INCORRECT_MESSAGE}
         Page Should Contain             ${CREATE_ACCOUNT_PAGE_DATE_FORMAT_INCORRECT_MESSAGE}
+
+Verify if still on create account page after entering invalid email
+
+        Wait Until Page Contains        ${CREATE_ACCOUNT_PAGE_HEADER}
+        Page Should Contain             ${CREATE_ACCOUNT_PAGE_HEADER}
+
+Verify if still on create account page after entering invalid password
+
+         Wait Until Page Contains        ${CREATE_ACCOUNT_PAGE_HEADER}
+         Page Should Contain             ${CREATE_ACCOUNT_PAGE_HEADER}
 
 Verify invalid email message displayed
 
@@ -64,3 +82,4 @@ Verify invalid password message displayed
 
         Wait Until Page Contains        ${CREATE_ACCOUNT_PAGE_INVALID_PASSWORD_MESSAGE}
         Page Should Contain             ${CREATE_ACCOUNT_PAGE_INVALID_PASSWORD_MESSAGE}
+
