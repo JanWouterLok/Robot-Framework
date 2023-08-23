@@ -64,17 +64,6 @@ Should not be able to create an account without using "@" in the email address
     [Documentation]     Enter invalid email address and try to create an account
     [Tags]    TC_WS_006    Functional   Create Account
 
-#       1. Go to the homepage
-#       2. Click on Sign In Button
-#       3. Click on "No account?Create one here"
-#       4. Select Social title
-#       5. Enter a firstname
-#       6. Enter a lastname
-#       7. Enter an invalid email
-#       8. Enter a valid password
-#       9. Enter birthday
-#       10. Click on ""SAVE"" Button
-#       11. Verify that the error message ""Gebruik een'@'in het e-mailadress. In {email} ontbreekt een '@'." is displayed
 
         ValoriWebShop.Go to Valori Webshop landing page
         ValoriWebShop.Create a "Mrs." account on Valori Webshop with invalid email
@@ -83,18 +72,6 @@ Should not be able to create account without when using less than five character
     [Documentation]     Enter invalid password and try to create an account
     [Tags]    TC_WS_007    Functional   Create Account
 
-#       1. Go to the homepage
-#       2. Click on Sign In Button
-#       3. Click on "No account?Create one here"
-#       4. Select Social title
-#       5. Enter a firstname
-#       6. Enter a lastname
-#       7. Enter a valid email
-#       8. Enter an invalid password
-#       9. Enter birthday
-#       10. Click on ""SAVE"" Button
-#       11. Verify that the error message "Zorg dat de indeling voldoet aan de gevraagde indeling. At least 5 characters long" is displayed
-
         ValoriWebShop.Go to Valori Webshop landing page
         ValoriWebShop.Create a "Mr." account on Valori Webshop with invalid password
 
@@ -102,10 +79,6 @@ Should be able to add five items to cart and confirm those items are added to ca
     [Documentation]     Add five items to cart and confirm those items are added to cart
     [Tags]    TC_WS_008    Functional   Add to Cart
 
-#       1. Go to the homepage
-#       2. login as existing user
-#       3. Add 5 product to cart
-#       4. Verify that 5 items have been added to the cart
 
         ValoriWebShop.Go to Valori Webshop landing page
         ValoriWebShop.Add 5 products to cart
