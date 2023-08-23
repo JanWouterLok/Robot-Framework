@@ -12,8 +12,9 @@ Select "Size M" dropdown
 
 Click "Add to cart" button
 
+    Mouse Down                              ${SINGLE_PRODUCT_PAGE_ADD_TO_CART_BUTTON}
     Click Button                            ${SINGLE_PRODUCT_PAGE_ADD_TO_CART_BUTTON}
-
+    Mouse Up                                ${SINGLE_PRODUCT_PAGE_ADD_TO_CART_BUTTON}
 
 Select "Dimensions" "40 x 60cm"
 
