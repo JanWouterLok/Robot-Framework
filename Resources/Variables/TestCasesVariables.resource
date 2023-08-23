@@ -12,6 +12,7 @@ ${LAST_NAME_NEW_ACCOUNT}        Batty
 ${EMAIL_NEW_ACCOUNT}            Replicant6@BladeRunner.com
 ${PASSWORD_NEW_ACCOUNT}         Priss123
 ${BIRTHDAY_NEW_ACCOUNT}         01/01/1993
+@{SHOPPING_CART_ITEMS}          Hummingbird printed t-shirt     The adventure begins Framed poster     Hummingbird printed sweater      The best is yet to come' Framed poster      Mug The best is yet to come
 
 # Screenshot paths
 
@@ -22,6 +23,8 @@ ${SCREENSHOT_INVALID_EMAIL_AND_PASSWORD_SIGN_IN}=               ../Results/Scree
 # Create account page
 ${SCREENSHOT_INVALID_EMAIL_CREATE_ACCOUNT}=                     ../Results/Screenshot_Invalid_Email_Create_Account.png
 ${SCREENSHOT_INVALID_PASSWORD_CREATE_ACCOUNT}=                  ../Results/Screenshot_Invalid_Password_Create_Account.png
+
+
 
 # Adress page
 

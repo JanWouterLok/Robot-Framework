@@ -14,7 +14,7 @@ Generate and Use Valid "Create Account" Mock Data
         ${GENERATED_FIRST_NAME_NEW_ACCOUNT} =               Generate Random String      3               [LETTERS]
         ${GENERATED_LAST_NAME_NEW_ACCOUNT} =                Generate Random String      3               [LETTERS]
         ${GENERATED_EMAIL_NEW_ACCOUNT} =                    Generate Random String      5-10            [LETTERS][NUMBERS]
-        ${GENERATED_PASSWORD_NEW_ACCOUNT} =                 Generate Random String      5-10            [LETTERS]
+        ${GENERATED_PASSWORD_NEW_ACCOUNT} =                 Generate Random String      5-10            [LETTERS][NUMBERS]
 
         Input Text    ${CREATE_ACCOUNT_PAGE_FIRST_NAME_BOX}       Roy${GENERATED_FIRST_NAME_NEW_ACCOUNT}
         Input Text    ${CREATE_ACCOUNT_PAGE_LAST_NAME_BOX}        Batty${GENERATED_LAST_NAME_NEW_ACCOUNT}
@@ -32,7 +32,7 @@ Generate and Use "Create Account" Mock Data with invalid email
 
         Input Text    ${CREATE_ACCOUNT_PAGE_FIRST_NAME_BOX}       Rachel${GENERATED_FIRST_NAME_NEW_ACCOUNT}
         Input Text    ${CREATE_ACCOUNT_PAGE_LAST_NAME_BOX}        Tyrell${GENERATED_LAST_NAME_NEW_ACCOUNT}
-        Input Text    ${CREATE_ACCOUNT_PAGE_EMAIL_BOX}            ${GENERATED_EMAIL_NEW_ACCOUNT}BUT_NOT_AN_EMAIL
+        Input Text    ${CREATE_ACCOUNT_PAGE_EMAIL_BOX}            ${GENERATED_EMAIL_NEW_ACCOUNT}_NOT_AN_EMAIL
         Input Text    ${CREATE_ACCOUNT_PAGE_PASSWORD_BOX}         ${GENERATED_PASSWORD_NEW_ACCOUNT}
 
 Generate and Use "Create Account" Mock Data with invalid password

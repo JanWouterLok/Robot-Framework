@@ -42,16 +42,6 @@ click sign in
 
         Click Button                                    ${SIGN_IN_BUTTON}
 
-Verify wrong email message displayed
-
-        Wait Until Element Is Visible                   //div[contains(text(), "ontbreekt een '@'")]    timeout=5s
-        Wait Until Page Contains                        ${SIGN_IN_PAGE_INVALID_EMAIL_ERROR}
-        Page Should Contain                             ${SIGN_IN_PAGE_INVALID_EMAIL_ERROR}
-
-Verify wrong password message displayed
-
-        Wait Until Page Contains                        ${SIGN_IN_PAGE_INVALID_PASSWORD_ERROR}
-        Page Should Contain                             ${SIGN_IN_PAGE_INVALID_PASSWORD_ERROR}
 
 Verify authentication failed message displayed
 

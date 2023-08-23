@@ -99,28 +99,34 @@ Add 5 products to cart
         LandingPage.Click product "HummingBird Printed T-Shirt"
         SingleProductPage.Select "Size M" dropdown
         SingleProductPage.Click "Add to cart" button
+        OrderModal.Verify Order Modal is displayed
         OrderModal.Click "Continue shopping" button
-        TopNav.Click "Valori" logo
+        SingleProductPage.Click "Home" link
         LandingPage.Click product "The Adventure Begins Framed Poster"
         SingleProductPage.Select "Dimensions" "40 x 60cm"
         SingleProductPage.Click "Add to cart" button
+        OrderModal.Verify Order Modal Is Displayed
         OrderModal.Click "Continue shopping" button
-        TopNav.Click "Valori" logo
+        SingleProductPage.Click "Home" link
         LandingPage.Click product "HummingBird Printed Sweater"
         SingleProductPage.Select "Size L" dropdown
         SingleProductPage.Click "Add to cart" button
+        OrderModal.Verify Order Modal Is Displayed
         OrderModal.Click "Continue shopping" button
-        TopNav.Click "Valori" logo
+        SingleProductPage.Click "Home" link
         LandingPage.Click product "The Best is Yet to Come Framed Poster"
         SingleProductPage.Select "Dimensions" "60 x 90cm"
         SingleProductPage.Click "Add to cart" button
+        OrderModal.Verify Order Modal Is Displayed
         OrderModal.Click "Continue shopping" button
-        TopNav.Click "Valori" logo
+        SingleProductPage.Click "Home" link
         LandingPage.Click product "The Best is Yet to Come Mug"
         SingleProductPage.Click "Add to cart" button
+        OrderModal.Verify Order Modal Is Displayed
         OrderModal.Click "Proceed to checkout" button
         CartPage.Verify Cart page loaded
         Cartpage.Verify products in cart
+        CartPage.Remove items from cart
 
 
 

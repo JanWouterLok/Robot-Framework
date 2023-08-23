@@ -11,17 +11,17 @@ Test Teardown   End web test
 
 *** Test Cases ***
 
-Should be able to open webshop
-    [Documentation]     As a user I want to be able to open the webshop
-    [Tags]    TC-001    Smoke   Open Webshop
-
-        ValoriWebShop.Go to Valori Webshop landing page
-
 Should be able to run tests in different browsers
     [Documentation]     As a user I want to be able to open the webshop and run the tests in different browsers
-    [Tags]    TC-002    Smoke   Open Webshop
-    ${new_browser} =  Get Selection From User    Choose a browser to run this suite with    chrome      headlesschrome   firefox        headlessfirefox         edge
+    [Tags]    TC-001    Smoke   Open Webshop
+    ${new_browser} =  Get Selection From User    Choose a browser to run this suite with    chrome    headlesschrome      firefox    headlessfirefox     edge
         Set Global Variable    ${BROWSER}    ${new_browser}
+
+Should be able to open webshop
+    [Documentation]     As a user I want to be able to open the webshop
+    [Tags]    TC-002    Smoke   Open Webshop
+
+        ValoriWebShop.Go to Valori Webshop landing page
 
 Should be able to sign in webshop
     [Documentation]     Enter a valid username&password and sign in
@@ -108,7 +108,6 @@ Should be able to add five items to cart and confirm those items are added to ca
 #       4. Verify that 5 items have been added to the cart
 
         ValoriWebShop.Go to Valori Webshop landing page
-        ValoriWebShop.Sign in to Valori Webshop
         ValoriWebShop.Add 5 products to cart
 
 
