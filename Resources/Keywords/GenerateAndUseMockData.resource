@@ -6,7 +6,7 @@ Resource        ../Locators/CreateAccountPageLocators.resource
 
 *** Keywords ***
 
-Generate and Use Valid "Create Account" Mock Data
+Generate And Use Valid "Create Account" Mock Data
     [Documentation]     Generate random data for the Create Account page
     [Tags]              GUMD-001        Functional          Valid Mock Data
 
@@ -21,7 +21,7 @@ Generate and Use Valid "Create Account" Mock Data
         Input Text    ${CREATE_ACCOUNT_PAGE_EMAIL_BOX}            ${GENERATED_EMAIL_NEW_ACCOUNT}@TEST.nl
         Input Text    ${CREATE_ACCOUNT_PAGE_PASSWORD_BOX}         ${GENERATED_PASSWORD_NEW_ACCOUNT}
 
-Generate and Use "Create Account" Mock Data with invalid email
+Generate And Use "Create Account" Mock Data With Invalid Email
     [Documentation]     Generate random data for the Create Account page with invalid email
     [Tags]              GUMD-002        Functional         Invalid Mock Email
 
@@ -35,7 +35,7 @@ Generate and Use "Create Account" Mock Data with invalid email
         Input Text    ${CREATE_ACCOUNT_PAGE_EMAIL_BOX}            ${GENERATED_EMAIL_NEW_ACCOUNT}_NOT_AN_EMAIL
         Input Text    ${CREATE_ACCOUNT_PAGE_PASSWORD_BOX}         ${GENERATED_PASSWORD_NEW_ACCOUNT}
 
-Generate and Use "Create Account" Mock Data with invalid password
+Generate And Use "Create Account" Mock Data With Invalid Password
     [Documentation]     Generate random data for the Create Account page with invalid password
     [Tags]              GUMD-003        Functional          Invalid Mock Password
 
@@ -48,4 +48,5 @@ Generate and Use "Create Account" Mock Data with invalid password
         Input Text    ${CREATE_ACCOUNT_PAGE_LAST_NAME_BOX}        Deckard${GENERATED_LAST_NAME_NEW_ACCOUNT}
         Input Text    ${CREATE_ACCOUNT_PAGE_EMAIL_BOX}            ${GENERATED_EMAIL_NEW_ACCOUNT}@TEST.nl
         Input Text    ${CREATE_ACCOUNT_PAGE_PASSWORD_BOX}         ${GENERATED_INVALID_PASSWORD_NEW_ACCOUNT}
+
 

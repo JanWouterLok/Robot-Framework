@@ -8,7 +8,8 @@ Resource            ../Resources/PO/CreateAccountPage.resource
 Resource            ../Resources/PO/SingleProductPage.resource
 Resource            ../Resources/PO/OrderModal.resource
 Resource            ../Resources/PO/CartPage.resource
-Resource            ../Resources/PO/AddressPage.resource
+Resource            ../Resources/PO/AccountAddressPage.resource
+Resource            ../Resources/PO/AccountPage.resource
 Resource            ../Resources/Keywords/GenerateAndUseMockData.resource
 
 
@@ -127,6 +128,27 @@ Add 5 products to cart
         CartPage.Verify Cart page loaded
         Cartpage.Verify products in cart
         CartPage.Remove items from cart
+
+Add address to existing user
+	    AccountPage.Click "Addresses" link
+        AccountAddressPage.Verify Account Address Page Loaded
+        AccountAddressPage.Click "Create new address" Link
+        NewAddressPage.Enter "Address"
+        NewAddressPage.Enter "Zip/postal code"
+        NewAddressPage.Enter "City"
+        AccountAddressPage.Enter "Country"
+        NewAddressPage.Enter "Phone"
+        NewAddressPage.Click "Save" button
+        AccountAddressPage.Verify Address added
+        AccountAddressPage.Click "Home" link
+        TopNav.Click "Sign out" link
+
+Verify address added to existing user
+        AccountPage.Verify Account page loaded
+        AccountPage.Click "Addresses" link
+        AccountAddressPage.Verify Account Address page loaded
+        AccountAddressPage.Verify Address added
+        AccountAddressPage.Delete added address
 
 
 

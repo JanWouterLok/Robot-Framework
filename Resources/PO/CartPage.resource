@@ -1,5 +1,4 @@
 *** Settings ***
-Library           SeleniumLibrary
 Library             SeleniumLibrary
 Resource            ../Variables/TestCasesVariables.resource
 Resource            ../Locators/CartPageLocators.resource

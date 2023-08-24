@@ -13,13 +13,13 @@ Test Teardown   End web test
 
 Should be able to run tests in different browsers
     [Documentation]     As a user I want to be able to open the webshop and run the tests in different browsers
-    [Tags]    TC-001    Smoke   Open Webshop
+    [Tags]    TC-001    Smoke   Critical_001    Open Webshop
     ${new_browser} =  Get Selection From User    Choose a browser to run this suite with    chrome    headlesschrome      firefox    headlessfirefox     edge
         Set Global Variable    ${BROWSER}    ${new_browser}
 
 Should be able to open webshop
     [Documentation]     As a user I want to be able to open the webshop
-    [Tags]    TC-002    Smoke   Open Webshop
+    [Tags]    TC-002    Smoke   Critical_002   Open Webshop
 
         ValoriWebShop.Go to Valori Webshop landing page
 
@@ -83,7 +83,6 @@ Should be able to add five items to cart and confirm those items are added to ca
         ValoriWebShop.Go to Valori Webshop landing page
         ValoriWebShop.Add 5 products to cart
 
-
 Should be able to add address to existing user
     [Documentation]     Add address to existing user
     [Tags]    TC_WS_009    Functional   Add Address
@@ -97,6 +96,10 @@ Should be able to add address to existing user
 #       7. Choose a country
 #       8. Click on 'Save' button
 #       9. Verify that address has been created and "Address successfully added! " message is displayed
+        ValoriWebShop.Go to Valori Webshop landing page
+        ValoriWebShop.Sign in to Valori Webshop
+        ValoriWebShop.Add address to existing user
+        ValoriWebShop.Verify address added to existing user
 
 Should be able to place an order and go to own address
     [Documentation]     Place an order and go to own address
@@ -152,29 +155,23 @@ Should be able to file a complaint and confirm that the complaint is filed
 #       7. Verify that the complaint was sent and "Your message has been successfully sent to our team." message is displayed.
 
 
-Should be able to use "Forgot password" functionality
-
-Should be able to change personal information
-
-Should be able to look at personal addresses
-
-Should be able to review order history
-
-Should be able to review credit slips
-
-Should be able to search for product
-
-Should be able to checkout product
-
-Should be able to use the quick view functionality on products
-
-Should be able to use the Top Navigation
-
-Should be able to use the Footer Navigation
-
-Should be able to subscribe to newsletter
-
-Should be able to sign out webshop
-
-Should be able to delete account
-
+#Should be able to use "Forgot password" functionality
+#
+#Should be able to review order history
+#
+#Should be able to review credit slips
+#
+#Should be able to search for product
+#
+#Should be able to checkout product
+#
+#Should be able to use the quick view functionality on products
+#
+#Should be able to use the Top Navigation
+#
+#Should be able to use the Footer Navigation
+#
+#Should be able to order multiple products and the payment amount should be correct
+#
+#Should be able to delete account
+#

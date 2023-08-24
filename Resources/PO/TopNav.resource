@@ -21,3 +21,7 @@ Click "Valori" logo
 
         Click Element                       ${TOP_NAV_VALORI_LOGO}
 
+Click "Sign out" link
+
+        Click Element                       ${TOP_NAV_SIGN_OUT_LINK}
+
