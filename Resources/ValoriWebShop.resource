@@ -34,6 +34,7 @@ Sign in to Valori Webshop with invalid email
         SignInPage.Enter password
         SignInPage.Click sign in
         SignInPage.Capture Page Screenshot after entering invalid email
+        SignInPage.Compare screenshot after entering invalid email
         SignInPage.Verify if still on sign in page after entering invalid email and/or password
 
 Sign in to Valori Webshop with invalid password
@@ -68,18 +69,22 @@ Create a "Mr." account on Valori Webshop
         TopNav.Click logged in user link
         AccountPage.Verify Account page loaded
 
-Create a "Mrs." account on Valori Webshop with invalid email
+Create a "Mr." account on Valori Webshop with invalid email
         TopNav.Click sign in link
         SignInPage.Verify Sign In page loaded
         SignInPage.Click create an account link
         CreateAccountPage.Verify Create Account page loaded
-        CreateAccountPage.Click radio button "Mrs."
-        GenerateAndUseMockData.Generate and Use "Create Account" Mock Data with invalid email
+        CreateAccountPage.Click radio button "Mr."
+        CreateAccountPage.Enter First Name
+        CreateAccountPage.Enter Last Name
+        CreateAccountPage.Enter Invalid Email
+        CreateAccountPage.Enter Password
         CreateAccountPage.Enter date of birth
         CreateAccountPage.Click "Receive offers" checkbox
         CreateAccountPage.Click "Sign up for newsletter" checkbox
         CreateAccountPage.Click "Save" new account button
         CreateAccountPage.Capture screenshot after entering invalid email
+        CreateAccountPage.Compare screenshot after entering invalid email
         CreateAccountPage.Verify if still on create account page after entering invalid email
 
 Create a "Mr." account on Valori Webshop with invalid password
@@ -88,12 +93,16 @@ Create a "Mr." account on Valori Webshop with invalid password
         SignInPage.Click create an account link
         CreateAccountPage.Verify Create Account page loaded
         CreateAccountPage.Click radio button "Mr."
-        GenerateAndUseMockData.Generate and Use "Create Account" Mock Data with invalid password
+        CreateAccountPage.Enter First Name
+        CreateAccountPage.Enter Last Name
+        CreateAccountPage.Enter valid Email
+        CreateAccountPage.Enter Invalid Password
         CreateAccountPage.Enter date of birth
         CreateAccountPage.Click "Receive offers" checkbox
         CreateAccountPage.Click "Sign up for newsletter" checkbox
         CreateAccountPage.Click "Save" new account button
         CreateAccountPage.Capture screenshot after entering invalid password
+        CreateAccountPage.Compare screenshot after entering invalid password
         CreateAccountPage.Verify if still on create account page after entering invalid password
 
 Add 5 products to cart

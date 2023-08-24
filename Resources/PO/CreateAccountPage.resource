@@ -1,5 +1,6 @@
 *** Settings ***
 Library             SeleniumLibrary
+Library             ImageCompare
 Resource            ../Variables/TestCasesVariables.resource
 Resource            ../Locators/CreateAccountPageLocators.resource
 
@@ -26,13 +27,22 @@ Enter Last Name
 
         Input Text                      ${CREATE_ACCOUNT_PAGE_LAST_NAME_BOX}            ${LAST_NAME_NEW_ACCOUNT}
 
-Enter Email
+Enter Valid Email
 
         Input Text                      ${CREATE_ACCOUNT_PAGE_EMAIL_BOX}                ${EMAIL_NEW_ACCOUNT}
 
+Enter Invalid Email
+
+            Input Text                  ${CREATE_ACCOUNT_PAGE_EMAIL_BOX}                ${INVALID_EMAIL}
+
+
 Enter Password
-        [
+
         Input Text                      ${CREATE_ACCOUNT_PAGE_PASSWORD_BOX}             ${PASSWORD_NEW_ACCOUNT}
+
+Enter Invalid Password
+
+            Input Text                  ${CREATE_ACCOUNT_PAGE_PASSWORD_BOX}             ${INVALID_PASSWORD}
 
 Enter Date of Birth
 
@@ -51,11 +61,11 @@ Click "Save" new account button
         Click Button                    ${CREATE_ACCOUNT_PAGE_SAVE_BUTTON}
 
 Capture screenshot after entering invalid email
-        Sleep                           1s
+        Sleep                           2s
         Capture Page Screenshot         ${SCREENSHOT_INVALID_EMAIL_CREATE_ACCOUNT}
 
 Capture screenshot after entering invalid password
-        Sleep                           1s
+        Sleep                           2s
         Capture Page Screenshot         ${SCREENSHOT_INVALID_PASSWORD_CREATE_ACCOUNT}
 
 Verify date format is incorrect message
@@ -82,4 +92,12 @@ Verify invalid password message displayed
 
         Wait Until Page Contains        ${CREATE_ACCOUNT_PAGE_INVALID_PASSWORD_MESSAGE}
         Page Should Contain             ${CREATE_ACCOUNT_PAGE_INVALID_PASSWORD_MESSAGE}
+
+Compare screenshot after entering invalid email
+        Sleep                           1s
+        Compare Images                  ${SCREENSHOT_INVALID_EMAIL_CREATE_ACCOUNT_REFERENCE}        ${SCREENSHOT_INVALID_EMAIL_CREATE_ACCOUNT}
+
+Compare screenshot after entering invalid password
+	        Sleep                       1s
+        Compare Images                  ${SCREENSHOT_INVALID_PASSWORD_CREATE_ACCOUNT_REFERENCE}     ${SCREENSHOT_INVALID_PASSWORD_CREATE_ACCOUNT}
 

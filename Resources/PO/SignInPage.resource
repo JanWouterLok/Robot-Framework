@@ -1,5 +1,6 @@
 *** Settings ***
 Library             SeleniumLibrary
+Library             ImageCompare
 Resource            ../Variables/TestCasesVariables.resource
 Resource            ../Locators/SignInPageLocators.resource
 
@@ -27,7 +28,7 @@ Enter unknown email
         Input Text      ${SIGN_IN_PAGE_EMAIL_BOX}       ${INVALID_UNKNOWN_EMAIL}
 
 Capture Page Screenshot after entering invalid email
-         Sleep                                          1s
+         Sleep                                          2s
          Capture Page Screenshot                        ${SCREENSHOT_INVALID_EMAIL_SIGN_IN}
 
 Enter invalid password
@@ -52,6 +53,10 @@ Verify if still on sign in page after entering invalid email and/or password
 
         Wait Until Page Contains Element                ${SIGN_IN_PAGE_HEADER}
         Page Should Contain Element                     ${SIGN_IN_PAGE_HEADER}
+
+Compare screenshot after entering invalid email
+
+        Compare Images                                  ${SCREENSHOT_INVALID_EMAIL_SIGN_IN_REFERENCE}       ${SCREENSHOT_INVALID_EMAIL_SIGN_IN}
 
 Click create an account link
 
