@@ -1,0 +1,96 @@
+@startuml
+'https://plantuml.com/component-diagram
+
+!define SPRITESURL https://raw.githubusercontent.com/kuujo/plantuml-sprites/v1.2021.10.12
+!define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/v2.2
+
+!define RECTANGLE_CLASS class
+
+left to right direction
+
+skinparam classArrowColor DarkSlateGray
+
+rectangle "Robot-Framework" {
+  package "Resources" {
+    package Documentation {
+      [Valori Robot Framework Project.docx]
+    }
+    package Keywords {
+      [GenerateAndUseMockData.resource]
+    }
+    package Locators {
+      [LandingPageLocators.resource]
+      [AccountPageLocators.resource]
+      [SignInPageLocators.resource]
+      [CreateAccountPageLocators.resource]
+    }
+    package "PO-PageObjects" {
+      [LandingPage.resource]
+      [AccountPage.resource]
+      [SignInPage.resource]
+      [CreateAccountPage.resource]
+    }
+    package ReferenceImages {
+      [Screenshot_Invalid_Email_Create_Account_Reference.png]
+    }
+    package Variables {
+      [TestCasesVariables.resource]
+    }
+  }
+
+  package Results {
+    [log.html]
+    [output.xml]
+    [report.html]
+    [Screenshot_Invalid_Email_Create_Account.png]
+  }
+
+  package "Tests" {
+    [ValoriWebShopTests.robot]
+  }
+
+  [Common.resource]
+  [ValoriWebShop.resource]
+
+  note top of [ValoriWebShopTests.robot]
+  This file contains all the test cases
+  end note
+
+  note top of [Common.resource]
+  This file contains all the common keywords for Test Setup and Test Teardown
+  end note
+
+  note top of [ValoriWebShop.resource]
+  This file contains all the test steps for the test cases that will be send to the Page Objects
+  end note
+
+  note right of [PO-PageObjects]
+  These files contain all the keywords for the Page Objects
+  end note
+
+  note left of [Locators]
+  These files contain all the locators for the Page Objects
+  end note
+
+  note left of [Variables]
+  This file contains all the global variables for the test cases
+  end note
+
+  [ValoriWebShopTests.robot] <-[#blue]-> [Common.resource]
+  [ValoriWebShopTests.robot] -[#green]-> [ValoriWebShop.resource]
+  [ValoriWebShop.resource] -[#red]-> [LandingPage.resource]
+  [ValoriWebShop.resource] -[#purple]-> [GenerateAndUseMockData.resource]
+  [ValoriWebShop.resource] -[#orange]-> [AccountPage.resource]
+  [ValoriWebShop.resource] -[#pink]-> [SignInPage.resource]
+  [ValoriWebShop.resource] -[#brown]-> [CreateAccountPage.resource]
+  [TestCasesVariables.resource] -[#teal]-> [LandingPage.resource]
+    [TestCasesVariables.resource] -[#yellow]-> [AccountPage.resource]
+    [TestCasesVariables.resource] -[#gray]-> [SignInPage.resource]
+    [TestCasesVariables.resource] -[#gold]-> [CreateAccountPage.resource]
+  [CreateAccountPageLocators.resource] -[#navy]-> [CreateAccountPage.resource]
+  [SignInPageLocators.resource] -[#maroon]-> [SignInPage.resource]
+  [AccountPageLocators.resource] -[#olive]-> [AccountPage.resource]
+  [LandingPageLocators.resource] -[#cyan]-> [LandingPage.resource]
+  [Screenshot_Invalid_Email_Create_Account_Reference.png] <-[#black]-> [Screenshot_Invalid_Email_Create_Account.png]
+}
+@enduml

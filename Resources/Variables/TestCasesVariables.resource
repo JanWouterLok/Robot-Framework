@@ -6,7 +6,8 @@ ${VALID_EMAIL}                          dantester@jourrapide.com
 ${VALID_PASSWORD}                       1qazxsw2
 ${INVALID_EMAIL}                        WrongEmail
 ${INVALID_UNKNOWN_EMAIL}                Unknown@email.address
-${INVALID_PASSWORD}                     blah
+${INVALID_PASSWORD}                     WrongPassword
+${PASSWORD_WRONG_FORMAT}                blah
 ${ITEM_SEARCH}                          hummingbird
 ${FIRST_NAME_NEW_ACCOUNT}               Roy
 ${LAST_NAME_NEW_ACCOUNT}                Batty

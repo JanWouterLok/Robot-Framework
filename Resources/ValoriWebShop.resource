@@ -96,7 +96,7 @@ Create a "Mr." account on Valori Webshop with invalid password
         CreateAccountPage.Enter First Name
         CreateAccountPage.Enter Last Name
         CreateAccountPage.Enter valid Email
-        CreateAccountPage.Enter Invalid Password
+        CreateAccountPage.Enter Wrong Format Password
         CreateAccountPage.Enter date of birth
         CreateAccountPage.Click "Receive offers" checkbox
         CreateAccountPage.Click "Sign up for newsletter" checkbox

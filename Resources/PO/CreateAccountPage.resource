@@ -33,7 +33,7 @@ Enter Valid Email
 
 Enter Invalid Email
 
-            Input Text                  ${CREATE_ACCOUNT_PAGE_EMAIL_BOX}                ${INVALID_EMAIL}
+        Input Text                      ${CREATE_ACCOUNT_PAGE_EMAIL_BOX}                ${INVALID_EMAIL}
 
 
 Enter Password
@@ -42,7 +42,11 @@ Enter Password
 
 Enter Invalid Password
 
-            Input Text                  ${CREATE_ACCOUNT_PAGE_PASSWORD_BOX}             ${INVALID_PASSWORD}
+        Input Text                      ${CREATE_ACCOUNT_PAGE_PASSWORD_BOX}             ${INVALID_PASSWORD}
+
+Enter Wrong Format Password
+
+        Input Text                      ${CREATE_ACCOUNT_PAGE_PASSWORD_BOX}             ${PASSWORD_WRONG_FORMAT}
 
 Enter Date of Birth
 
@@ -98,6 +102,6 @@ Compare screenshot after entering invalid email
         Compare Images                  ${SCREENSHOT_INVALID_EMAIL_CREATE_ACCOUNT_REFERENCE}        ${SCREENSHOT_INVALID_EMAIL_CREATE_ACCOUNT}
 
 Compare screenshot after entering invalid password
-	        Sleep                       1s
-        Compare Images                  ${SCREENSHOT_INVALID_PASSWORD_CREATE_ACCOUNT_REFERENCE}     ${SCREENSHOT_INVALID_PASSWORD_CREATE_ACCOUNT}
+	    Sleep                           1s
+        Compare Images                  ${SCREENSHOT_INVALID_PASSWORD_CREATE_ACCOUNT_REFERENCE}     ${SCREENSHOT_INVALID_PASSWORD_CREATE_ACCOUNT}       placeholder_file=C:/ValoriRobotFrameWorkProject/Robot-Framework/Resources/ReferenceImages/BottomMask.json
 
