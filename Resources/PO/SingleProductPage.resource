@@ -6,6 +6,9 @@ Resource            ../Locators/SingleProductPageLocators.resource
 Resource            ../Locators/OrderModalLocators.resource
 *** Keywords ***
 
+Verify "Hummingbird Printed T-shirt" Product Page Loaded
+
+
 Select "Size M" dropdown
     Click Element                           ${SINGLE_PRODUCT_PAGE_SIZE_DROPDOWN}
     Select From List By Label               ${SINGLE_PRODUCT_PAGE_SIZE_DROPDOWN}            ${SINGLE_PRODUCT_PAGE_SIZE_DROPDOWN_OPTION_MEDIUM}
@@ -31,6 +34,12 @@ Select "Dimensions" "60 x 90cm"
 Click "Home" Link
 
     Click Element                           ${SINGLE_PRODUCT_PAGE_HOME_LINK}
+
+Click "Color" Black Radio Buttton
+
+    Click Element
+
+Select "Quantity" "2" from Dropdown
 
 
 

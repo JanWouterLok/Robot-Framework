@@ -10,6 +10,9 @@ Resource            ../Resources/PO/OrderModal.resource
 Resource            ../Resources/PO/CartPage.resource
 Resource            ../Resources/PO/AccountAddressPage.resource
 Resource            ../Resources/PO/NewAddressPage.resource
+Resource            ../Resources/PO/ClothesProductsPage.resource
+Resource            ../Resources/PO/CheckoutPage.resource
+Resource            ../Resources/PO/OrderSummaryPage.resource
 Resource            ../Resources/Keywords/GenerateAndUseMockData.resource
 
 
@@ -183,16 +186,16 @@ Place an order and go to own address
         OrderModal.Click "Proceed to checkout" button
         CartPage.Verify Cart page loaded
         CartPage.Click "Proceed to checkout" button
-        CheckoutPage.Verify Checkout page "Personal information"loaded
+        CheckoutPage.Verify Checkout page "Personal information" loaded
         CheckoutPage.Choose an address "France"
-        CheckoutPage.Click "Continue" button
+        CheckoutPage.Click Personal Information "Continue" button
         CheckoutPage.Verify Checkout page "Shipping method" loaded
         CheckoutPage.Choose shipping method "My carrier"
-        CheckoutPage.Click "Continue" button
+        CheckoutPage.Click Shipping method "Continue" button
         CheckoutPage.Verify Checkout page "Payment method" loaded
         CheckoutPage.Choose payment method "Pay by bank wire"
         CheckoutPage.Check "I agree with the terms of service and will adhere to them unconditionally." Checkbox
-        CheckoutPage.Click "Continue" button
+        CheckoutPage.Click payment method "Continue" button
         OrderSummaryPage.Verify Order Summary page loaded
         OrderSummaryPage.Verify Order Summary page "YOUR ORDER IS CONFIRMED" message is displayed
 

@@ -25,3 +25,8 @@ Click "Sign out" link
 
         Click Element                       ${TOP_NAV_SIGN_OUT_LINK}
 
+Click "Clothes" Element
+
+	    Click Element                       ${TOP_NAV_CLOTHES_ELEMENT}
+
+
