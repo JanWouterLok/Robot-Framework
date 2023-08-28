@@ -1,28 +1,30 @@
 *** Variables ***
 # Scalar variables
-${BROWSER}                              chrome
-${URL}                                  https://webshop.mobiletestautomation.nl
-${VALID_EMAIL}                          dantester@jourrapide.com
-${VALID_PASSWORD}                       1qazxsw2
-${INVALID_EMAIL}                        WrongEmail
-${INVALID_UNKNOWN_EMAIL}                Unknown@email.address
-${INVALID_PASSWORD}                     WrongPassword
-${PASSWORD_WRONG_FORMAT}                blah
-${ITEM_SEARCH}                          hummingbird
-${FIRST_NAME_NEW_ACCOUNT}               Roy
-${LAST_NAME_NEW_ACCOUNT}                Batty
-${EMAIL_NEW_ACCOUNT}                    Replicant6@BladeRunner.com
-${PASSWORD_NEW_ACCOUNT}                 Priss123
-${BIRTHDAY_NEW_ACCOUNT}                 01/01/1993
-${ADDRESS_CREATE_NEW_ADDRESS}           Teststraat 1
-${POSTAL_CODE_CREATE_NEW_ADDRESS}       1234 AB
-${CITY_CREATE_NEW_ADDRESS}              Teststad
+${BROWSER}                                      chrome
+${URL}                                          https://webshop.mobiletestautomation.nl
+${VALID_EMAIL}                                  dantester@jourrapide.com
+${VALID_PASSWORD}                               1qazxsw2
+${INVALID_EMAIL}                                WrongEmail
+${INVALID_UNKNOWN_EMAIL}                        Unknown@email.address
+${INVALID_PASSWORD}                             WrongPassword
+${PASSWORD_WRONG_FORMAT}                        blah
+${ITEM_SEARCH}                                  hummingbird
+${FIRST_NAME_NEW_ACCOUNT}                       Roy
+${LAST_NAME_NEW_ACCOUNT}                        Batty
+${EMAIL_NEW_ACCOUNT}                            Replicant6@BladeRunner.com
+${PASSWORD_NEW_ACCOUNT}                         Priss123
+${BIRTHDAY_NEW_ACCOUNT}                         01/01/1993
+${ADDRESS_CREATE_NEW_ADDRESS}                   Teststraat 1
+${POSTAL_CODE_CREATE_NEW_ADDRESS}               1234 AB
+${CITY_CREATE_NEW_ADDRESS}                      Teststad
+${COUNTRY_NETHERLANDS_CREATE_NEW_ADDRESS}       Netherlands
+${COUNTRY_FRANCE_CREATE_NEW_ADDRESS}            France
 
 
 # List variables
 @{SHOPPING_CART_ITEMS}          Hummingbird printed t-shirt     The adventure begins Framed poster     Hummingbird printed sweater      The best is yet to come' Framed poster      Mug The best is yet to come
-@{CREATE_NEW_ADDRESS}           Teststraat 1    1234 AB     Teststad
-
+@{ADDRESS_INFORMATION_LIST}     Teststraat 1
+@{COUNTRY_LIST}                 Netherlands     France
 # Screenshot paths
 
 # Sign in page

@@ -99,7 +99,6 @@ Should be able to add address to existing user
         ValoriWebShop.Go to Valori Webshop landing page
         ValoriWebShop.Sign in to Valori Webshop
         ValoriWebShop.Add address to existing user
-        ValoriWebShop.Verify address added to existing user
 
 Should be able to place an order and go to own address
     [Documentation]     Place an order and go to own address

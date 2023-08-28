@@ -9,6 +9,9 @@ Verify Account Page Loaded
     Wait Until Page Contains Element        ${ACCOUNT_PAGE_HEADER}
     Page Should Contain Element             ${ACCOUNT_PAGE_HEADER}
 
-Click "Addresses" Link
-	Click Link                              ${ACCOUNT_PAGE_ADDRESSES_LINK}
+Click "Create New Address" Element
+    Click Element                           ${ACCOUNT_PAGE_CREATE_NEW_ADDRESS_ELEMENT}
+
+Click "Addresses" Element
+	Click Element                           ${ACCOUNT_PAGE_ADDRESSES_ELEMENT}
 ```

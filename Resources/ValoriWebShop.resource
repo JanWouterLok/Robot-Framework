@@ -9,7 +9,7 @@ Resource            ../Resources/PO/SingleProductPage.resource
 Resource            ../Resources/PO/OrderModal.resource
 Resource            ../Resources/PO/CartPage.resource
 Resource            ../Resources/PO/AccountAddressPage.resource
-Resource            ../Resources/PO/AccountPage.resource
+Resource            ../Resources/PO/NewAddressPage.resource
 Resource            ../Resources/Keywords/GenerateAndUseMockData.resource
 
 
@@ -139,25 +139,26 @@ Add 5 products to cart
         CartPage.Remove items from cart
 
 Add address to existing user
-	    AccountPage.Click "Addresses" link
+	    AccountPage.Click "Addresses" Element
         AccountAddressPage.Verify Account Address Page Loaded
-        AccountAddressPage.Click "Create new address" Link
+        ${create_address_link_visible}=         Run Keyword And Return Status
+        ...     Page Should Contain Element     ${ACCOUNT_ADDRESS_PAGE_CREATE_NEW_ADDRESS_ELEMENT}
+        Run Keyword If                          ${create_address_link_visible}
+        ...     AccountAddressPage.Click "Create new address" Element
+        ...     ELSE    AccountPage.Click "Addresses" element
+        NewAddressPage.Verify New Address Page Loaded
         NewAddressPage.Enter "Address"
         NewAddressPage.Enter "Zip/postal code"
         NewAddressPage.Enter "City"
-        AccountAddressPage.Enter "Country"
-        NewAddressPage.Enter "Phone"
+        NewAddressPage.Select "Country" "Netherlands"
         NewAddressPage.Click "Save" button
-        AccountAddressPage.Verify Address added
-        AccountAddressPage.Click "Home" link
+        AccountAddressPage.Verify "Address succesfully added!" message is displayed
+        AccountAddressPage.Verify address added to existing user
+        AccountAddressPage.Delete address from existing user
+        AccountAddressPage.Click "Home" Element
         TopNav.Click "Sign out" link
 
-Verify address added to existing user
-        AccountPage.Verify Account page loaded
-        AccountPage.Click "Addresses" link
-        AccountAddressPage.Verify Account Address page loaded
-        AccountAddressPage.Verify Address added
-        AccountAddressPage.Delete added address
+
 
 
 
