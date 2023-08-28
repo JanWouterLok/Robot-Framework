@@ -15,8 +15,11 @@ ${EMAIL_NEW_ACCOUNT}                            Replicant6@BladeRunner.com
 ${PASSWORD_NEW_ACCOUNT}                         Priss123
 ${BIRTHDAY_NEW_ACCOUNT}                         01/01/1993
 ${ADDRESS_CREATE_NEW_ADDRESS}                   Teststraat 1
-${POSTAL_CODE_CREATE_NEW_ADDRESS}               1234 AB
+${ADDRESS_CREATE_NEW_ADDRESS_FR}                Rue de Test 1
+${POSTAL_CODE_NL_CREATE_NEW_ADDRESS}            1234 AB
+${POSTAL_CODE_FR_CREATE_NEW_ADDRESS}            12345
 ${CITY_CREATE_NEW_ADDRESS}                      Teststad
+${CITY_CREATE_NEW_ADDRESS_FR}                   Testville
 ${COUNTRY_NETHERLANDS_CREATE_NEW_ADDRESS}       Netherlands
 ${COUNTRY_FRANCE_CREATE_NEW_ADDRESS}            France
 
@@ -24,6 +27,7 @@ ${COUNTRY_FRANCE_CREATE_NEW_ADDRESS}            France
 # List variables
 @{SHOPPING_CART_ITEMS}          Hummingbird printed t-shirt     The adventure begins Framed poster     Hummingbird printed sweater      The best is yet to come' Framed poster      Mug The best is yet to come
 @{ADDRESS_INFORMATION_LIST}     Teststraat 1
+@{ADDRESS_INFORMATION_LIST_FR}  Rue de Test 1   12345   Testville   France
 @{COUNTRY_LIST}                 Netherlands     France
 # Screenshot paths
 

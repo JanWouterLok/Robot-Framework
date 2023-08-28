@@ -158,6 +158,48 @@ Add address to existing user
         AccountAddressPage.Click "Home" Element
         TopNav.Click "Sign out" link
 
+Place an order and go to own address
+
+        AccountPage.Click "Addresses" Element
+        AccountAddressPage.Verify Account Address Page Loaded
+        ${create_address_link_visible}=         Run Keyword And Return Status
+        ...     Page Should Contain Element     ${ACCOUNT_ADDRESS_PAGE_CREATE_NEW_ADDRESS_ELEMENT}
+        Run Keyword If                          ${create_address_link_visible}
+        ...     AccountAddressPage.Click "Create new address" Element
+        ...     ELSE    AccountPage.Click "Addresses" element
+        NewAddressPage.Verify New Address Page Loaded
+        NewAddressPage.Enter All Address Fields "France"
+        NewAddressPage.Click "Save" button
+        AccountAddressPage.Verify "Address succesfully added!" message is displayed
+        TopNav.Click "Clothes" Element
+        ClothesProductsPage.Verify "Clothes" Products Page Loaded
+        ClothesProductsPage.Click "Hummingbird Printed T-shirt" Picture
+        SingleProductPage.Verify "Hummingbird Printed T-shirt" Product Page Loaded
+        SingleProductPage.Select "Size M" Dropdown
+        SingleProductPage.Click "Color" Black Radio Buttton
+        SingleProductPage.Select "Quantity" "2" from Dropdown
+        SingleProductPage.Click "Add to cart" button
+        OrderModal.Verify Order Modal Is Displayed
+        OrderModal.Click "Proceed to checkout" button
+        CartPage.Verify Cart page loaded
+        CartPage.Click "Proceed to checkout" button
+        CheckoutPage.Verify Checkout page "Personal information"loaded
+        CheckoutPage.Choose an address "France"
+        CheckoutPage.Click "Continue" button
+        CheckoutPage.Verify Checkout page "Shipping method" loaded
+        CheckoutPage.Choose shipping method "My carrier"
+        CheckoutPage.Click "Continue" button
+        CheckoutPage.Verify Checkout page "Payment method" loaded
+        CheckoutPage.Choose payment method "Pay by bank wire"
+        CheckoutPage.Check "I agree with the terms of service and will adhere to them unconditionally." Checkbox
+        CheckoutPage.Click "Continue" button
+        OrderSummaryPage.Verify Order Summary page loaded
+        OrderSummaryPage.Verify Order Summary page "YOUR ORDER IS CONFIRMED" message is displayed
+
+
+
+
+
 
 
 

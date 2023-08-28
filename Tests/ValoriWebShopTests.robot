@@ -87,15 +87,6 @@ Should be able to add address to existing user
     [Documentation]     Add address to existing user
     [Tags]    TC_WS_009    Functional   Add Address
 
-#       1. Go to the homepage
-#       2. Login as existing user
-#       3. Click 'Add First Address'
-#       4. Enter an address to address textbox
-#       5. Enter a postcode to postcode textbox
-#       6. Enter city
-#       7. Choose a country
-#       8. Click on 'Save' button
-#       9. Verify that address has been created and "Address successfully added! " message is displayed
         ValoriWebShop.Go to Valori Webshop landing page
         ValoriWebShop.Sign in to Valori Webshop
         ValoriWebShop.Add address to existing user
@@ -118,6 +109,11 @@ Should be able to place an order and go to own address
 #       12. Click on 'PLACE ORDER' Button
 #       13. Verify order and amount and "YOUR ORDER IS CONFIRMED" message is displayed
 
+        ValoriWebShop.Go to Valori Webshop landing page
+        ValoriWebShop.Sign in to Valori Webshop
+        ValoriWebShop.Place an order and go to own address
+
+
 Should be able to send a message about the order and confirm that the message is sent
     [Documentation]     Send a message about the order and confirm that the message is sent
     [Tags]    TC_WS_011    Functional   Send Message
@@ -126,7 +122,7 @@ Should be able to send a message about the order and confirm that the message is
 #       2. Login as exisiting user
 #       3. Click on your account
 #       4. Click on Order History and Details
-#       5. Clcik on Details
+#       5. Click on Details
 #       6. Choose a product
 #       7. Enter a message about the product you selected
 #       8. Click on "SEND" button

@@ -15,7 +15,7 @@ Enter "Address"
 
 Enter "Zip/postal code"
 
-    Input Text                          ${NEW_ADDRESS_PAGE_POSTAL_CODE_BOX}     ${POSTAL_CODE_CREATE_NEW_ADDRESS}
+    Input Text                          ${NEW_ADDRESS_PAGE_POSTAL_CODE_BOX}     ${POSTAL_CODE_NL_CREATE_NEW_ADDRESS}
 
 Enter "City"
 
@@ -27,6 +27,12 @@ Select "Country" "Netherlands"
 
 Select "Country" "France"
 
+    Select From List By Label           ${NEW_ADDRESS_PAGE_COUNTRY_DROPDOWN}    ${COUNTRY_FRANCE_CREATE_NEW_ADDRESS}
+
+Enter All Address Fields "France"
+    Input Text                          ${NEW_ADDRESS_PAGE_ADDRESS_BOX}         ${ADDRESS_CREATE_NEW_ADDRESS_FR}
+    Input Text                          ${NEW_ADDRESS_PAGE_POSTAL_CODE_BOX}     ${POSTAL_CODE_FR_CREATE_NEW_ADDRESS}
+    Input Text                          ${NEW_ADDRESS_PAGE_CITY_BOX}            ${CITY_CREATE_NEW_ADDRESS_FR}
     Select From List By Label           ${NEW_ADDRESS_PAGE_COUNTRY_DROPDOWN}    ${COUNTRY_FRANCE_CREATE_NEW_ADDRESS}
 
 Click "Save" button
