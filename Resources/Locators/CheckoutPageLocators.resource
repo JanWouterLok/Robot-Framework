@@ -1,1 +1,14 @@
-*** Keywords ***
+*** Variables ***
+${CHECKOUT_PAGE_PERSONAL_INFORMATION_HEADER} =              xpath=//*[@id="checkout-personal-information-step"]/h1
+${CHECKOUT_PAGE_PERSONAL_INFORMATION_CONTINUE_BUTTON} =     xpath=//*[@id="checkout-personal-information-step"]/div/div/form/button
+${CHECKOUT_PAGE_ADDRESSES_HEADER} =                         xpath=//*[@id="checkout-addresses-step"]/h1
+${CHECKOUT_PAGE_MY_ADDRESS_RADIO_BUTTON} =                  xpath=//*[contains(@id, "id-address-delivery-address-")]/header/label/span[1]/span
+${CHECKOUT_PAGE_ADDRESSES_CONTINUE_BUTTON} =                xpath=//*[@id="checkout-addresses-step"]/div/div/form/div[2]/button
+${CHECKOUT_PAGE_SHIPPING_METHOD_HEADER} =                   xpath=//*[@id="checkout-delivery-step"]/h1
+${CHECKOUT_PAGE_SHIPPING_METHOD_VALORI_RADIO_BUTTON} =      xpath=//*[@id="delivery_option_1"]
+${CHECKOUT_PAGE_SHIPPING_METHOD_MY_CARRIER_RADIO_BUTTON} =  xpath=//*[@id="delivery_option_2"]
+${CHECKOUT_PAGE_SHIPPING_METHOD_CONTINUE_BUTTON} =          xpath=//*[@id="js-delivery"]/button
+${CHECKOUT_PAGE_PAYMENT_HEADER} =                           xpath=//*[@id="checkout-payment-step"]/h1
+${CHECKOUT_PAGE_PAYMENT_BY_CHECK_RADIO_BUTTON} =            xpath=//*[@id="payment-option-1"]
+${CHECKOUT_PAGE_TERMS_OF_SERVICE_CHECKBOX} =                id=conditions_to_approve[terms-and-conditions]
+${CHECKOUT_PAGE_PAYMENT_PLACE_ORDER_BUTTON} =               xpath=//*[@id="payment-confirmation"]/div[1]/button

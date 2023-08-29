@@ -174,7 +174,7 @@ Place an order and go to own address
         NewAddressPage.Enter All Address Fields "France"
         NewAddressPage.Click "Save" button
         AccountAddressPage.Verify "Address succesfully added!" message is displayed
-        TopNav.Click "Clothes" Element
+        TopNav.Click "Clothes" Dropdown
         ClothesProductsPage.Verify "Clothes" Products Page Loaded
         ClothesProductsPage.Click "Hummingbird Printed T-shirt" Picture
         SingleProductPage.Verify "Hummingbird Printed T-shirt" Product Page Loaded

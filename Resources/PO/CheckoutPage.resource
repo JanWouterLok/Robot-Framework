@@ -2,6 +2,8 @@
 
 Verify Checkout page "Personal information" loaded
 
+
+
 Choose an address "France"
 
 Click Personal Information "Continue" button

@@ -9,4 +9,4 @@ ${CART_PAGE_PRODUCT_QUANTITY} =
 ${CART_PAGE_PRODUCT_TOTAL_PRICE} =
 ${CART_PAGE_SUBTOTAL} =
 ${CART_PAGE_TOTAL} =
-${CART_PAGE_CHECKOUT_BUTTON} =
+${CART_PAGE_CHECKOUT_BUTTON} =              xpath=//a[contains(text(),'Proceed to checkout')]
