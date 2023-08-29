@@ -1,25 +1,27 @@
 *** Settings ***
-Library     SeleniumLibrary
 Resource    ../Resources/Keywords/homePageKeywords.robot
-Resource    ../Resources/Keywords/loginKeywords.robot
-Resource    ../Resources/Variables/loginVariable.robot
-Resource    ../Resources/Variables/homePageVariable.robot
-Resource    ../Resources/Variables/registerVariable.robot
-Resource    ../Resources/Locators/homePageLocators.robot
-Resource    ../Resources/Locators/loginLocators.robot
-Test Setup  Navigate to HomePage
+
+Test Setup      Navigate to Website
 Test Teardown   Exit Browser
 
 
 *** Test Cases ***
-PositiefLoginTest    
-    Log in 
-    Confirm user is sign in   
+Successful log in
+    [Documentation]     Login succefully
+    Log in with correct login
+    Confirm sign in pass
 
-#voorbeeld zonder keywords
-Login to webshop and confirm user is logged in
-    Click Link         ${signinLink}
-    Input text         ${emailInputField}    ${username} 
-    Input Password     ${passwordInputField}              ${Password}
-    Click Button       ${signinButton}    
-    
+Unsuccessful log in with invalid username
+    [Documentation]     Try to log in with invalid username
+    Log in with incorrect username
+    Confirm sign in failed
+
+Unsuccessful log in with invalid password
+    [Documentation]     Try to log in with invalid password
+    Log in with incorrect password
+    Confirm sign in failed
+
+Unsuccessful log in with invalid credentials
+    [Documentation]     Try to log in with invalid username and password
+    Log in with incorrect credentials
+    Confirm sign in failed
