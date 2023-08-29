@@ -54,7 +54,7 @@ Click "Color" Black Radio Buttton
 
 Select "Quantity" "2" from Dropdown
 
-	Select From List By Value               ${SINGLE_PRODUCT_PAGE_QUANTITY_DROPDOWN}         ${SINGLE_PRODUCT_PAGE_QUANTITY_DROPDOWN_OPTION_2}
+	Input Text                              ${SINGLE_PRODUCT_PAGE_QUANTITY_FIELD}         ${PRODUCT_QUANTITY_OPTION_2}
 
 
 

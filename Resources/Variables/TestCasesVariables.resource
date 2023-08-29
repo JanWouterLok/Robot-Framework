@@ -22,6 +22,7 @@ ${CITY_CREATE_NEW_ADDRESS}                      Teststad
 ${CITY_CREATE_NEW_ADDRESS_FR}                   Testville
 ${COUNTRY_NETHERLANDS_CREATE_NEW_ADDRESS}       Netherlands
 ${COUNTRY_FRANCE_CREATE_NEW_ADDRESS}            France
+${PRODUCT_QUANTITY_OPTION_2}                    2
 
 
 # List variables

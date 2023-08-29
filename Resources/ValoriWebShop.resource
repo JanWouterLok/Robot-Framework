@@ -187,15 +187,15 @@ Place an order and go to own address
         CartPage.Verify Cart page loaded
         CartPage.Click "Proceed to checkout" button
         CheckoutPage.Verify Checkout page "Personal information" loaded
-        CheckoutPage.Choose an address "France"
-        CheckoutPage.Click Personal Information "Continue" button
+        CheckoutPage.Choose an address
+        CheckoutPage.Click "Addresses" "Continue" button
         CheckoutPage.Verify Checkout page "Shipping method" loaded
         CheckoutPage.Choose shipping method "My carrier"
         CheckoutPage.Click Shipping method "Continue" button
         CheckoutPage.Verify Checkout page "Payment method" loaded
-        CheckoutPage.Choose payment method "Pay by bank wire"
+        CheckoutPage.Choose payment method "Pay by check"
         CheckoutPage.Check "I agree with the terms of service and will adhere to them unconditionally." Checkbox
-        CheckoutPage.Click payment method "Continue" button
+        CheckoutPage.Click payment method "Place order" button
         OrderSummaryPage.Verify Order Summary page loaded
         OrderSummaryPage.Verify Order Summary page "YOUR ORDER IS CONFIRMED" message is displayed
 

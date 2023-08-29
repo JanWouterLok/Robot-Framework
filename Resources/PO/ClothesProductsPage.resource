@@ -11,3 +11,5 @@ Verify "Clothes" Products Page Loaded
     Page Should Contain Element         ${CLOTHES_PRODUCTS_PAGE_HEADER}
 
 Click "Hummingbird Printed T-shirt" Picture
+
+	Click Element                       ${CLOTHES_PRODUCTS_PAGE_TSHIRT_PICTURE}
