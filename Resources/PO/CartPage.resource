@@ -9,7 +9,6 @@ Verify Cart page loaded
     Page Should Contain Element         ${CART_PAGE_HEADER}
 
 Verify products in cart
-
     FOR   ${item}       IN              @{SHOPPING_CART_ITEMS}
 
     Page Should Contain                 ${item}
@@ -17,7 +16,6 @@ Verify products in cart
     END
 
 Remove items from cart
-
     FOR   ${item}       IN              @{SHOPPING_CART_ITEMS}
 
     Click Element                       ${CART_PAGE_TRASH_ICON}
@@ -25,6 +23,5 @@ Remove items from cart
     END
 
 Click "Proceed to checkout" button
-
-	 Click Element                      ${CART_PAGE_CHECKOUT_BUTTON}
+    Click Element                      ${CART_PAGE_CHECKOUT_BUTTON}
 ```

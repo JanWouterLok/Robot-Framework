@@ -1,7 +1,7 @@
 *** Settings ***
 Library             SeleniumLibrary
-Resource            C:/ValoriRobotFrameWorkProject/Robot-Framework/Resources/Locators/LandingPageLocators.resource
-Resource            C:/ValoriRobotFrameWorkProject/Robot-Framework/Resources/Variables/TestCasesVariables.resource
+Resource            ../Locators/LandingPageLocators.resource
+Resource            ../Variables/TestCasesVariables.resource
 
 *** Variables ***
 
@@ -23,6 +23,7 @@ Click product "The Adventure Begins Framed Poster"
 
 Click product "HummingBird Printed Sweater"
     Click Element                           ${LANDING_PAGE_HUMMINGBIRD_PRINTED_SWEATER_THUMBNAIL}
+
 Click product "The Best is Yet to Come Framed Poster"
     Click Element                           ${LANDING_PAGE_THE_BEST_IS_YET_TO_COME_FRAMED_POSTER_THUMBNAIL}
 

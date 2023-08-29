@@ -7,57 +7,45 @@ Resource            ../Locators/SignInPageLocators.resource
 *** Keywords ***
 
 Verify Sign In Page Loaded
-
-        Wait Until Page Contains Element                ${SIGN_IN_PAGE_HEADER}
-        Page Should Contain Element                     ${SIGN_IN_PAGE_HEADER}
+    Wait Until Page Contains Element                ${SIGN_IN_PAGE_HEADER}
+    Page Should Contain Element                     ${SIGN_IN_PAGE_HEADER}
 
 Enter email
-
-        Input Text      ${SIGN_IN_PAGE_EMAIL_BOX}       ${VALID_EMAIL}
+    Input Text      ${SIGN_IN_PAGE_EMAIL_BOX}       ${VALID_EMAIL}
 
 Enter password
-
-        Input Text      ${SIGN_IN_PAGE_PASSWORD_BOX}    ${VALID_PASSWORD}
+    Input Text      ${SIGN_IN_PAGE_PASSWORD_BOX}    ${VALID_PASSWORD}
 
 Enter invalid email
-
-        Input Text      ${SIGN_IN_PAGE_EMAIL_BOX}       ${INVALID_EMAIL}
+    Input Text      ${SIGN_IN_PAGE_EMAIL_BOX}       ${INVALID_EMAIL}
 
 Enter unknown email
-
-        Input Text      ${SIGN_IN_PAGE_EMAIL_BOX}       ${INVALID_UNKNOWN_EMAIL}
+    Input Text      ${SIGN_IN_PAGE_EMAIL_BOX}       ${INVALID_UNKNOWN_EMAIL}
 
 Capture Page Screenshot after entering invalid email
-         Sleep                                          2s
-         Capture Page Screenshot                        ${SCREENSHOT_INVALID_EMAIL_SIGN_IN}
+    Sleep                                          2s
+    Capture Page Screenshot                        ${SCREENSHOT_INVALID_EMAIL_SIGN_IN}
 
 Enter invalid password
-
-        Input Text      ${SIGN_IN_PAGE_PASSWORD_BOX}    ${INVALID_PASSWORD}
+    Input Text      ${SIGN_IN_PAGE_PASSWORD_BOX}    ${INVALID_PASSWORD}
 
 Capture Page Screenshot after entering invalid email and password
-        Sleep                                           1s
-        Capture Page Screenshot                         ${SCREENSHOT_INVALID_EMAIL_AND_PASSWORD_SIGN_IN}
+    Sleep                                           1s
+    Capture Page Screenshot                         ${SCREENSHOT_INVALID_EMAIL_AND_PASSWORD_SIGN_IN}
 
 click sign in
-
-        Click Button                                    ${SIGN_IN_BUTTON}
-
+    Click Button                                    ${SIGN_IN_BUTTON}
 
 Verify authentication failed message displayed
-
-        Wait Until Page Contains                        ${SIGN_IN_PAGE_AUTHENTICATION_ERROR}
-        Page Should Contain                             ${SIGN_IN_PAGE_AUTHENTICATION_ERROR}
+    Wait Until Page Contains                        ${SIGN_IN_PAGE_AUTHENTICATION_ERROR}
+    Page Should Contain                             ${SIGN_IN_PAGE_AUTHENTICATION_ERROR}
 
 Verify if still on sign in page after entering invalid email and/or password
-
-        Wait Until Page Contains Element                ${SIGN_IN_PAGE_HEADER}
-        Page Should Contain Element                     ${SIGN_IN_PAGE_HEADER}
+    Wait Until Page Contains Element                ${SIGN_IN_PAGE_HEADER}
+    Page Should Contain Element                     ${SIGN_IN_PAGE_HEADER}
 
 Compare screenshot after entering invalid email
-
-        Compare Images                                  ${SCREENSHOT_INVALID_EMAIL_SIGN_IN_REFERENCE}       ${SCREENSHOT_INVALID_EMAIL_SIGN_IN}
+    Compare Images                                  ${SCREENSHOT_INVALID_EMAIL_SIGN_IN_REFERENCE}       ${SCREENSHOT_INVALID_EMAIL_SIGN_IN}
 
 Click create an account link
-
-        Click Link                                      ${SIGN_IN_PAGE_CREATE_ACCOUNT_LINK}
+    Click Link                                      ${SIGN_IN_PAGE_CREATE_ACCOUNT_LINK}
