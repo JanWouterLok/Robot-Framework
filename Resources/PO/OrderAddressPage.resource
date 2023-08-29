@@ -1,7 +1,7 @@
 *** Settings ***
 Library             SeleniumLibrary
 Resource            ../Variables/TestCasesVariables.resource
-Resource            ../Locators/AccountAddressPageLocators.resource
+Resource            ../Locators/OrderAddressPageLocators.resource
 
 *** Keywords ***
 

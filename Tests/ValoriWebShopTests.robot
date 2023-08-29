@@ -49,7 +49,6 @@ Should not be able to login with invalid username and invalid password
     [Documentation]     Enter an invalid username&password and try to sign in
     [Tags]    TC_WS_004    Functional   Sign in Webshop
 
-
         ValoriWebshop.Go to Valori Webshop landing page
         ValoriWebshop.Sign in to Valori Webshop with invalid email and password
 
@@ -79,7 +78,6 @@ Should be able to add five items to cart and confirm those items are added to ca
     [Documentation]     Add five items to cart and confirm those items are added to cart
     [Tags]    TC_WS_008    Functional   Add to Cart
 
-
         ValoriWebShop.Go to Valori Webshop landing page
         ValoriWebShop.Add 5 products to cart
 
@@ -94,20 +92,6 @@ Should be able to add address to existing user
 Should be able to place an order and go to own address
     [Documentation]     Place an order and go to own address
     [Tags]    TC_WS_010    Functional   Place Order
-
-#       1. Go to the homepage
-#       2. Login as existing user
-#       3. Click 'Add First Address'
-#       4. Add  some products to cart
-#       5. Click on 'Proceed to checkout'
-#       6. Choose an address
-#       7. Click on 'continue' button
-#       8. Choose shipping method
-#       9. Click on 'continue' button
-#       10. Choose payment method
-#       11. Accept the terms of service
-#       12. Click on 'PLACE ORDER' Button
-#       13. Verify order and amount and "YOUR ORDER IS CONFIRMED" message is displayed
 
         ValoriWebShop.Go to Valori Webshop landing page
         ValoriWebShop.Sign in to Valori Webshop
@@ -127,6 +111,10 @@ Should be able to send a message about the order and confirm that the message is
 #       7. Enter a message about the product you selected
 #       8. Click on "SEND" button
 #       9. Verify that the message you sent is under Messages and "Message successfully sent" message is displayed
+
+        ValoriWebShop.Go to Valori Webshop landing page
+        ValoriWebShop.Sign in to Valori Webshop
+        ValoriWebShop.Send a message about the order and confirm that the message is sent
 
 Should be able to search for product and confirm that the product is found
     [Documentation]     Search for product and confirm that the product is found

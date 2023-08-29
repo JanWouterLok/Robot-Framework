@@ -10,4 +10,7 @@ Verify Account Page Loaded
 
 Click "Addresses" Element
 	Click Element                           ${ACCOUNT_PAGE_ADDRESSES_ELEMENT}
+
+Click "Order History and Details" Element
+    Click Element                           ${ACCOUNT_PAGE_ORDER_HISTORY_ELEMENT}
 ```

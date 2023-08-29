@@ -3,10 +3,6 @@ Library             SeleniumLibrary
 Resource            ../Locators/LandingPageLocators.resource
 Resource            ../Variables/TestCasesVariables.resource
 
-*** Variables ***
-
-
-
 *** Keywords ***
 
 Load

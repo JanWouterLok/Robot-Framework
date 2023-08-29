@@ -13,6 +13,8 @@ Resource            ../Resources/PO/NewAddressPage.resource
 Resource            ../Resources/PO/ClothesProductsPage.resource
 Resource            ../Resources/PO/CheckoutPage.resource
 Resource            ../Resources/PO/OrderSummaryPage.resource
+Resource            ../Resources/PO/OrderHistoryPage.resource
+Resource            ../Resources/PO/OrderDetailsPage.resource
 Resource            ../Resources/Keywords/GenerateAndUseMockData.resource
 
 
@@ -199,7 +201,16 @@ Place an order and go to own address
         OrderSummaryPage.Verify Order Summary page loaded
         OrderSummaryPage.Verify Order Summary page "YOUR ORDER IS CONFIRMED" message is displayed
 
-
+Send a message about the order and confirm that the message is sent
+	    FooterNav.Click on "YOUR ACCOUNT" Link
+        AccountPage.Verify Account page loaded
+        AccountPage.Click "Order History and Details" Element
+        OrderHistoryPage.Verify "Order History" page loaded
+        OrderHistoryPage.Click "Order DAGEDQZUV Details" Link
+        OrderDetailsPage.Verify "Order Details" page loaded
+        OrderDetailsPage.Select Product "Mountain fox cushion" from Dropdown
+        OrderDetailsPage.Enter Message "What does the fox say?" in Textarea
+        OrderDetailsPage.Click "Send" button
 
 
 
