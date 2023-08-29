@@ -211,6 +211,7 @@ Send a message about the order and confirm that the message is sent
         OrderDetailsPage.Select Product "Mountain fox cushion" from Dropdown
         OrderDetailsPage.Enter Message "What does the fox say?" in Textarea
         OrderDetailsPage.Click "Send" button
+        OrderDetailsPage.Verify "Message succesfully sent" message displayed
 
 
 

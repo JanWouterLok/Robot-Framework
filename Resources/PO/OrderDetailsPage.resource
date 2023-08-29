@@ -9,11 +9,17 @@ Verify "Order Details" page loaded
     Page Should Contain Element             ${ORDER_DETAILS_PAGE_HEADER}
 
 Select Product "Mountain fox cushion" from Dropdown
-	    Select From List By Label           ${ORDER_DETAILS_PAGE_PRODUCT_DROPDOWN}              ${MOUNTAIN_FOX_CUSHION_ORDER}
+	Select From List By Label               ${ORDER_DETAILS_PAGE_PRODUCT_DROPDOWN}              ${MOUNTAIN_FOX_CUSHION_ORDER}
 
 Enter Message "What does the fox say?" in Textarea
+    Input Text                              ${ORDER_DETAILS_PAGE_MESSAGE_FIELD}                 ${MOUNTAIN_FOX_CUSHION_MESSAGE}
 
-	Input Text                              ${ORDER_DETAILS_PAGE_MESSAGE_FIELD}                 ${MOUNTAIN_FOX_CUSHION_MESSAGE}
+Click "Send" button
+	Click Element                           ${ORDER_DETAILS_PAGE_SEND_MESSAGE_BUTTON}
+
+Verify "Message succesfully sent" message displayed
+    Wait Until Page Contains Element        ${ORDER_DETAILS_PAGE_SUCCESS_SENT_MESSAGE}
+    Page Should Contain Element             ${ORDER_DETAILS_PAGE_SUCCESS_SENT_MESSAGE}
 
 
 ```

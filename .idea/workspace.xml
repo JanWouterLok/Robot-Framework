@@ -5,27 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e62f7dcf-5fcf-4b29-a1d6-9676171309cc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Resources/Locators/OrderDetailsPageLocators.resource" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Locators/OrderHistoryPageLocators.resource" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/PO/OrderDetailsPage.resource" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/PO/OrderHistoryPage.resource" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/ReferenceImages/Screenshot_Invalid_Email_Create_Account_Deprecated.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/ReferenceImages/Screenshot_Invalid_Email_Sign_In_Deprecated.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/ReferenceImages/Screenshot_Invalid_Password_Create_Account_Deprecated.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Documentation/ProjectStructureRobotFrameWorkSVG.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Documentation/ProjectStructureRobotFrameWorkSVG.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Locators/AccountPageLocators.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Locators/AccountPageLocators.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Locators/FooterNavLocators.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Locators/FooterNavLocators.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/PO/AccountPage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/PO/AccountPage.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/PO/FooterNav.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/PO/FooterNav.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/PO/LandingPage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/PO/LandingPage.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/PO/OrderAddressPage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/PO/OrderAddressPage.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/ReferenceImages/Screenshot_Invalid_Email_Create_Account_Reference.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/ReferenceImages/Screenshot_Invalid_Email_Create_Account_Reference.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/ReferenceImages/Screenshot_Invalid_Email_Sign_In_Reference.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/ReferenceImages/Screenshot_Invalid_Email_Sign_In_Reference.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/ReferenceImages/Screenshot_Invalid_Password_Create_Account_Reference.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/ReferenceImages/Screenshot_Invalid_Password_Create_Account_Reference.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Locators/OrderDetailsPageLocators.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Locators/OrderDetailsPageLocators.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/PO/OrderDetailsPage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/PO/OrderDetailsPage.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/ValoriWebShop.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/ValoriWebShop.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Variables/TestCasesVariables.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Variables/TestCasesVariables.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ValoriWebShopTests.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ValoriWebShopTests.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,21 +37,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultPlantUmlFileTemplate": "UML Component",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/ValoriRobotFrameWorkProject/Robot-Framework/Resources/ReferenceImages",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Component&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/ValoriRobotFrameWorkProject/Robot-Framework/Resources/ReferenceImages&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\ValoriRobotFrameWorkProject\Robot-Framework\Resources\ReferenceImages" />
@@ -88,7 +71,8 @@
       <workItem from="1693205892670" duration="6331000" />
       <workItem from="1693213395639" duration="15464000" />
       <workItem from="1693230210971" duration="339000" />
-      <workItem from="1693292223910" duration="14483000" />
+      <workItem from="1693292223910" duration="14891000" />
+      <workItem from="1693317140550" duration="327000" />
     </task>
     <servers />
   </component>

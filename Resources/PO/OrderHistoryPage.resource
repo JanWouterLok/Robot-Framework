@@ -5,8 +5,8 @@ Resource                ../Locators/OrderHistoryPageLocators.resource
 *** Keywords ***
 
 Verify "Order History" page loaded
-	Wait Until Page Contains Element
+	Wait Until Page Contains Element        ${ORDER_HISTORY_PAGE_HEADER}
 
 Click "Order DAGEDQZUV Details" Link
-	Click Link                      ${ORDER_HISTORY_PAGE_ORDER_NUMBER_DAGEDQZUV_DETAILS}
+	Click Link                              ${ORDER_HISTORY_PAGE_ORDER_NUMBER_DAGEDQZUV_DETAILS}
 
