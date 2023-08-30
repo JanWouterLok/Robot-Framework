@@ -1,5 +1,6 @@
 *** Settings ***
 Library             SeleniumLibrary
+Library             RequestsLibrary
 Resource            ../Resources/Variables/TestCasesVariables.resource
 
 *** Keywords ***
@@ -14,3 +15,8 @@ End web test
     Sleep                           2s
     Close Browser
     Log                             Ending the test case!
+
+Create an API request session
+	@{list}=   Create List          ${VALID_EMAIL}   ${VALID_PASSWORD}
+	           Create Session       ValoriWebShop    ${URL}/login?back=my-account            auth=${list}
+	           GET On Session       ValoriWebShop    /     expected_status=200
