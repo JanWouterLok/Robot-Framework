@@ -121,23 +121,3 @@ Should be able to file a complaint and confirm that the complaint is filed
         ValoriWebShop.File a complaint and confirm that the complaint is filed
 
 
-#Should be able to use "Forgot password" functionality
-#
-#Should be able to review order history
-#
-#Should be able to review credit slips
-#
-#Should be able to search for product
-#
-#Should be able to checkout product
-#
-#Should be able to use the quick view functionality on products
-#
-#Should be able to use the Top Navigation
-#
-#Should be able to use the Footer Navigation
-#
-#Should be able to order multiple products and the payment amount should be correct
-#
-#Should be able to delete account
-#
