@@ -1,5 +1,6 @@
 *** Settings ***
 Library             SeleniumLibrary
+Resource            ../Variables/TestCasesVariables.resource
 Resource            ../Locators/TopNavLocators.resource
 
 *** Keywords ***
@@ -22,6 +23,12 @@ Click "Sign out" link
 
 Click "Clothes" Dropdown
     Click Element                       ${TOP_NAV_CLOTHES_DROPDOWN}
+
+Enter "Hummingbird t-shirt" in Search field
+    Input Text                          ${TOP_NAV_SEARCH_FIELD}             ${ITEM_SEARCH}
+
+Click "Search" button
+	Click Element                       ${TOP_NAV_SEARCH_BUTTON}
 
 
 

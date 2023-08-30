@@ -26,5 +26,7 @@ Click product "The Best is Yet to Come Framed Poster"
 Click product "The Best is Yet to Come Mug"
     Click Element                           ${LANDING_PAGE_THE_BEST_IS_YET_TO_COME_MUG_THUMBNAIL}
 
+
+
 ```
 

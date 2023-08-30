@@ -15,6 +15,7 @@ Resource            ../Resources/PO/CheckoutPage.resource
 Resource            ../Resources/PO/OrderSummaryPage.resource
 Resource            ../Resources/PO/OrderHistoryPage.resource
 Resource            ../Resources/PO/OrderDetailsPage.resource
+Resource            ../Resources/PO/SearchResultsPage.resource
 Resource            ../Resources/Keywords/GenerateAndUseMockData.resource
 
 
@@ -212,6 +213,14 @@ Send a message about the order and confirm that the message is sent
         OrderDetailsPage.Enter Message "What does the fox say?" in Textarea
         OrderDetailsPage.Click "Send" button
         OrderDetailsPage.Verify "Message succesfully sent" message displayed
+
+Search for product and confirm that the product is found
+	    TopNav.Enter "Hummingbird t-shirt" in Search field
+        TopNav.Click "Search" button
+        SearchResultsPage.Verify "Search results" page loaded
+        SearchResultsPage.Verify "Hummingbird t-shirt" product is found
+
+
 
 
 

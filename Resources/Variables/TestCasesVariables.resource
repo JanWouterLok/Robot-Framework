@@ -8,7 +8,7 @@ ${INVALID_EMAIL}                                WrongEmail
 ${INVALID_UNKNOWN_EMAIL}                        Unknown@email.address
 ${INVALID_PASSWORD}                             WrongPassword
 ${PASSWORD_WRONG_FORMAT}                        blah
-${ITEM_SEARCH}                                  hummingbird
+${ITEM_SEARCH}                                  Hummingbird t-shirt
 ${FIRST_NAME_NEW_ACCOUNT}                       Roy
 ${LAST_NAME_NEW_ACCOUNT}                        Batty
 ${EMAIL_NEW_ACCOUNT}                            Replicant6@BladeRunner.com

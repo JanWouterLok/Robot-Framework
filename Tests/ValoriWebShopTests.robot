@@ -102,16 +102,6 @@ Should be able to send a message about the order and confirm that the message is
     [Documentation]     Send a message about the order and confirm that the message is sent
     [Tags]    TC_WS_011    Functional   Send Message
 
-#       1. Go to the homepage
-#       2. Login as exisiting user
-#       3. Click on your account
-#       4. Click on Order History and Details
-#       5. Click on Details
-#       6. Choose a product
-#       7. Enter a message about the product you selected
-#       8. Click on "SEND" button
-#       9. Verify that the message you sent is under Messages and "Message successfully sent" message is displayed
-
         ValoriWebShop.Go to Valori Webshop landing page
         ValoriWebShop.Sign in to Valori Webshop
         ValoriWebShop.Send a message about the order and confirm that the message is sent
@@ -120,10 +110,8 @@ Should be able to search for product and confirm that the product is found
     [Documentation]     Search for product and confirm that the product is found
     [Tags]    TC_WS_012    Functional   Search Product
 
-#       1. Go to the homepage
-#       2. Click on search box
-#       3. Enter an item
-#       4. Verify that item is in the result
+        ValoriWebShop.Go to Valori Webshop landing page
+        ValoriWebShop.Search for product and confirm that the product is found
 
 Should be able to file a complaint and confirm that the complaint is filed
     [Documentation]     File a complaint and confirm that the complaint is filed

@@ -10,3 +10,4 @@ ${TOP_NAV_ACCESSORIES_DROPDOWN} =       xpath=//*[@id="category-6"]/a
 ${TOP_NAV_ART_ELEMENT} =                xpath=//*[@id="category-9"]/a
 ${TOP_NAV_CONTACT_US_LINK} =            xpath=//*[@id="contact-link"]/a
 ${TOP_NAV_SEARCH_FIELD} =               name=s
+${TOP_NAV_SEARCH_BUTTON} =              xpath=//div[@id='search_widget']/form/button/i
