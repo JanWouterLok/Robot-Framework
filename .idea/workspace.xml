@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e62f7dcf-5fcf-4b29-a1d6-9676171309cc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Resources/Locators/SearchResultsPageLocators.resource" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/PO/SearchResultsPage.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Locators/ContactUsPageLocators.resource" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/PO/ContactUsPage.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Locators/TopNavLocators.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Locators/TopNavLocators.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/PO/LandingPage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/PO/LandingPage.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/PO/TopNav.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/PO/TopNav.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/ValoriWebShop.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/ValoriWebShop.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/Variables/TestCasesVariables.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Variables/TestCasesVariables.resource" afterDir="false" />
@@ -25,6 +23,7 @@
       <list>
         <option value="UML Component" />
         <option value="Robot Resource File" />
+        <option value="Robot Feature File" />
       </list>
     </option>
   </component>
@@ -78,7 +77,7 @@
       <workItem from="1693230210971" duration="339000" />
       <workItem from="1693292223910" duration="14891000" />
       <workItem from="1693317140550" duration="1273000" />
-      <workItem from="1693379184815" duration="1463000" />
+      <workItem from="1693379184815" duration="3533000" />
     </task>
     <servers />
   </component>

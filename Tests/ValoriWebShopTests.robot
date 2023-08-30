@@ -117,13 +117,8 @@ Should be able to file a complaint and confirm that the complaint is filed
     [Documentation]     File a complaint and confirm that the complaint is filed
     [Tags]    TC_WS_013    Functional   File Complaint
 
-#       1. Go to the homepage
-#       2. Click on 'Contact us'
-#       3. Choose a department
-#       4. Enter an e-mailadress
-#       5. Enter your complaint to messagetextbox
-#       6. Click on "SEND" button
-#       7. Verify that the complaint was sent and "Your message has been successfully sent to our team." message is displayed.
+        ValoriWebShop.Go to Valori Webshop landing page
+        ValoriWebShop.File a complaint and confirm that the complaint is filed
 
 
 #Should be able to use "Forgot password" functionality

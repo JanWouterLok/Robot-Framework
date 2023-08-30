@@ -16,6 +16,7 @@ Resource            ../Resources/PO/OrderSummaryPage.resource
 Resource            ../Resources/PO/OrderHistoryPage.resource
 Resource            ../Resources/PO/OrderDetailsPage.resource
 Resource            ../Resources/PO/SearchResultsPage.resource
+Resource            ../Resources/PO/ContactUsPage.resource
 Resource            ../Resources/Keywords/GenerateAndUseMockData.resource
 
 
@@ -219,6 +220,15 @@ Search for product and confirm that the product is found
         TopNav.Click "Search" button
         SearchResultsPage.Verify "Search results" page loaded
         SearchResultsPage.Verify "Hummingbird t-shirt" product is found
+
+File a complaint and confirm that the complaint is filed
+	    TopNav.Click "Contact us" link
+        ContactUsPage.Verify "Contact us" page loaded
+        ContactUsPage.Select "Customer service" from Dropdown
+        ContactUsPage.Enter Email in Email Field
+        ContactUsPage.Enter Complaint in Message Field
+        ContactUsPage.Click "Send" button
+        ContactUsPage.Verify "Your message has been successfully sent to our team." message displayed
 
 
 

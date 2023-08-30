@@ -25,6 +25,8 @@ ${COUNTRY_FRANCE_CREATE_NEW_ADDRESS}            France
 ${PRODUCT_QUANTITY_OPTION_2}                    2
 ${MOUNTAIN_FOX_CUSHION_ORDER}                   Mountain fox cushion - Color : Black
 ${MOUNTAIN_FOX_CUSHION_MESSAGE}                 What does the fox say?
+${CUSTOMER_SERVICE_LABEL}                       Customer service
+${COMPLAINT_TEXT}                               I have a complaint. I want my money back!
 
 
 # List variables
