@@ -146,13 +146,14 @@ Add 5 products to cart
         CartPage.Remove items from cart
 
 Add address to existing user
-	    AccountPage.Click "Addresses" Element
-        AccountAddressPage.Verify Account Address Page Loaded
+        FooterNav.Click on "YOUR ACCOUNT" Link
+        AccountPage.Verify Account Page Loaded
         ${create_address_link_visible}=         Run Keyword And Return Status
-        ...     Page Should Contain Element     ${ACCOUNT_ADDRESS_PAGE_CREATE_NEW_ADDRESS_ELEMENT}
+        ...     Page Should Contain Element     ${ACCOUNT_PAGE_ADD_FIRST_ADDRESS_ELEMENT}
         Run Keyword If                          ${create_address_link_visible}
-        ...     AccountAddressPage.Click "Create new address" Element
+        ...     AccountPage.Click "Add First Address" Element
         ...     ELSE    AccountPage.Click "Addresses" element
+        Run Keyword And Ignore Error    AccountAddressPage.Click "Create new address" Element
         NewAddressPage.Verify New Address Page Loaded
         NewAddressPage.Enter "Address"
         NewAddressPage.Enter "Zip/postal code"
@@ -166,14 +167,14 @@ Add address to existing user
         TopNav.Click "Sign out" link
 
 Place an order and go to own address
-
-        AccountPage.Click "Addresses" Element
-        AccountAddressPage.Verify Account Address Page Loaded
+	    FooterNav.Click on "YOUR ACCOUNT" Link
+        AccountPage.Verify Account Page Loaded
         ${create_address_link_visible}=         Run Keyword And Return Status
-        ...     Page Should Contain Element     ${ACCOUNT_ADDRESS_PAGE_CREATE_NEW_ADDRESS_ELEMENT}
+        ...     Page Should Contain Element     ${ACCOUNT_PAGE_ADD_FIRST_ADDRESS_ELEMENT}
         Run Keyword If                          ${create_address_link_visible}
-        ...     AccountAddressPage.Click "Create new address" Element
+        ...     AccountPage.Click "Add First Address" Element
         ...     ELSE    AccountPage.Click "Addresses" element
+        Run Keyword And Ignore Error    AccountAddressPage.Click "Create new address" Element
         NewAddressPage.Verify New Address Page Loaded
         NewAddressPage.Enter All Address Fields "France"
         NewAddressPage.Click "Save" button

@@ -26,8 +26,8 @@ Verify new "My address" section is displayed
     Page Should Contain Element                     ${ACCOUNT_ADDRESS_PAGE_MY_ADDRESS_SECTION}
 
 Verify "Address succesfully added!" message is displayed
-    Wait Until Page Contains Element                ${ACCOUNT_PAGE_ADDRESS_ADDED_MESSAGE}
-    Page Should Contain Element                     ${ACCOUNT_PAGE_ADDRESS_ADDED_MESSAGE}
+    Wait Until Page Contains Element                ${ACCOUNT_ADDRESS_PAGE_ADDRESS_ADDED_MESSAGE}
+    Page Should Contain Element                     ${ACCOUNT_ADDRESS_PAGE_ADDRESS_ADDED_MESSAGE}
 
 Verify address added to existing user
     FOR   ${item}       IN                          @{ADDRESS_INFORMATION_LIST}
