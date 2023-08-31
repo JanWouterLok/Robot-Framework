@@ -3,13 +3,16 @@ Library             SeleniumLibrary
 Library             RequestsLibrary
 Resource            ../Resources/Variables/TestCasesVariables.resource
 
+
+
 *** Keywords ***
 Start web test
     Set Selenium Speed              .0001s
     Set Selenium Timeout            3s
     Log                             Starting the test case!
     Open Browser                    about:blank                                     ${BROWSER}
-    Maximize Browser Window
+    Set Window Size                 1280                                            1024
+
 
 End web test
     Sleep                           2s
