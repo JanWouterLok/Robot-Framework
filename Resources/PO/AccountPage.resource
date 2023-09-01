@@ -18,4 +18,23 @@ Click "Add First Address" Element
 
 Click "Order History and Details" Element
     Click Element                           ${ACCOUNT_PAGE_ORDER_HISTORY_ELEMENT}
+
+
+
+# Non-funtional keywords for failing test demonstration
+
+Click "Delete your account" Element
+    Click Element                           ${ACCOUNT_PAGE_FAKE_DELETE_ACCOUNT_ELEMENT}}
+
+Verify "Are you sure you want to delete your account?" message displayed
+	Wait Until Page Contains Element        ${ACCOUNT_PAGE_FAKE_ARE_YOU_SURE_MESSAGE}
+    Page Should Contain Element             ${ACCOUNT_PAGE_FAKE_ARE_YOU_SURE_MESSAGE}
+
+Click "Delete my account" button
+	Click Element                           ${ACCOUNT_PAGE_FAKE_DELETE_ACCOUNT_BUTTON}
+
+Verify "Your account has been deleted." message displayed
+	Wait Until Page Contains Element        ${ACCOUNT_PAGE_FAKE_ACCOUNT_DELETED_MESSAGE}
+    Page Should Contain Element             ${ACCOUNT_PAGE_FAKE_ACCOUNT_DELETED_MESSAGE}
+
 ```

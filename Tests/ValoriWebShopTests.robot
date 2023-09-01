@@ -120,4 +120,12 @@ Should be able to file a complaint and confirm that the complaint is filed
         ValoriWebShop.Go to Valori Webshop landing page
         ValoriWebShop.File a complaint and confirm that the complaint is filed
 
+Should be able to delete user account and confirm that the account is deleted
+    [Documentation]     Intentionally failing delete user account and confirm that the account is deleted
+    [Tags]    TC_WS_014    Functional   Delete Account
+
+        ValoriWebShop.Go to Valori Webshop landing page
+        ValoriWebShop.Sign in to Valori Webshop
+        ValoriWebShop.Delete user account and confirm that the account is deleted
+
 
