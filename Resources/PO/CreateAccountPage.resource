@@ -52,10 +52,12 @@ Click "Save" new account button
 
 Capture screenshot after entering invalid email
     Sleep                           2s
+    Execute Javascript                              window.resizeTo(1280, 1024)
     Capture Page Screenshot         ${SCREENSHOT_INVALID_EMAIL_CREATE_ACCOUNT}
 
 Capture screenshot after entering invalid password
     Sleep                           2s
+    Execute Javascript                              window.resizeTo(1280, 1024)
     Capture Page Screenshot         ${SCREENSHOT_INVALID_PASSWORD_CREATE_ACCOUNT}
 
 Verify date format is incorrect message

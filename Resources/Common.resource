@@ -5,19 +5,20 @@ Resource            ../Resources/Variables/TestCasesVariables.resource
 
 
 
+*** Variables ***
+${work_screen}                True
+
 *** Keywords ***
 Start web test
-    Set Selenium Speed              .0001s
-    Set Selenium Timeout            3s
-    Log                             Starting the test case!
-    Open Browser                    about:blank                                     ${BROWSER}
-    Set Window Size                 1280                                            1024
-
+    Set Selenium Speed          .00001s
+    Set Selenium Timeout        3s
+    Log                         Starting the test case!
+    Open Browser                about:blank               ${BROWSER}
+    Set Window Size             1280                      1024
 
 End web test
-    Sleep                           2s
     Close Browser
-    Log                             Ending the test case!
+    Log                         Ending the test case!
 
 Create an API request session
 	@{list}=   Create List          ${VALID_EMAIL}   ${VALID_PASSWORD}

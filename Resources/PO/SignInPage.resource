@@ -23,8 +23,9 @@ Enter unknown email
     Input Text      ${SIGN_IN_PAGE_EMAIL_BOX}       ${INVALID_UNKNOWN_EMAIL}
 
 Capture Page Screenshot after entering invalid email
-    Sleep                                          2s
-    Capture Page Screenshot                        ${SCREENSHOT_INVALID_EMAIL_SIGN_IN}
+    Sleep                                           2s
+    Execute Javascript                              window.resizeTo(1280, 1024)
+    Capture Page Screenshot                         ${SCREENSHOT_INVALID_EMAIL_SIGN_IN}
 
 Enter invalid password
     Input Text      ${SIGN_IN_PAGE_PASSWORD_BOX}    ${INVALID_PASSWORD}
