@@ -24,4 +24,3 @@ Remove items from cart
 
 Click "Proceed to checkout" button
     Click Element                      ${CART_PAGE_CHECKOUT_BUTTON}
-```

@@ -22,4 +22,3 @@ Verify "Message succesfully sent" message displayed
     Page Should Contain Element             ${ORDER_DETAILS_PAGE_SUCCESS_SENT_MESSAGE}
 
 
-```

@@ -37,4 +37,3 @@ Verify "Your account has been deleted." message displayed
 	Wait Until Page Contains Element        ${ACCOUNT_PAGE_FAKE_ACCOUNT_DELETED_MESSAGE}
     Page Should Contain Element             ${ACCOUNT_PAGE_FAKE_ACCOUNT_DELETED_MESSAGE}
 
-```

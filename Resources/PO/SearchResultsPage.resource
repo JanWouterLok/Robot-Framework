@@ -13,4 +13,3 @@ Verify "Hummingbird t-shirt" product is found
     Page Should Contain Element         ${SEARCH_RESULTS_PAGE_HUMMINGBIRD_TSHIRT_PRODUCT}
     Page Should Contain Element         ${SEARCH_RESULTS_PAGE_HUMMINGBIRD_TSHIRT_PRICE}
     Page Should Contain Element         ${SEARCH_RESULTS_PAGE_HUMMINGBIRD_TSHIRT_IMAGE}
-```
