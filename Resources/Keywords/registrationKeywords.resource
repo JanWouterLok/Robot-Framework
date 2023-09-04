@@ -2,7 +2,7 @@
 Library     String
 Library     Screenshot
 Library     ImageCompare
-Resource    homePageKeywords.robot
+Resource    homePageKeywords.resource
 
 *** Keywords ***
 Navigate to create new account page
@@ -29,8 +29,8 @@ Input invalid registration email
     Select to receive newsletters
     Click Button  Save
     Sleep    2s
-    Capture Page Screenshot     ../Tests/screenshots/InvalidEmailToCompare.png
-    Compare Images    ${ReferenceInvalidEmail}    ../Tests/screenshots/InvalidEmailToCompare.png
+    Capture Page Screenshot     Tests/screenshots/InvalidEmailToCompare.png
+    Compare Images    ${ReferenceInvalidEmail}    Tests/screenshots/InvalidEmailToCompare.png
 
 Input invalid registration password
     Select gender    2
@@ -41,8 +41,8 @@ Input invalid registration password
     Select to receive newsletters
     Click Button  Save
     Sleep    2s
-    Capture Page Screenshot     ../Tests/screenshots/InvalidPasswordToCompare.png
-    Compare Images    ${ReferenceInvalidPassword}    ../Tests/screenshots/InvalidPasswordToCompare.png
+    Capture Page Screenshot     Tests/screenshots/InvalidPasswordToCompare.png
+    Compare Images    ${ReferenceInvalidPassword}    Tests/screenshots/InvalidPasswordToCompare.png
 
 Select gender
     [Arguments]     ${GenderID}

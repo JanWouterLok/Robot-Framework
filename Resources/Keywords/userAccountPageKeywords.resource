@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    homePageKeywords.robot
+Resource    homePageKeywords.resource
 Library    RPA.RobotLogListener
 Library    RPA.Windows
 
@@ -51,7 +51,7 @@ Add new address
     Input Text      ${newPostalCodeField}    2359 IT
     Input Text      ${newCityField}    Lille
     Select From List By Value      ${newCountryField}    13
-    Click Element    ${saveButton}
+    Click "Save" button
     Element Should Contain    ${verifyAddress}    Address successfully added!
 
 Add first address
@@ -60,5 +60,13 @@ Add first address
     Input Text      ${newPostalCodeField}    23540
     Input Text      ${newCityField}    Almelo
     Select From List By Value      ${newCountryField}    8
-    Click Element    ${saveButton}
+    Click "Save" button
     Element Should Contain    ${verifyAddress}    Address successfully added!
+
+Click "Save" button
+    Run Keyword And Ignore Error        Click "Save" Button Action
+    Run Keyword And Ignore Error        Click "Save" Button Action
+
+Click "Save" Button Action
+    Click Element                       ${saveButton}
+

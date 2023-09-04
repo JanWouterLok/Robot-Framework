@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../Resources/Keywords/homePageKeywords.robot
+Resource    ../Resources/Keywords/homePageKeywords.resource
 
 Test Setup      Navigate to Website
 Test Teardown   Exit Browser

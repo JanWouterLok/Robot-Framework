@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    homePageKeywords.robot
+Resource    homePageKeywords.resource
 
 *** Keywords ***
 Select customer service from subject

@@ -18,6 +18,6 @@ ${LastName}                     Tester
 ${NewPassword}                  testing123!
 ${InvalidNewPassword}           923j
 ${Birthday}                     06/06/1999
-${ReferenceInvalidEmail}        ./screenshots/RegistrationInvalidEmailReference.png
-${ReferenceInvalidPassword}     ./screenshots/RegistrationInvalidPasswordReference.png
+${ReferenceInvalidEmail}        Tests/screenshots/RegistrationInvalidEmailReference.png
+${ReferenceInvalidPassword}     Tests/screenshots/RegistrationInvalidPasswordReference.png
 

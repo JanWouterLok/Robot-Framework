@@ -1,17 +1,17 @@
 *** Settings ***
 Library     SeleniumLibrary
 
-Resource    ../variables.robot
-Resource    ../locators.robot
+Resource    ../variables.resource
+Resource    ../locators.resource
 
-Resource    cartPageKeywords.robot
-Resource    checkoutPageKeywords.robot
-Resource    contactUsPageKeyword.robot
-Resource    loginKeywords.robot
-Resource    productPageKeyword.robot
-Resource    registrationKeywords.robot
-Resource    searchPageKeywords.robot
-Resource    userAccountPageKeywords.robot
+Resource    cartPageKeywords.resource
+Resource    checkoutPageKeywords.resource
+Resource    contactUsPageKeyword.resource
+Resource    loginKeywords.resource
+Resource    productPageKeyword.resource
+Resource    registrationKeywords.resource
+Resource    searchPageKeywords.resource
+Resource    userAccountPageKeywords.resource
 
 
 *** Keywords ***
