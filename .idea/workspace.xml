@@ -8,7 +8,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/Common.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Common.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/Locators/OrderHistoryPageLocators.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Locators/OrderHistoryPageLocators.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/PO/CreateAccountPage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/PO/CreateAccountPage.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/PO/SignInPage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/PO/SignInPage.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/ReferenceImages/Screenshot_Invalid_Email_Create_Account_Reference.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/ReferenceImages/Screenshot_Invalid_Email_Create_Account_Reference.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/ReferenceImages/Screenshot_Invalid_Email_Sign_In_Reference.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/ReferenceImages/Screenshot_Invalid_Email_Sign_In_Reference.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/ReferenceImages/Screenshot_Invalid_Password_Create_Account_Reference.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/ReferenceImages/Screenshot_Invalid_Password_Create_Account_Reference.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +82,7 @@
       <workItem from="1693379184815" duration="13101000" />
       <workItem from="1693458891380" duration="7829000" />
       <workItem from="1693557893265" duration="3469000" />
-      <workItem from="1693812530859" duration="6906000" />
+      <workItem from="1693812530859" duration="7298000" />
     </task>
     <servers />
   </component>
