@@ -6,10 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e62f7dcf-5fcf-4b29-a1d6-9676171309cc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Common.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Common.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Locators/OrderHistoryPageLocators.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Locators/OrderHistoryPageLocators.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/PO/CreateAccountPage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/PO/CreateAccountPage.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/PO/SignInPage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/PO/SignInPage.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/PO/AccountPage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/PO/AccountPage.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/PO/CartPage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/PO/CartPage.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/PO/LandingPage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/PO/LandingPage.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/PO/OrderDetailsPage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/PO/OrderDetailsPage.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/PO/SearchResultsPage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/PO/SearchResultsPage.resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/ReferenceImages/Screenshot_Invalid_Email_Create_Account_Reference.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/ReferenceImages/Screenshot_Invalid_Email_Create_Account_Reference.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/ReferenceImages/Screenshot_Invalid_Email_Sign_In_Reference.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/ReferenceImages/Screenshot_Invalid_Email_Sign_In_Reference.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/ReferenceImages/Screenshot_Invalid_Password_Create_Account_Reference.png" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/ReferenceImages/Screenshot_Invalid_Password_Create_Account_Reference.png" afterDir="false" />
@@ -82,7 +83,7 @@
       <workItem from="1693379184815" duration="13101000" />
       <workItem from="1693458891380" duration="7829000" />
       <workItem from="1693557893265" duration="3469000" />
-      <workItem from="1693812530859" duration="7298000" />
+      <workItem from="1693812530859" duration="10217000" />
     </task>
     <servers />
   </component>
