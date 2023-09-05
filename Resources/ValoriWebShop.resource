@@ -240,6 +240,29 @@ Delete user account and confirm that the account is deleted
     AccountPage.Click "Delete my account" button
     AccountPage.Verify "Your account has been deleted." message displayed
 
+# Behavior Driven Development (BDD) testing
+
+I am on the webshop homepage
+    LandingPage.Load
+
+I login with valid credentials
+    TopNav.Click sign in link
+    SignInPage.Verify Sign In page loaded
+    SignInPage.Enter Email
+    SignInPage.Enter password
+    SignInPage.Click sign in
+
+I should see my account page
+    AccountPage.Verify Account page loaded
+
+I search for "Hummingbird t-shirt"
+	TopNav.Enter "Hummingbird t-shirt" in Search field
+    TopNav.Click "Search" button
+
+I should see search results for "Hummingbird t-shirt"
+    SearchResultsPage.Verify "Search results" page loaded
+	SearchResultsPage.Verify "Hummingbird t-shirt" product is found
+
 
 
 
