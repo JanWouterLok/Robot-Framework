@@ -263,6 +263,16 @@ I should see search results for "Hummingbird t-shirt"
     SearchResultsPage.Verify "Search results" page loaded
 	SearchResultsPage.Verify "Hummingbird t-shirt" product is found
 
+I login with invalid password
+	TopNav.Click sign in link
+    SignInPage.Verify Sign In page loaded
+    SignInPage.Enter Email
+    SignInPage.Enter invalid password
+    SignInPage.Click sign in
+
+I should see an error message
+    SignInPage.Verify authentication failed message displayed
+
 
 
 
