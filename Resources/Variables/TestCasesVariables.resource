@@ -26,7 +26,7 @@ ${PRODUCT_QUANTITY_OPTION_2}                    2
 ${MOUNTAIN_FOX_CUSHION_ORDER}                   Mountain fox cushion - Color : Black
 ${MOUNTAIN_FOX_CUSHION_MESSAGE}                 What does the fox say?
 ${CUSTOMER_SERVICE_LABEL}                       Customer service
-${COMPLAINT_TEXT}                               I have a complaint. I want my money back!
+${COMPLAINT_TEXT}                               I have a complaint. I don't know what the fox says!
 
 
 # List variables
@@ -45,10 +45,8 @@ ${SCREENSHOT_INVALID_EMAIL_CREATE_ACCOUNT}=                     C:/ValoriRobotFr
 ${SCREENSHOT_INVALID_PASSWORD_CREATE_ACCOUNT}=                  C:/ValoriRobotFrameWorkProject/Robot-Framework/Results/Screenshot_Invalid_Password_Create_Account.png
 
 # Screenshot Reference paths
-
 ${SCREENSHOT_INVALID_EMAIL_CREATE_ACCOUNT_REFERENCE}=           C:/ValoriRobotFrameWorkProject/Robot-Framework/Resources/ReferenceImages/Screenshot_Invalid_Email_Create_Account_Reference.png
 ${SCREENSHOT_INVALID_PASSWORD_CREATE_ACCOUNT_REFERENCE}=        C:/ValoriRobotFrameWorkProject/Robot-Framework/Resources/ReferenceImages/Screenshot_Invalid_Password_Create_Account_Reference.png
-
 ${SCREENSHOT_INVALID_EMAIL_SIGN_IN_REFERENCE}=                  C:/ValoriRobotFrameWorkProject/Robot-Framework/Resources/ReferenceImages/Screenshot_Invalid_Email_Sign_In_Reference.png
 
 

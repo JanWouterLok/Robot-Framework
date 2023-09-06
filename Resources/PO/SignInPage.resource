@@ -22,6 +22,14 @@ Enter invalid email
 Enter unknown email
     Input Text      ${SIGN_IN_PAGE_EMAIL_BOX}       ${INVALID_UNKNOWN_EMAIL}
 
+Enter Email From List
+	[Arguments]     ${username}
+	Input Text      ${SIGN_IN_PAGE_EMAIL_BOX}       ${username}
+
+Enter Password From List
+	[Arguments]     ${password}
+    Input Text      ${SIGN_IN_PAGE_PASSWORD_BOX}    ${password}
+
 Capture Page Screenshot after entering invalid email
     Sleep                                           2s
     Execute Javascript                              window.resizeTo(1280, 1024)
